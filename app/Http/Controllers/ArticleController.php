@@ -8,3 +8,11 @@ class ArticleController extends Controller
 {
     //
 }
+
+class ArticleController extends Controller
+{
+    public function create()
+    {
+        return view('article.create');
+    }
+}
