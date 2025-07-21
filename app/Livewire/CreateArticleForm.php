@@ -29,7 +29,11 @@ class CreateArticleForm extends Component
             'category_id'=>$this->category,
             'user_id'=> Auth::id()
         ]);
+        $this->reset();
+        session()->flash('success', 'Article created successfully');
     }
+    
+
 
 
 
