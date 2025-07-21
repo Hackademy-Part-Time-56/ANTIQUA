@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Routing\Controllers\HasMiddleware;
 
 class ArticleController extends Controller
 {
@@ -12,3 +12,4 @@ class ArticleController extends Controller
         return view('article.create');
     }
 }
+
