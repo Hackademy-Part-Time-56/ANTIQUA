@@ -1,0 +1,301 @@
+/* Stili Generali del Footer */
+.main-footer {
+    background-color: #ff6600; /* Un blu scuro, simile ai toni di Catawiki */
+    color: white; /* Testo chiaro */
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+    border-top: 1px solid #34495e;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permette alle colonne di andare a capo su schermi piccoli */
+    justify-content: space-between;
+    gap: 30px; /* Spazio tra le colonne */
+}
+
+.footer-upper {
+    padding-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1; /* Permette alle sezioni di occupare spazio equamente */
+    min-width: 200px; /* Larghezza minima per evitare colonne troppo strette */
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #f39c12; /* Un arancione brillante, colore di accento */
+    margin-top: 8px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white; /* Grigio chiaro per i link */
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white; /* Arancione all'hover */
+}
+
+/* Sezione Logo e About */
+.footer-about .footer-logo {
+    margin-bottom: 5%;
+    margin-top: 0;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+.footer-about .logo-placeholder {
+    max-width: 150px; /* Dimensione massima per il tuo logo */
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Sezione Newsletter e Social */
+.footer-newsletter-social p {
+    font-size: 0.9em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #34495e;
+    border-radius: 4px 0 0 4px;
+    background-color: #ff6600;
+    color: white;
+    outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: white;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff6600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Sezione Bottom Footer (Copyright e Metodi di Pagamento) */
+.footer-bottom {
+    background-color: #ff6600; /* Stesso sfondo, ma potresti volerlo leggermente diverso */
+    border-top: 1px solid #34495e;
+    padding: 20px 0;
+}
+
+.footer-bottom .bottom-content {
+    display: flex;
+    flex-wrap: wrap; /* Per la responsività */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    color: white;
+}
+
+.copyright {
+    margin-bottom: 10px; /* Spazio sotto il copyright su schermi piccoli */
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra le icone su schermi piccoli */
+}
+
+.payment-methods img {
+    height: 25px; /* Altezza fissa per le icone di pagamento */
+    width: auto;
+    filter: grayscale(100%) brightness(150%); /* Rende le icone quasi bianche/grigie */
+    transition: filter 0.3s ease;
+}
+
+.payment-methods img:hover {
+    filter: grayscale(0%) brightness(100%); /* Ritorna a colori all'hover */
+}
+
+
+/* --- Media Queries per Responsività --- */
+
+/* Tablet (schermi tra 768px e 1023px) */
+@media (max-width: 1023px) {
+    .footer-container {
+        justify-content: space-around; /* Distribuisce meglio le colonne */
+        gap: 20px;
+    }
+
+    .footer-section {
+        min-width: 180px;
+    }
+
+    .footer-newsletter-social {
+        min-width: 300px; /* Newsletter più larga */
+        flex-basis: 100%; /* Occupa tutta la larghezza su tablet */
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .newsletter-form {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-section h3::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mobile (schermi fino a 767px) */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column; /* Impila le sezioni verticalmente */
+        align-items: center; /* Centra le sezioni */
+        padding: 0 15px;
+    }
+
+    .footer-section {
+        width: 100%; /* Ogni sezione prende tutta la larghezza */
+        min-width: auto; /* Rimuove la larghezza minima */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h3::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-about .logo-placeholder {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-newsletter-social {
+        width: 100%;
+        min-width: auto;
+        margin-top: 0;
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Impila input e bottone */
+    }
+
+    .newsletter-form input[type="email"] {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form button {
+        border-radius: 4px;
+        width: 100%; /* Bottone a larghezza piena */
+    }
+
+    .footer-bottom .bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 15px;
+    }
+
+    .payment-methods {
+        width: 100%;
+        justify-content: center; /* Centra le icone di pagamento */
+    }
+}
+
+/* Stili specifici per Safari su mobile per gestire flexbox */
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .footer-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}}

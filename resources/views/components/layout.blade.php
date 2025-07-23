@@ -14,6 +14,7 @@
         'resources/css/create-article.css',
         'resources/css/card.css',
         'resources/css/navbar.css',
+        'resources/css/footer.css',
     ])
     <title>Antiqua</title>
 </head>
