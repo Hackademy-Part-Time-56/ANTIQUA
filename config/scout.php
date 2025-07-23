@@ -4,7 +4,7 @@ use TeamTNT\TNTSearch\TNTSearch;
 
 return [
 
-    'driver' => [ env('SCOUT_DRIVER', 'tntsearch') ],
+    'driver' =>  env('SCOUT_DRIVER', 'tntsearch') ,
 
     /*
     |--------------------------------------------------------------------------
@@ -20,7 +20,6 @@ return [
     |
     */
 
-    'driver' => env('SCOUT_DRIVER', 'algolia'),
 
     /*
     |--------------------------------------------------------------------------

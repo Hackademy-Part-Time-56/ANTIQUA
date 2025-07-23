@@ -13,3 +13,5 @@ Route::get('/article/index', [ ArticleController::class, 'index'])->middleware('
 Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name('byCategory');
+
+Route::get('/search/article',[PublicController::class,'searchArticles'])->name('article.search');
