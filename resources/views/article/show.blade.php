@@ -5,12 +5,12 @@
                 <h1 class="display-4">Dettaglio dell'articolo: {{ $article->title }}</h1>
             </div>
         </div>
-        <div class="row height-cwstom justify-content-center py-5">
+        <div class="row height-custom justify-content-center py-5">
             <div class="col-12 col-md-6 mb-3 ">
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <ing src="https://picsum.photos/408" class="d-block w-180 rounded shadow" alt=" ... ">
+                            <img src="https://picsum.photos/408" class="d-block w-180 rounded shadow" alt=" ... ">
                         </div>
                         <div class="carousel-itom">
                             <img src="https://picsum.photos/408" class="d-block w-180 rounded shadow" alt=" ..." />

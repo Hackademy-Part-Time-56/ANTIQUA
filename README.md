@@ -59,3 +59,43 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+1 pcs Diamante (Naturale) - 2.02 ct - Pera - D (incolore) - FL - Gemological Institute of America (GIA) - Esempio esempio
+
+Questo diamante naturale a forma di pera da 2,02 carati, certificato GIA, combina purezza eccezionale e bellezza incolore per acquirenti raffinati.
+
+8000€
+
+-----------------------------------------------------------------------------------------
+
+2009 Merrick Mint Laser Line Boxing Muhammad Ali The Greatest of all Time WCG 10 - 1 Graded card
+
+2009 - Merrick - Boxe - Muhammad Ali - Carta d'oro (23K) - Valutata 10 GEM MINT
+
+Edizione limitata
+Stratificato d'oro
+Condizioni perfette, grado 10
+In NUOVA condizione
+
+Ogni carta è realizzata manualmente con foglia d'oro e con una stampa in oro tridimensionale, che crea un'immagine drammatica, realistica e viva di ogni giocatore.
+
+Ogni carta è realizzata con estrema cura nei minimi dettagli utilizzando le tecnologie più avanzate, contribuendo al valore storico della carta d'oro come autentico oggetto da collezione in edizione limitata certificata.
+
+Questo straordinario Muhammad Ali è una delle carte da collezione ufficialmente licenziate più uniche mai offerte.
+
+Spedizione.
+Spedito con registrazione e con numero di tracciamento.
+
+Il venditore si racconta
+IMPORTANTE - DAL 7 al 25 aprile saremo in vacanza, tutti gli ordini pagati in quel periodo saranno spediti nella settimana dopo il nostro ritorno. Le email saranno risposte anche al nostro ritorno ----- Avremo centinaia di ordini, quindi li spediremo nell'ordine in cui verranno pagati --- Grazie per la vostra considerazione. Siamo SUPREME AUTOGRAPHS. Un'attività autorizzata e registrata dal 2001 Vendiamo i nostri prodotti in più di 75 paesi.----- Cerchi qualcosa di speciale? Sei nel posto giusto!!! --- Il Natale si avvicina e se cercate qualcosa di speciale e unico lo troverete qui. Da Hollywood, musica e cimeli delle carte sportive!--- Divertiti !
+
+5000€
+
+
+
+1.fare una scaletta

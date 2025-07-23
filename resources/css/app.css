@@ -3,3 +3,17 @@
 .height-custom {
     min-height: 60vh;
 }
+.logo-3d {
+    width: 200px;
+    height: auto;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.logo-3d:hover {
+    transform: perspective(1000px) rotateY(10deg) scale(1.05);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+
