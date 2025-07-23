@@ -63,6 +63,8 @@
             </a>
         </div>
 
+
+
         <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,4 +106,20 @@
             </nav>
         </div>
     </div>
+
+<!-- Collegamento Area Del Revisore -->
+
+            @auth
+        @if (Auth::user()->is_revisor)
+        
+            <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
+                        href="{{ route('revisor.index') }}">Zona Revisore
+                        <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}
+                        </span>
+                        </a>
+            </li>
+        @endif
+    @endauth        
 </nav>

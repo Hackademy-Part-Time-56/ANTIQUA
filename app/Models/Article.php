@@ -42,4 +42,11 @@ class Article extends Model
             'user_id' => $this->user_id
         ];
     }
+
+    public static function toBeRevisedCount()
+    {
+        return Article::where('is_accepted', null)->count();
+    }
+
 }
+
