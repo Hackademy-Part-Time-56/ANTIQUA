@@ -17,4 +17,6 @@ Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name
 
 Route::get('/search/article',[PublicController::class,'searchArticles'])->name('article.search');
 
-Route::get('revisor/index',[RevisorController::class, 'index'])->middleware('revisor')->name('revisor.index');
+Route::get('revisor/index',[RevisorController::class, 'index'])->name('revisor.index');
+
+Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
