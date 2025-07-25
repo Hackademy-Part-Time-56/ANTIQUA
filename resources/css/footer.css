@@ -1,10 +1,9 @@
 /* Stili Generali del Footer */
 .main-footer {
-    background-color: #ff6600; /* Un blu scuro, simile ai toni di Catawiki */
+    background-color: #ff6600; /* Colore di sfondo arancione */
     color: white; /* Testo chiaro */
     font-family: Arial, sans-serif;
     padding-top: 40px;
-    border-top: 1px solid #34495e;
 }
 
 .footer-container {
@@ -73,7 +72,7 @@
 }
 
 h3{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .footer-about .logo-placeholder {
@@ -157,7 +156,6 @@ h3{
 /* Sezione Bottom Footer (Copyright e Metodi di Pagamento) */
 .footer-bottom {
     background-color: #ff6600; /* Stesso sfondo, ma potresti volerlo leggermente diverso */
-    border-top: 1px solid #34495e;
     padding: 20px 0;
 }
 

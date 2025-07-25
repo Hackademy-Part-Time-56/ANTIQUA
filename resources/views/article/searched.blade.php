@@ -20,6 +20,6 @@
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        <!-- aggiungere articles-links -->
+        {{ $articles->links() }}
     </div>
 </x-layout>

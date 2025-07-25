@@ -1,4 +1,13 @@
 <x-layout>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -25,7 +34,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="password_confirmation" class="form-label">Conferma la password:</label>
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                        <input type="password" class="form-control" id="password_confirmation"
+                            name="password_confirmation">
                     </div>
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-dark">Registrati</button>

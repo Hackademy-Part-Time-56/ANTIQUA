@@ -33,16 +33,4 @@
                 </div>
             @endforelse
         </div>
-
-        @if (session()->has('errorMessage'))
-        <div class="alert alert-danger text-center shadow rounded w-50">
-            {{session('errorMessage')}}
-        </div>
-        @endif
-
-         @if (session()->has('message'))
-        <div class="alert alert-success text-center shadow rounded w-50">
-            {{session('message')}}
-        </div>
-        @endif
 </x-layout>
