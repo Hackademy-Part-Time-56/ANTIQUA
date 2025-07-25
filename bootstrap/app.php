@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\IsRevisor;
 use Illuminate\Foundation\Application;
+use App\Http\Middleware\SetLocaleMiddleware;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
