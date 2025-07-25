@@ -8,7 +8,7 @@
         </div>
 
         <!-- Searchbar -->
-        <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
+        <form class="d-flex ms-auto mt-3" role="search" action="{{ route('article.search') }}" method="GET">
             <div class="input-group">
                 <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
                 <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
@@ -75,6 +75,9 @@
                 </div>
             </div>
             @endauth
+            <x-_locale lang="it" class="mt-3" />
+            <x-_locale lang="en" />
+            <x-_locale lang="es" />
         </div>
 
 
