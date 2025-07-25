@@ -75,7 +75,7 @@
                 </div>
             </div>
             @endauth
-            <x-_locale lang="it" class="mt-3" />
+            <x-_locale lang="it" />
             <x-_locale lang="en" />
             <x-_locale lang="es" />
         </div>
@@ -91,7 +91,7 @@
     </div>
 
     <!-- Secondary Navigation -->
-    <div class="navbar-secondary">
+    <!-- <div class="navbar-secondary"> 
         <div class="navbar-containertwo">
             <nav class="secondary-nav">
                 <a href="{{ route('homepage') }}"
@@ -124,6 +124,7 @@
                         </div>
                     </div>
                 </div>
+                -->
 
             </nav>
         </div>
