@@ -22,3 +22,5 @@ Route::get('revisor/index',[RevisorController::class, 'index'])->name('revisor.i
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
+
+Route::get( '/revisor/index',[RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
