@@ -24,7 +24,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
-                Vendi
+                {{ __('ui.sell') }}
             </a>
             @guest
                 <a href="{{ route('login') }}" class="nav-action-link">
@@ -38,7 +38,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
-                    <span>Registrati</span>
+                    <span>{{ __('ui.register') }}</span>
                 </a>
             @else
             <div class="user-menu">
@@ -65,7 +65,7 @@
                     @auth
                         @if (Auth::user()->is_revisor)
                             <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
-                                href="{{ route('revisor.index') }}">Zona Revisore
+                                href="{{ route('revisor.index') }}">{{ __('ui.revisorZone') }}
                                 <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}
                                 </span>

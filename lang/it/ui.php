@@ -1,0 +1,26 @@
+<?php
+return
+[
+    'hello'=>'Ciao',
+    'allArticles'=>'Tutti gli articoli',
+    'register'=>'Registrati',
+    'becomeRevisor'=>'Diventa revisore',
+    'revisorDashboard'=>'Dashboard Revisore',
+    'acceptArticle'=>'Accetta Articolo',
+    'rejectArticle'=>'Rifiuta Articolo',
+    'articleAccepted'=>'Articolo accettato',
+    'articleRejected'=>'Articolo rifiutato',
+    'requestRevisor'=>'Richiedi di diventare revisore',
+    'revisorRequestSent'=>'Richiesta revisore inviata',
+    'revisorRequestSuccess'=>'Congratulazioni, hai richiesto di diventare revisore!',
+    'revisorRequestFailure'=>'Errore nell\'invio della richiesta revisore',
+    'makeRevisor'=>'Rendi Revisore',
+    'revisorMade'=>'Revisore creato con successo',
+    'revisorNotFound'=>'Revisore non trovato',
+    'searchArticles'=>'Cerca Articoli',
+    'searchResults'=>'Risultati della ricerca',
+    'noArticlesFound'=>'Nessun articolo trovato',
+    'languageChanged'=>'Lingua cambiata con successo',
+    'revisorZone'=>'Zona Revisore',
+    'sell'=>'Vendi',
+];

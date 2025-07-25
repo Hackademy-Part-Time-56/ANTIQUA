@@ -2,5 +2,25 @@
 return
 [
     'hello'=>'Hello',
-    'allArticles'=>'All the articles'
+    'allArticles'=>'All the articles',
+    'register'=>'Register',
+    'becomeRevisor'=>'Become a revisor',
+    'revisorDashboard'=>'Revisor Dashboard',
+    'acceptArticle'=>'Accept Article',
+    'rejectArticle'=>'Reject Article',
+    'articleAccepted'=>'Article accepted',
+    'articleRejected'=>'Article rejected',
+    'requestRevisor'=>'Request to become a revisor',
+    'revisorRequestSent'=>'Revisor request sent',
+    'revisorRequestSuccess'=>'Congratulations, you have requested to become a revisor!',
+    'revisorRequestFailure'=>'Error sending revisor request',
+    'makeRevisor'=>'Make Revisor',
+    'revisorMade'=>'Revisor successfully created',
+    'revisorNotFound'=>'Revisor not found',
+    'searchArticles'=>'Search Articles',
+    'searchResults'=>'Search Results',
+    'noArticlesFound'=>'No articles found',
+    'languageChanged'=>'Language changed successfully',
+    'revisorZone'=>'Revisor Zone',
+    'sell'=>'Sell',
 ];
