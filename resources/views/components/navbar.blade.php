@@ -20,8 +20,8 @@
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg>
                 </button>
-                <input type="search" name="query" class="form-control custom-search-input search-input" placeholder="Cerca..."
-                    aria-label="Cerca" style="padding-left: 2.5rem;">
+                <input type="search" name="query" class="form-control custom-search-input search-input"
+                    placeholder="Cerca..." aria-label="Cerca" style="padding-left: 2.5rem;">
             </div>
         </form>
 
@@ -83,9 +83,46 @@
                 </div>
             </div>
             @endauth
-            <x-_locale lang="it" />
-            <x-_locale lang="en" />
-            <x-_locale lang="es" />
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center" type="button"
+                    id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{ asset('vendor/blade-flags/language-' . app()->getLocale() . '.svg') }}" width="24"
+                        height="24" class="me-2" />
+                    {{ strtoupper(app()->getLocale()) }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li>
+                        <form class="d-inline" action="{{route('setLocale', 'it')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item d-flex align-items-center">
+                                <img src="{{ asset('vendor/blade-flags/language-it.svg') }}" width="24" height="24"
+                                    class="me-2" />
+                                IT
+                            </button>
+                        </form>
+                    </li>
+                    <li>
+                        <form class="d-inline" action="{{route('setLocale', 'es')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item d-flex align-items-center">
+                                <img src="{{ asset('vendor/blade-flags/language-es.svg') }}" width="24" height="24"
+                                    class="me-2" />
+                                ES
+                            </button>
+                        </form>
+                    </li>
+                    <li>
+                        <form class="d-inline" action="{{route('setLocale', 'en')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item d-flex align-items-center">
+                                <img src="{{ asset('vendor/blade-flags/language-en.svg') }}" width="24" height="24"
+                                    class="me-2" />
+                                EN
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 
@@ -134,7 +171,4 @@
                 </div>
                 -->
 
-            </nav>
-        </div>
-    </div>
 </nav>

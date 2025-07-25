@@ -1,6 +1,8 @@
 .category-navigation {
     background-color: #fff;
     padding: 2rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 .category-grid {
@@ -79,6 +81,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .category-navigation {
+        padding-top: 100px;
+    }
     .category-grid {
         gap: 1.5rem;
     }

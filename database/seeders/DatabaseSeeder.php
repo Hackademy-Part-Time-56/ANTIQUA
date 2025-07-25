@@ -22,10 +22,10 @@ class DatabaseSeeder extends Seeder
         'motori'
     ];
     
-      public function run(): void
+    public function run(): void
     {
         foreach ($this->categories as $category) {
-         Category::create([
+        Category::create([
             'name' => $category
         ]);
         }

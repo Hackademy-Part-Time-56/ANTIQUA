@@ -23,4 +23,6 @@ return
     'languageChanged'=>'Lingua cambiata con successo',
     'revisorZone'=>'Zona Revisore',
     'sell'=>'Vendi',
+    'elettronica'=>'Elettronica',
+    'abbigliamento'=>'Abbigliamento',
 ];

@@ -26,7 +26,8 @@
                         {!! $categoryIcons[strtolower($category->name)] ?? $defaultIcon !!}
                     </svg>
                 </div>
-                <span class="category-name">{{ ucfirst($category->name) }}</span>
+                <span class="category-name">{{__("ui.$category->name")}}
+</span>
                 @if($category->articles_count)
                     <span class="item-count">{{ $category->articles_count }}</span>
                 @endif
