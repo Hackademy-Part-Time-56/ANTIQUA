@@ -4,7 +4,7 @@
             <div class="col-3">
                 <div class="rounded shadow bg-body-secondary">
                     <h1 class="display-5 text-center pb-2">Dashboard Revisore
-                    </h1> 
+                    </h1>
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="row justify-content-center pt-5">
             <div class="col-md-8">
                 <div class="row justify-content-center">
-                    @for ($i = 0; $i <6; $i++)
+                    @for ($i = 0; $i < 6; $i++)
                         <div class="col-6 col-md-4 mb-4 text-center">
                             <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
                         </div>
@@ -29,14 +29,20 @@
                     <p class="h6">{{ $article_to_check->description }}</p>
                 </div>
                 <div class="d-flex pb-4 justify-content-around">
-                    <form action="" method="POST">
-                        @csrf
-                        <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
-                    </form>
-                    <form action="" method="POST">
-                        @csrf
-                        <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
-                    </form>
+                    <div class="d-flex pb-4 justify-content-around">
+                        <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+                        </form>
+
+                        <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -45,6 +51,13 @@
             <div class="col-12">
                 <h1 class="fst-italic display-4">Non ci sono articoli da revisionare</h1>
                 <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">Torna alla home</a>
+            </div>
+        </div>
+    @endif
+    @if (session()->has('message'))
+        <div class="row justify-content-center">
+            <div class="col-5 alert alert-success text-center shadow rounded">
+                {{ session('message') }}
             </div>
         </div>
     @endif
