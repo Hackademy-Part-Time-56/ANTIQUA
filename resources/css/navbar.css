@@ -85,22 +85,14 @@
     box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.1);
 }
 
-.search-button {
-    position: absolute;
-    right: 4px;
-    background: #ff6600;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s ease;
+.custom-search-button svg {
+    transition: color 0.2s ease-in-out;
+    transition: transform 0.2s ease;
 }
 
-.search-button:hover {
-    background: #e55a00;
+.custom-search-button:hover svg {
+    color: #ff6600 !important;
+    transform: scale(1.4);
 }
 
 /* Navigation Actions */

@@ -9,11 +9,19 @@
 
         <!-- Searchbar -->
         <form class="d-flex ms-auto mt-3" role="search" action="{{ route('article.search') }}" method="GET">
-            <div class="input-group">
-                <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
-                <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">
-                    Search
+            <div class="position-relative w-100 custom-search-container">
+                <button type="submit" class="btn custom-search-button"
+                    style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 2; border: none; background: transparent;"
+                    aria-label="Cerca">
+                    <!-- Icona SVG di ricerca (da Bootstrap Icons) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search text-secondary" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
                 </button>
+                <input type="search" name="query" class="form-control custom-search-input search-input" placeholder="Cerca..."
+                    aria-label="Cerca" style="padding-left: 2.5rem;">
             </div>
         </form>
 
