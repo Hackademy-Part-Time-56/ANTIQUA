@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Article;
 use App\Models\Category;
 
@@ -29,23 +28,11 @@ class ArticleController extends Controller
         return view('article.byCategory', compact('articles', 'category'));
     }
 
-    public function toggleFavorite(Request $request, Article $article)
+    public function favorites(Request $request)
     {
         $user = $request->user();
+        $articles = $user->favoriteArticles()->latest()->get();
 
-        if ($user->favoriteArticles()->where('article_id', $article->id)->exists()) {
-            $user->favoriteArticles()->detach($article->id);
-            return back()->with('message', 'Articolo rimosso dai preferiti');
-        } else {
-            $user->favoriteArticles()->attach($article->id);
-            return back()->with('message', 'Articolo aggiunto ai preferiti');
-        }
-    }
-
-    public function favorites(Request $request, Article $article)
-    {
-        $user = $request->user();
-        $articles = $user->favoriteArticles()->where('is_accepted', true)->get();
         return view('article.favorites', compact('articles'));
     }
 }

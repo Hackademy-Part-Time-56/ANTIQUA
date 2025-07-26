@@ -2,7 +2,7 @@
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    
+
     transition: all 0.3s ease;
     max-width: 320px;
     margin: 0 auto 1.5rem;
@@ -261,16 +261,42 @@
     transition: color 0.2s ease;
 }
 
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    75% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-favorite:active {
+    transform: scale(0.95) !important;
+}
+
 /* Responsive */
 @media (max-width: 380px) {
     .article-card {
         max-width: 100%;
     }
-    
+
     .price {
         font-size: 1.25rem;
     }
-    
+
     .card-content {
         padding: 1.25rem;
     }
@@ -281,6 +307,7 @@
     display: block;
     color: inherit;
 }
+
 .article-card-link:hover .article-card {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
     transform: translateY(-4px) scale(1.01);

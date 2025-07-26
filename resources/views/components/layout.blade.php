@@ -17,6 +17,7 @@
         'resources/css/footer.css',
     ])
     <title>Antiqua</title>
+    @livewireStyles
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -26,6 +27,7 @@
         {{$slot }}
     </div>
     <x-footer />
+    @livewireScripts
 </body>
 
 </html>
