@@ -84,6 +84,12 @@ return
     'new'=>'NUOVO',
     'seedetails'=>'Vedi dettagli',
 
+    //verifyemail
+    'verifyouremail'=>'Verifica la tua email',
+    'checkemail'=>'Prima di procedere, controlla la tua email per il link di verifica.',
+    'sendverif'=>'Invia email di verifica',
+
+
     //register.blade.php
     'emailaddress'=>'Indirizzo email:',
     'pw'=>'Password:',
@@ -94,6 +100,14 @@ return
 
     //show.blade.php
     'detailsarticles'=>'Dettagli articolo: ',
+    'verif'=>'Verificato',
+    'notverif'=>'Non verificato',
+    'buynow'=>'Acquista ora',
+    'contactseller'=>'Contatta il venditore',
+    'buyerguarantee'=>'Garanzia acquirente',
+    'insuredship'=>'Spedizione assicurata',
+    'category'=>'Categoria: ',
+    'published'=>'Pubblicato il: ',
 
     //searched.blade.php
     'searchresults'=>'Risultati della ricerca per:',
@@ -122,6 +136,9 @@ return
     'noartforthiscat'=>'Non sono ancora stati creati articoli per questa categoria!',
     'pubarticle'=>'Pubblica un articolo',
 
+    //preferiti
+    'yourfav'=>'I tuoi articoli preferiti',
+    'havenotadded'=>'Non hai ancora aggiunto articoli ai preferiti.',
 
 
 ];

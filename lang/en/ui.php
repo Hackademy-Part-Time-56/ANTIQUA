@@ -85,6 +85,11 @@ return
     'new'=>'NEW',
     'seedetails'=>'See details',
 
+     //verifyemail
+    'verifyouremail'=>'Verify your email',
+    'checkemail'=>'Before proceeding, check your email for the verification link.',
+    'sendverif'=>'Send verification email',
+
     //register.blade.php
     'emailaddress'=>'Email address:',
     'pw'=>'Password:',
@@ -94,6 +99,14 @@ return
 
     //show.blade.php
     'detailsarticles'=>'Article details: ',
+    'verif'=>'Verified',
+    'notverif'=>'Unverified',
+    'buynow'=>'Buy now',
+    'contactseller'=>'Contact seller',
+    'buyerguarantee'=>'Buyer guarantee',
+    'insuredship'=>'Insured shipping',
+    'category'=>'Category: ',
+    'published'=>'Published on: ',
 
     //searched.blade.php
     'searchresults'=>'Search results for:',
@@ -120,4 +133,8 @@ return
     'artthiscategory'=>'Articles in this category',
     'noartforthiscat'=>'No articles have been created for this category yet!',
     'pubarticle'=>'Publish an article',
+
+    //preferiti
+    'yourfav'=>'Your favorites',
+    'havenotadded'=>'You have not added any items to your favorites yet.',
 ];

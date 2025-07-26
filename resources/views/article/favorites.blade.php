@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <h2 class="mb-4">I tuoi articoli preferiti</h2>
+        <h2 class="mb-4">{{ __('ui.yourfav') }}</h2>
         <div class="row">
             @forelse($articles as $article)
                 <div class="col-md-4 mb-4">
@@ -8,7 +8,7 @@
                     @endcomponent
                 </div>
             @empty
-                <p>Non hai ancora aggiunto articoli ai preferiti.</p>
+                <p>{{ __('ui.havenotadded') }}</p>
             @endforelse
         </div>
     </div>

@@ -5,10 +5,10 @@
                 <i class="fas fa-envelope-circle-check"></i>
             </div>
 
-            <h1 class="verification-title">Verifica la tua email</h1>
+            <h1 class="verification-title">{{ __('ui.verifyouremail') }}</h1>
 
             <p class="verification-text">
-                Prima di procedere, controlla la tua email per il link di verifica.
+                {{ __('ui.checkemail') }}
             </p>
 
             @if (session('message'))
@@ -22,7 +22,7 @@
                 @csrf
                 <button type="submit" class="btn btn-resend" id="resendBtn">
                     <i class="fas fa-paper-plane me-2"></i>
-                    Invia email di verifica
+                    {{ __('ui.sendverif') }}
                 </button>
             </form>
         </div>

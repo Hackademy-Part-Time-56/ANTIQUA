@@ -74,11 +74,11 @@
                                         {{ $article->user->name }}
                                         @if($article->user->hasVerifiedEmail())
                                             <span class="badge bg-success ms-2" title="Utente verificato">
-                                                <i class="fas fa-check-circle"></i> Verificato
+                                                <i class="fas fa-check-circle"></i> {{ __('ui.verif') }}
                                             </span>
                                         @else
                                             <span class="badge bg-secondary ms-2" title="Utente non verificato">
-                                                <i class="fas fa-times-circle"></i> Non verificato
+                                                <i class="fas fa-times-circle"></i> {{ __('ui.notverif') }}
                                             </span>
                                         @endif
                                     </h6>
@@ -89,21 +89,21 @@
 
                         <div class="action-buttons">
                             <button class="btn btn-primary btn-lg w-100 mb-2">
-                                Acquista ora
+                                {{ __('ui.buynow') }}
                             </button>
                             <button class="btn btn-outline-primary w-100">
-                                Contatta il venditore
+                                {{ __('ui.contactseller') }}
                             </button>
                         </div>
 
                         <div class="product-features">
                             <div class="feature-item">
                                 <i class="bi bi-shield-check text-success"></i>
-                                <span>Garanzia acquirente</span>
+                                <span>{{ __('ui.buyerguarantee') }}</span>
                             </div>
                             <div class="feature-item">
                                 <i class="bi bi-truck text-success"></i>
-                                <span>Spedizione assicurata</span>
+                                <span>{{ __('ui.insuredship') }}</span>
                             </div>
                         </div>
                     </div>
@@ -121,8 +121,8 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <p><strong>Categoria:</strong> {{ $article->category->name }}</p>
-                                <p><strong>Pubblicato il:</strong> {{ $article->created_at->format('d/m/Y') }}</p>
+                                <p><strong>{{ __('ui.category') }}</strong> {{ $article->category->name }}</p>
+                                <p><strong>{{ __('ui.published') }}</strong> {{ $article->created_at->format('d/m/Y') }}</p>
                             </div>
                             <div class="col-md-6">
                                 <!-- <p><strong>ID Articolo:</strong> #{{ $article->id }}</p> -->
