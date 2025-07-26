@@ -69,16 +69,16 @@ return
     'copyright' => 'Antiqua. All rights reserved.',
     
     //categorynavigation
-    'electronics'=>'Electronics',
-    'clothing'=>'Clothing',
-    'health_and_beauty'=> 'Health & Beauty',
-    'home_and_garden'=>'Home & garden',
-    'toys'=>'Toys',
-    'sports'=>'Sports',
-    'pets'=>'Pets',
-    'books_and_magazines'=>'Books & magazines',
-    'accessories'=>'Accessories',
-    'motors'=>'Motors',
+    'elettronica'=>'Electronics',
+    'abbigliamento'=>'Clothing',
+    'salute e bellezza'=>'Health and Beauty',
+    ' casa e giardinaggio'=>'Home and Garden',
+    'giocattoli'=>'Toys',
+    ' sport'=>'Sports',
+    'animali domestici'=>'Pets',
+    'libri e riviste'=>'Books and Magazines',
+    'accessori'=>'Accessories',
+    'motori'=>'Motors',
 
 
     //cardblade

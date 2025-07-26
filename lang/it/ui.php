@@ -68,16 +68,16 @@ return
 
 
     //categorynavigation
-    'electronics'=>'Elettronica',
-    'clothing'=>'Abbigliamento',
-    'health_and_beauty'=>'Salute e bellezza',
-    'home_and_garden'=>'Casa e giardino',
-    'toys'=>'Giocattoli',
-    'sports'=>'Sport',
-    'pets'=>'Animali domestici',
-    'books_and_magazines'=>'Libri e riviste',
-    'accessories'=>'Accessori',
-    'motors'=>'Motori',
+    'elettronica'=>'Elettronica',
+    'abbigliamento'=>'Abbigliamento',
+    'salute e bellezza'=>'Salute e bellezza',
+    ' casa e giardinaggio'=>'Casa e giardino',
+    'giocattoli'=>'Giocattoli',
+    ' sport'=>'Sport',
+    'animali domestici'=>'Animali domestici',
+    'libri e riviste'=>'Libri e riviste',
+    'accessori'=>'Accessori',
+    'motori'=>'Motori',
 
 
     //cardblade

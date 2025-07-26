@@ -1,44 +1,112 @@
 <x-layout>
-    <div class="container">
-        <div class="row height-custom justify-content-center align-items-center text-center">
-            <div class="col-12">
-                <h1 class="display-4">{{ __('ui.detailsarticles') }}{{ $article->title }}</h1>
-            </div>
+    <div class="article-detail-page">
+        <!-- Breadcrumb -->
+        <div class="container">
+            <nav aria-label="breadcrumb" class="pt-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('homepage') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('article.index') }}">Articoli</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('byCategory',['category'=>$article->category]) }}">{{ $article->category->name }}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ Str::limit($article->title, 30) }}</li>
+                </ol>
+            </nav>
         </div>
-        <div class="row height-custom justify-content-center py-5">
-            <div class="col-12 col-md-6 mb-3 ">
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/408" class="d-block w-180 rounded shadow" alt=" ... ">
-                        </div>
-                        <div class="carousel-itom">
-                            <img src="https://picsum.photos/408" class="d-block w-180 rounded shadow" alt=" ..." />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/488" class="d-block w-180 rounded shadow" alt=" ..." />
+
+        <!-- Main Content -->
+        <div class="container py-4">
+            <div class="row">
+                <!-- Gallery Section -->
+                <div class="col-12 col-lg-7 mb-4">
+                    <div class="product-gallery">
+                        <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://picsum.photos/600/500" class="d-block w-100 main-image" alt="{{ $article->title }}">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/601/500" class="d-block w-100 main-image" alt="{{ $article->title }}">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/602/500" class="d-block w-100 main-image" alt="{{ $article->title }}">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                </div>
+
+                <!-- Product Info Section -->
+                <div class="col-12 col-lg-5">
+                    <div class="product-info">
+                        <span class="category-badge">{{ $article->category->name }}</span>
+                        <h1 class="product-title">{{ $article->title }}</h1>
+                        
+                        <div class="price-section">
+                            <span class="price-label">{{ __('ui.price:') }}</span>
+                            <span class="price-value">€ {{ number_format($article->price, 2, ',', '.') }}</span>
+                        </div>
+
+                        <div class="seller-card">
+                            <div class="seller-info">
+                                <img src="https://ui-avatars.com/api/?name={{ urlencode($article->user->name) }}" alt="Venditore" class="seller-avatar">
+                                <div>
+                                    <h6 class="mb-0">{{ $article->user->name }}</h6>
+                                    <small class="text-muted">Venditore verificato</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn btn-primary btn-lg w-100 mb-2">
+                                Acquista ora
+                            </button>
+                            <button class="btn btn-outline-primary w-100">
+                                Contatta il venditore
+                            </button>
+                        </div>
+
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="bi bi-shield-check text-success"></i>
+                                <span>Garanzia acquirente</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-truck text-success"></i>
+                                <span>Spedizione assicurata</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 mb-3 height-custom text-center">
-                <h2 class="display-5"> <span class="fw-bold">{{ __('ui.title') }}</span> {{ $article->title }}</h2>
-                <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="fw-bold">{{ __('ui.price:') }} {{ $article->price }}</h4>
-                        <h5>{{ __('ui.description:') }}</h5>
-                </div>
-                <p>{{ $article->description }}</p>
 
+            <!-- Description Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="description-section">
+                        <h3 class="mb-3">{{ __('ui.description:') }}</h3>
+                        <p>{{ $article->description }}</p>
+                        
+                        <hr class="my-4">
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Categoria:</strong> {{ $article->category->name }}</p>
+                                <p><strong>Pubblicato il:</strong> {{ $article->created_at->format('d/m/Y') }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- <p><strong>ID Articolo:</strong> #{{ $article->id }}</p> -->
+                                <!-- <p><strong>Visualizzazioni:</strong> 125</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

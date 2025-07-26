@@ -69,16 +69,16 @@ return
     'copyright' => 'Antiqua. Todos los derechos reservados.',
     
     //categorynavigation
-    'electronics'=>'Electrónicos',
-    'clothing'=>'Ropa',
-    'health_and_beauty'=> 'Salud y belleza',
-    'home_and_garden'=>'Hogar y jardín',
-    'toys'=>'Juguetes',
-    'sports'=>'Deportes',
-    'pets'=>'Mascotas',
-    'books_and_magazines'=>'Libros y revistas',
-    'accessories'=>'Accesorios',
-    'motors'=>'Motores',
+    'elettronica'=>'Electrónica',
+    'abbigliamento'=>'Ropa',
+    'salute e bellezza'=>'Salud y belleza',
+    ' casa e giardinaggio'=>'Hogar y jardín',
+    'giocattoli'=>'Juegos',
+    ' sport'=>'Deportes',
+    'animali domestici'=>'Animalos domésticos',
+    'libri e riviste'=>'Libris y revistas',
+    'accessori'=>'Accesorios',
+    'motori'=>'Motores',
     
 
 
@@ -123,5 +123,3 @@ return
     'pubarticle'=>'Publicar un artículo',
 
 ];
-
- 

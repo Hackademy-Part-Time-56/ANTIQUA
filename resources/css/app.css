@@ -3,6 +3,7 @@
 .height-custom {
     min-height: 60vh;
 }
+
 .logo-3d {
     width: 200px;
     height: auto;
@@ -16,4 +17,256 @@
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
 }
 
+.article-detail-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
 
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.product-gallery {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.main-image {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.product-info {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.category-badge {
+    display: inline-block;
+    background: #fff5f0;
+    color: #ff6600;
+    padding: 0.375rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1.5rem;
+}
+
+.price-section {
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.price-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.seller-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.seller-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.seller-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.btn-primary {
+    background: #ff6600;
+    border-color: #ff6600;
+}
+
+.btn-primary:hover {
+    background: #e55a00;
+    border-color: #e55a00;
+}
+
+.btn-outline-primary {
+    color: #ff6600;
+    border-color: #ff6600;
+}
+
+.btn-outline-primary:hover {
+    background: #ff6600;
+    border-color: #ff6600;
+}
+
+.product-features {
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.description-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 991px) {
+    .main-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-image {
+        height: 300px;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
+    }
+
+    .price-value {
+        font-size: 1.75rem;
+    }
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.verification-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.verification-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    max-width: 24rem;
+    width: 100%;
+    padding: 2.5rem;
+}
+
+.verification-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #e7f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.verification-icon i {
+    font-size: 1.5rem;
+    color: #ff6600;
+}
+
+.verification-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.verification-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.success-alert {
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    color: #0f5132;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-resend {
+    background-color: #ff6600;
+    border: 1px solid #ff6600;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-resend:hover {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: white;
+}
+
+.btn-resend:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+@media (max-width: 576px) {
+    .verification-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+}
