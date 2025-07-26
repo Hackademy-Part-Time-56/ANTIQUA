@@ -36,10 +36,15 @@
                             <button class="btn btn-danger py-2 px-5 fw-bold">{{ __('ui.reject') }}</button>
                         </form>
 
-                        <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
+                        <form method="POST" action="{{ route('accept', $article_to_check) }}">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success py-2 px-5 fw-bold">{{ __('ui.accept') }}</button>
+                            <div class="mb-3">
+                                <label for="estimated_price" class="form-label">Stima prezzo (€)</label>
+                                <input type="number" step="0.01" name="estimated_price" id="estimated_price"
+                                    class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Accetta articolo e salva stima</button>
                         </form>
                     </div>
 

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BecomeRevisor;
-use App\Models\Article;
 use App\Models\User;
-use Illuminate\Support\Facades\Artisan;
+use App\Models\Article;
+use App\Mail\BecomeRevisor;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
+
 
 class RevisorController extends Controller
 {
@@ -16,9 +19,14 @@ class RevisorController extends Controller
         $article_to_check = Article::where('is_accepted', null)->first();
         return view('revisor.index', compact('article_to_check'));
     }
-    public function accept(Article $article)
+    public function accept(Request $request,Article $article)
     {
+        $request->validate([
+            'estimated_price' => 'required|numeric|min:0',
+        ]);
+        $article->estimated_price = $request->input('estimated_price');
         $article->setAccepted(true);
+        $article->save();
         return redirect()
             ->back()
             ->with('message', "Hai accettato l'articolo $article->title");

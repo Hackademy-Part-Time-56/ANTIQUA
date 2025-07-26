@@ -12,7 +12,7 @@ class Article extends Model
     use Searchable;
     use HasFactory;
     protected $fillable = [
-        'title','description','price','category_id','user_id'
+        'title','description','price','category_id','user_id','estimated_price'
     ];
     
     public function user() : BelongsTo
