@@ -12,14 +12,19 @@ class Article extends Model
     use Searchable;
     use HasFactory;
     protected $fillable = [
-        'title','description','price','category_id','user_id','estimated_price'
+        'title',
+        'description',
+        'price',
+        'category_id',
+        'user_id',
+        'estimated_price'
     ];
-    
-    public function user() : BelongsTo
+
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
-    public function category() : BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
@@ -48,5 +53,8 @@ class Article extends Model
         return Article::where('is_accepted', null)->count();
     }
 
+    public function favoritedByUsers()
+    {
+        return $this->belongsToMany(User::class, 'favorites')->withTimestamps();
+    }
 }
-

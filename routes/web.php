@@ -32,6 +32,10 @@ Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->nam
 
 Route::post('/lingua/{lang}', [PublicController::class,'setLanguage'])->name('setLocale');
 
+Route::post('/articles/{article}/favorite', [ArticleController::class, 'toggleFavorite'])->middleware('auth')->name('articles.favorite');
+
+Route::get('/preferiti', [ArticleController::class, 'favorites'])->middleware('auth')->name('articles.favorites');
+
 // Rotte verifica email Laravel
 Route::get('/email/verify', function () {
     return view('auth.verify-email');

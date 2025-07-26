@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -25,4 +26,5 @@ class PublicController extends Controller
         session()->put('locale', $lang);
         return redirect()->back();
     }
+
 }

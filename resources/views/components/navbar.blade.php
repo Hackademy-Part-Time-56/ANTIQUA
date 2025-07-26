@@ -49,39 +49,40 @@
                     <span>{{ __('ui.register') }}</span>
                 </a>
             @else
-            <div class="user-menu">
-                <button class="user-menu-trigger">
-                    <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="Avatar"
-                        class="user-avatar">
-                    <span class="user-name">{{ Auth::user()->name }}</span>
-                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="user-dropdown">
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-link"
-                        onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                <div class="user-menu">
+                    <button class="user-menu-trigger">
+                        <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="Avatar"
+                            class="user-avatar">
+                        <span class="user-name">{{ Auth::user()->name }}</span>
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
-                        {{ __('ui.exit') }}
-                    </a>
-                    <form action="{{route('logout')}}" method="post" class="d-none" id="form-logout">@csrf</form>
-                    @auth
-                        @if (Auth::user()->is_revisor)
-                            <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
-                                href="{{ route('revisor.index') }}">{{ __('ui.revisorZone') }}
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}
-                                </span>
-                            </a>
-                        @endif
-                    @endauth
+                    </button>
+                    <div class="user-dropdown">
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-link"
+                            onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                            </svg>
+                            {{ __('ui.exit') }}
+                        </a>
+                        <form action="{{ route('logout') }}" method="post" class="d-none" id="form-logout">@csrf</form>
+                        @auth
+                            @if (Auth::user()->is_revisor)
+                                <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
+                                    href="{{ route('revisor.index') }}">{{ __('ui.revisorZone') }}
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}
+                                    </span>
+                                </a>
+                            @endif
+                        @endauth
+                    </div>
                 </div>
-            </div>
             @endauth
             <div class="dropdown">
                 <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center" type="button"
@@ -92,36 +93,47 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                     <li>
-                        <form class="d-inline" action="{{route('setLocale', 'it')}}" method="POST">
+                        <form class="d-inline" action="{{ route('setLocale', 'it') }}" method="POST">
                             @csrf
                             <button type="submit" class="dropdown-item d-flex align-items-center">
-                                <img src="{{ asset('vendor/blade-flags/language-it.svg') }}" width="24" height="24"
-                                    class="me-2" />
+                                <img src="{{ asset('vendor/blade-flags/language-it.svg') }}" width="24"
+                                    height="24" class="me-2" />
                                 IT
                             </button>
                         </form>
                     </li>
                     <li>
-                        <form class="d-inline" action="{{route('setLocale', 'es')}}" method="POST">
+                        <form class="d-inline" action="{{ route('setLocale', 'es') }}" method="POST">
                             @csrf
                             <button type="submit" class="dropdown-item d-flex align-items-center">
-                                <img src="{{ asset('vendor/blade-flags/language-es.svg') }}" width="24" height="24"
-                                    class="me-2" />
+                                <img src="{{ asset('vendor/blade-flags/language-es.svg') }}" width="24"
+                                    height="24" class="me-2" />
                                 ES
                             </button>
                         </form>
                     </li>
                     <li>
-                        <form class="d-inline" action="{{route('setLocale', 'en')}}" method="POST">
+                        <form class="d-inline" action="{{ route('setLocale', 'en') }}" method="POST">
                             @csrf
                             <button type="submit" class="dropdown-item d-flex align-items-center">
-                                <img src="{{ asset('vendor/blade-flags/language-en.svg') }}" width="24" height="24"
-                                    class="me-2" />
+                                <img src="{{ asset('vendor/blade-flags/language-en.svg') }}" width="24"
+                                    height="24" class="me-2" />
                                 EN
                             </button>
                         </form>
                     </li>
                 </ul>
+            </div>
+
+            <div>
+                <a class="nav-link" href="{{ route('articles.favorites') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="me-1" viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                </a>
             </div>
         </div>
 
@@ -136,7 +148,7 @@
     </div>
 
     <!-- Secondary Navigation -->
-    <!-- <div class="navbar-secondary"> 
+    <!-- <div class="navbar-secondary">
         <div class="navbar-containertwo">
             <nav class="secondary-nav">
                 <a href="{{ route('homepage') }}"
@@ -155,7 +167,7 @@
                     <div class="category-mega-menu">
                         <div class="mega-menu-grid">
                             @foreach ($categories as $category)
-                                <a href="{{route('byCategory', ['category' => $category])}}" class="category-item">
+<a href="{{ route('byCategory', ['category' => $category]) }}" class="category-item">
                                     <div class="category-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke="currentColor">
@@ -165,7 +177,7 @@
                                     </div>
                                     <span>{{ $category->name }}</span>
                                 </a>
-                            @endforeach
+@endforeach
                         </div>
                     </div>
                 </div>
