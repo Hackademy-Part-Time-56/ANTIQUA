@@ -1,4 +1,4 @@
-<nav class="navbar-modern">
+<nav class="navbar-modern navbar navbar-expand-lg bg-body-tertiary">
     <div class="navbar-container">
         <!-- Logo Section -->
         <div class="navbar-brand-section">
@@ -21,7 +21,7 @@
                     </svg>
                 </button>
                 <input type="search" name="query" class="form-control custom-search-input search-input"
-                    placeholder="Cerca..." aria-label="Cerca" style="padding-left: 2.5rem;">
+                    placeholder={{ __('ui.searcharticles...') }} aria-label="Cerca" style="padding-left: 2.5rem;">
             </div>
         </form>
 
@@ -40,7 +40,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <span>Accedi</span>
+                    <span>{{ __('ui.login') }}</span>
                 </a>
                 <a href="{{ route('register') }}" class="nav-action-link">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,7 +67,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                         </svg>
-                        Esci
+                        {{ __('ui.exit') }}
                     </a>
                     <form action="{{route('logout')}}" method="post" class="d-none" id="form-logout">@csrf</form>
                     @auth

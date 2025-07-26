@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h1 class="display-4" pt-5>
-                    Registrati
+                    {{ __('ui.register') }}
                 </h1>
             </div>
         </div>
@@ -21,24 +21,24 @@
                 <form action="{{route('register')}}" method="post" class="bg-body-tertiary shadow rounded p-5">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome:</label>
+                        <label for="name" class="form-label">{{ __('ui.name:') }}</label>
                         <input type="text" class="form-control" id="name" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="registerEmail" class="form-label">Indirizzo email</label>
+                        <label for="registerEmail" class="form-label">{{ __('ui.emailaddress') }}</label>
                         <input type="email" class="form-control" id="registerEmail" name="email">
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password:</label>
+                        <label for="password" class="form-label">{{ __('ui.pw') }}</label>
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Conferma la password:</label>
+                        <label for="password_confirmation" class="form-label">{{ __('ui.confirmpw') }}</label>
                         <input type="password" class="form-control" id="password_confirmation"
                             name="password_confirmation">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-dark">Registrati</button>
+                        <button type="submit" class="btn btn-dark">{{ __('ui.register') }}</button>
                     </div>
                 </form>
             </div>

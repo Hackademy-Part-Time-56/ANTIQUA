@@ -1,28 +1,127 @@
 <?php
 return
 [
-    'hello'=>'Hola',
-    'allArticles'=>'Todos los artículos ',
-    'register'=>'Registrarse',
-    'becomeRevisor'=>'Convertirse en revisor',
-    'revisorDashboard'=>'Panel de control del revisor',
-    'acceptArticle'=>'Aceptar artículo',
-    'rejectArticle'=>'Rechazar artículo',
-    'articleAccepted'=>'Artículo aceptado',
-    'articleRejected'=>'Artículo rechazado',
-    'requestRevisor'=>'Solicitar ser revisor',
-    'revisorRequestSent'=>'Solicitud de revisor enviada',
-    'revisorRequestSuccess'=>'¡Felicidades, has solicitado convertirte en revisor!',
-    'revisorRequestFailure'=>'Error al enviar la solicitud de revisor',
-    'makeRevisor'=>'Hacer revisor',
-    'revisorMade'=>'Revisor creado con éxito',
-    'revisorNotFound'=>'Revisor no encontrado',
-    'searchArticles'=>'Buscar artículos',
-    'searchResults'=>'Resultados de la búsqueda',
-    'noArticlesFound'=>'No se encontraron artículos',
-    'languageChanged'=>'Idioma cambiado con éxito',
-    'revisorZone'=>'Zona del revisor', 
+    //welcome.blade.php
+    'startselling'=>'Empezar a vender',
+    'reachmillionsofinterestedbuyers'=>'llegar a millones de compradores interesados',
+    'postanad'=>'Publicar un anuncio',
+    'noarticleshavebeencreatedyet'=>'Aún no se han creado artículos',
+
+    //index.blade.php
+    'reviewerdashboard'=>'Panel de control del revisor',
+    'author:'=>'Autor:',
+    'price:'=>'Precio:',
+    'reject'=>'Rechazar',
+    'accept'=>'Aceptar',
+    'therearenoarticlestoreview'=>'No hay artículos para revisar',
+    'returntohomepage'=>'Volver a la página principal',
+
+     //becomerevisor
+    'useraskedwork'=>'Un usuario ha solicitado colaborar con nosotros.',
+    'theirinformation'=>'Aquí tienes sus datos:',
+    'name:'=>'Nombre:',
+    'email:'=>'Correo electrónico:',
+    'makethemreviewer'=>'Si quieres que sea revisor, haz clic aquí:',
+
+
+     //create-article-form.blade.php
+    'title'=>'Título: ',
+    'description:'=>'Descripcíon:',
+    'selectacategory'=>'Selecciona una categoría:',
+    'create'=>'Crear',
+
+    //navbar
+    'searcharticles...'=>'Buscar artículos...',
     'sell'=>'Vender',
-    'elettronica'=>'Electrónica',
-    'abbigliamento'=>'Ropa',
+    'login'=>'Iniciar sesión',
+    'register'=>'Registrarse',
+    'exit'=>'Salir',
+    'revisorZone'=>'Zona del revisor', 
+
+    //footer da modificare
+    'aboutus'=>'Sobre nosotros',
+    'workwithus'=>'Trabaja con nosotros',
+    'press'=>'Prensa',
+    'contact'=>'Contáctanos',
+    'helpandsupport'=>'Ayuda y soporte',
+    'helpcenter'=>'Centro de ayuda',
+    'howitworks'=>'Cómo funciona',
+    'shipping'=>'Envíos',
+    'payments'=>'Pagos',
+    'security'=>'Seguridad',
+
+    'legalinformation'=>'Información Legal',
+    'termsandcondition'=>'Términos y Condiciones',
+    'privacypolicy'=>'Política de Privacidad',
+    'cookiepolicy'=>'Política de Cookies',
+    'legalnotices'=>'Avisos Legales',
+
+    'explore' => 'Explorar',
+    'popularcategories' => 'Categorías Populares',
+    'liveauctions' => 'Subastas en Curso',
+    'mobileapps' => 'Apps Móviles',
+    'blog' => 'Blog',
+
+    'stayconnected' => 'Mantente Conectado',
+    'subscribetoournewsletter' => '¡Suscríbete a nuestro boletín para descubrir las últimas novedades, subastas y promociones exclusivas!',
+    'youremail'=>'Tu correo electrónico',
+    'subscribe' => 'Suscribirse',
+    'copyright' => 'Antiqua. Todos los derechos reservados.',
+    
+    //categorynavigation
+    'electronics'=>'Electrónicos',
+    'clothing'=>'Ropa',
+    'health_and_beauty'=> 'Salud y belleza',
+    'home_and_garden'=>'Hogar y jardín',
+    'toys'=>'Juguetes',
+    'sports'=>'Deportes',
+    'pets'=>'Mascotas',
+    'books_and_magazines'=>'Libros y revistas',
+    'accessories'=>'Accesorios',
+    'motors'=>'Motores',
+    
+
+
+    //cardblade
+    'new'=>'NUEVO',
+    'seedetails'=>'Ver detalles',
+
+    //register.blade.php
+    'emailaddress'=>'Dirección de correo electrónico',
+    'pw'=>'Contraseña',
+    'confirmpw'=>'Confirmar contraseña',
+
+    //login.blade.php
+
+    //show.blade.php
+    'detailsarticles'=>'Detalles del artículo: ',
+
+    //searched.blade.php
+    'searchresults'=>'Resultados de la búsqueda:',
+    'noarticlescreated'=>'Aún no se han creado artículos.',
+
+    //indexblade-articles
+    'allarticles'=>'Todos los artículos',
+
+    //create.blade.php
+    'postlisting'=>'Publica tu anuncio',
+    'sellyouritems'=>'Vende tus artículos a miles de compradores interesados',
+    'details'=>'Detalles',
+    'img'=>'Imágenes',
+    'confirm'=>'Confirmación',
+    'infoitem'=>'Información del artículo',
+    'alldetails'=>'Incluye todos los detalles de tu artículo para atraer a más compradores',
+    'successfulliating'=>'Consejos para un anuncio exitoso',
+    'high-quality'=>'Usa fotos de alta calidad y bien iluminadas',
+    'cleartitle'=>'Escribe un título claro y descriptivo',
+    'competitiveprice'=>'Establece un precio competitivo',
+    'importantdetails'=>'Incluye todos los detalles importantes en la descripción',
+
+    //bycategory.blade.php
+    'artthiscategory'=>'Artículos en esta categoría',
+    'noartforthiscat'=>'¡Aún no se han creado artículos para esta categoría!',
+    'pubarticle'=>'Publicar un artículo',
+
 ];
+
+ 

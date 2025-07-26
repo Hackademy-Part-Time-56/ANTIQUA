@@ -7,11 +7,11 @@
 </head>
 <body>
     <div>
-        <h1>Un utente ha chiesto di lavorare con noi</h1>
-        <h2>Ecco i suoi dati:</h2>
-        <p>Nome: {{$user->name}}</p>
-        <p>Email: {{$user->email}}</p>
-        <p> Se vuoi renderl* revisore clicca qui:</p>
+        <h1>{{ __('ui.useraskedwork') }}</h1>
+        <h2>{{ __('ui.theirinformation') }}</h2>
+        <p>{{ __('ui.name:') }}{{$user->name}}</p>
+        <p>{{ __('ui.email:') }}{{$user->email}}</p>
+        <p></p>{{ __('ui.makethemreviewer') }}
         <a href="{{route('make.revisor',compact('user'))}}">Rendi Revisor</a>
     </div>
 </body>

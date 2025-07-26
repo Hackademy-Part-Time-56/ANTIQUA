@@ -6,15 +6,15 @@
                 <div class="container">
                     <div class="publish-banner">
                         <div class="banner-content">
-                            <h3 class="banner-title">Inizia a vendere</h3>
-                            <p class="banner-subtitle">Raggiungi milioni di acquirenti interessati</p>
+                            <h3 class="banner-title">{{ __('ui.startselling') }}</h3>
+                            <p class="banner-subtitle">{{ __('ui.reachmillionsofinterestedbuyers') }}</p>
                         </div>
                         <a href="{{ route('create.article') }}" class="publish-button">
                             <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                             </svg>
-                            <span>Pubblica annuncio</span>
+                            <span>{{ __('ui.postanad') }}</span>
                         </a>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             @empty
                 <div class="col-12">
                     <h3 class="text-center">
-                        Non sono ancora stati creati articoli
+                        {{ __('ui.noarticleshavebeencreatedyet') }}
                     </h3>
                 </div>
             @endforelse

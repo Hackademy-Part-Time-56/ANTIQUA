@@ -2,7 +2,7 @@
     <div class="card-image-wrapper">
         <img src="https://picsum.photos/200" class="card-image" alt="Immagine dell'articolo {{$article->title}}">
         @if($article->created_at->diffInDays(now()) < 7)
-            <span class="badge-new">Nuovo</span>
+            <span class="badge-new">{{ __('ui.new') }}</span>
         @endif
     </div>
     
@@ -32,7 +32,7 @@
         
         <div class="card-actions">
             <a href="{{ route('article.show', compact('article')) }}" class="btn-primary">
-                Vedi dettagli
+                {{ __('ui.seedetails') }}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>

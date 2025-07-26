@@ -32,50 +32,50 @@ $payment_methods = [
                     <img src="{{ asset('images/logo-bianco.png') }}" alt="Il Tuo Logo" class="logo-placeholder">
                 </div>
                 <ul class="footer-links">
-                    <li><a href="/chi-siamo">Chi Siamo</a></li>
-                    <li><a href="{{route('become.revisor')}}">Lavora con noi</a></li>
-                    <li><a href="/stampa">Stampa</a></li>
-                    <li><a href="/contatti">Contatti</a></li>
+                    <li><a href="/chi-siamo">{{ __('ui.aboutus') }}</a></li>
+                    <li><a href="{{route('become.revisor')}}">{{ __('ui.workwithus') }}</a></li>
+                    <li><a href="/stampa">{{ __('ui.press') }}</a></li>
+                    <li><a href="/contatti">{{ __('ui.contact') }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-section footer-help">
-                <h3>Aiuto & Supporto</h3>
+                <h3>{{ __('ui.helpandsupport') }}</h3>
                 <ul class="footer-links">
-                    <li><a href="/centro-assistenza">Centro Assistenza</a></li>
-                    <li><a href="/come-funziona">Come Funziona</a></li>
-                    <li><a href="/spedizione">Spedizione</a></li>
-                    <li><a href="/pagamenti">Pagamenti</a></li>
-                    <li><a href="/sicurezza">Sicurezza</a></li>
+                    <li><a href="/centro-assistenza">{{ __('ui.helpcenter') }}</a></li>
+                    <li><a href="/come-funziona">{{ __('ui.howitworks') }}</a></li>
+                    <li><a href="/spedizione">{{ __('ui.shipping') }}</a></li>
+                    <li><a href="/pagamenti">{{ __('ui.payments') }}</a></li>
+                    <li><a href="/sicurezza">{{ __('ui.security') }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-section footer-legal">
-                <h3>Informazioni Legali</h3>
+                <h3>{{ __('ui.legalinformation') }}</h3>
                 <ul class="footer-links">
-                    <li><a href="/termini-condizioni">Termini e Condizioni</a></li>
-                    <li><a href="/informativa-privacy">Informativa sulla Privacy</a></li>
-                    <li><a href="/politica-cookie">Politica sui Cookie</a></li>
-                    <li><a href="/note-legali">Note Legali</a></li>
+                    <li><a href="/termini-condizioni">{{ __('ui.termsandcondition') }}</a></li>
+                    <li><a href="/informativa-privacy">{{ __('ui.privacypolicy') }}</a></li>
+                    <li><a href="/politica-cookie">{{ __('ui.cookiepolicy') }}</a></li>
+                    <li><a href="/note-legali">{{ __('ui.legalnotices') }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-section footer-explore">
-                <h3>Esplora</h3>
+                <h3>{{ __('ui.explore') }}</h3>
                 <ul class="footer-links">
-                    <li><a href="/categorie">Categorie Popolari</a></li>
-                    <li><a href="/aste-in-corso">Aste in Corso</a></li>
-                    <li><a href="/app-mobili">App Mobili</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/categorie">{{ __('ui.popularcategories') }}</a></li>
+                    <li><a href="/aste-in-corso">{{ __('ui.liveauctions') }}</a></li>
+                    <li><a href="/app-mobili">{{ __('ui.mobileapps') }}</a></li>
+                    <li><a href="/blog">{{ __('ui.blog') }}</a></li>
                 </ul>
             </div>
 
             <div class="footer-section footer-newsletter-social">
-                <h3>Rimani Connesso</h3>
-                <p>Iscriviti alla nostra newsletter per scoprire le ultime novità, aste e promozioni esclusive!</p>
+                <h3>{{ __('ui.stayconnected') }}</h3>
+                <p>{{ __('ui.subscribetoournewsletter') }}</p>
                 <form action="/iscriviti-newsletter" method="POST" class="newsletter-form">
                     <input type="email" name="email" placeholder="La tua email" required aria-label="Inserisci la tua email per la newsletter">
-                    <button type="submit">Iscriviti</button>
+                    <button type="submit">{{ __('ui.subscribe') }}</button>
                 </form>
 
                 <div class="social-icons">
@@ -91,7 +91,7 @@ $payment_methods = [
 
     <div class="footer-bottom">
         <div class="footer-container bottom-content">
-            <p class="copyright">&copy; <?php echo getCopyrightYear(); ?> Antiqua. Tutti i diritti riservati.</p>
+            <p class="copyright">&copy; <?php echo getCopyrightYear(); ?> {{ __('ui.copyright') }} </p>
             <div class="payment-methods">
                 <?php foreach ($payment_methods as $method): ?>
                     <img src="<?php echo htmlspecialchars($method['src']); ?>" alt="<?php echo htmlspecialchars($method['alt']); ?>">
