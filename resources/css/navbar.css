@@ -1,15 +1,14 @@
 .navbar-modern {
     background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     position: relative;
     top: 0;
     z-index: 1000;
 }
 
 .navbar-container {
-    max-width: 50%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1rem 1.5rem 1rem;
 }
 .navbar-containertwo {
     max-width: 20%;
@@ -171,6 +170,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .dropdown-arrow {
@@ -212,7 +213,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    padding: 0%.75rem 1rem  ;
     color: #495057;
     text-decoration: none;
     font-size: 0.875rem;
@@ -399,6 +400,7 @@
     .navbar-container {
         max-width: 100%;
         padding: 0 0.5rem;
+        min-height: 150px;
     }
     .navbar-search {
         display: none;
@@ -446,6 +448,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        min-height: 150px;
     }
     .navbar-modern>.navbar-container {
         gap: 1rem;
@@ -453,5 +456,15 @@
     .logo {
         margin-top: 10px;
         height: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-center-search {
+        width: 100%;
+        justify-content: center;
+    }
+    .custom-search-container {
+        width: 100%;
     }
 }

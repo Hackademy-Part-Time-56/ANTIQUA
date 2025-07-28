@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable implements MustVerifyEmail
@@ -23,6 +23,18 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'bio',
+        'specialization',
+        'birthdate',
+        'company_name',
+        'vat_number',
+        'business_address',
+        'business_type',
+        'total_sales',
+        'member_since',
+        'last_active',
+        'phone_number',
+        'location',
     ];
 
     /**
@@ -52,7 +64,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Article::class);
     }
 
-    public function favoriteArticles(): BelongsToMany  
+    public function favoriteArticles(): BelongsToMany
     {
         return $this->belongsToMany(Article::class, 'favorites', 'user_id', 'article_id')->withTimestamps();
     }

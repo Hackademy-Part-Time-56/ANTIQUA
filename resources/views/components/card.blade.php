@@ -6,10 +6,14 @@
 
         <div class="card-content">
             <div class="category-tag">
-                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="category-link"
-                    onclick="event.stopPropagation();">
-                    {{ $article->category->name }}
-                </a>
+                @if($article->category)
+                    <a href="{{ route('byCategory', ['category' => $article->category->id]) }}" class="category-link"
+                        onclick="event.stopPropagation();">
+                        {{ __("ui." . $article->category->name) }}
+                    </a>
+                @else
+                    <span class="category-link text-muted">{{ __('ui.no_category') }}</span>
+                @endif
             </div>
 
             <h4 class="card-title">

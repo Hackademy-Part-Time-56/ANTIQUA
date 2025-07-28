@@ -1,17 +1,10 @@
 <x-layout>
     <div class="article-detail-page">
-        <!-- Breadcrumb -->
-        <div class="container">
-            <nav aria-label="breadcrumb" class="pt-3">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('homepage') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('article.index') }}">Articoli</a></li>
-                    <li class="breadcrumb-item"><a
-                            href="{{ route('byCategory', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">{{ Str::limit($article->title, 30) }}</li>
-                </ol>
-            </nav>
+        <!-- Go Back Button -->
+        <div class="container mt-3 d-flex justify-content-center p-5 d-md-none">
+            <a href="{{ route('article.index') }}" class="btn customcolor customoutline">
+                <i class="fas fa-arrow-left"></i> {{ __('ui.back') }}
+            </a>
         </div>
 
         <!-- Main Content -->

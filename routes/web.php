@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -50,3 +51,7 @@ Route::post('/email/verification-notification', function () {
     request()->user()->sendEmailVerificationNotification();
     return back()->with('message', 'Link di verifica inviato!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+Route::get('/user/{user}', [UserProfileController::class, 'show'])->name('user.profile');
+Route::get('/profile/edit', [UserProfileController::class, 'edit'])->middleware('auth')->name('profile.edit');
+Route::post('/profile/update', [UserProfileController::class, 'update'])->middleware('auth')->name('profile.update');
