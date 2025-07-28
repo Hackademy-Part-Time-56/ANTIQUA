@@ -64,7 +64,8 @@
                                     alt="Venditore" class="seller-avatar">
                                 <div>
                                     <h6 class="mb-0">
-                                        {{ $article->user->name }}
+                                        <a class="text-decoration-none" href="{{ route('user.profile', $article->user) }}">{{ $article->user->name }}</a>
+                                        
                                         @if($article->user->hasVerifiedEmail())
                                             <span class="badge bg-success ms-2" title="Utente verificato">
                                                 <i class="fas fa-check-circle"></i> {{ __('ui.verif') }}
