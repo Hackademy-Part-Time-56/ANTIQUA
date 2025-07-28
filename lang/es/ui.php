@@ -79,6 +79,10 @@ return
     'libri e riviste'=>'Libris y revistas',
     'accessori'=>'Accesorios',
     'motori'=>'Motores',
+    'arte'=>'Arte',
+    'liquori'=>'Licor',
+    'orologi'=>'Relojes',
+    'monete'=>'Monedas',
     
 
 
