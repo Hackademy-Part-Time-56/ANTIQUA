@@ -10,10 +10,10 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     public $categories = [
-        'Arte',
-        'Liquori',
-        'Monete',
-        'Orologi'
+        'arte',
+        'liquori',
+        'monete',
+        'orologi'
     ];
     
     public function run(): void
