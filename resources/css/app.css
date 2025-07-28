@@ -9,10 +9,6 @@
     border-color: #ff6600;
 }
 
-.height-custom {
-    min-height: 60vh;
-}
-
 .logo-3d {
     width: 200px;
     height: auto;
@@ -608,8 +604,4 @@ body {
 
 .info {
     --radio-bg-hue: 200;
-}
-
-.height-custom {
-    height: 60vh;
 }
