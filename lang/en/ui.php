@@ -79,6 +79,10 @@ return
     'libri e riviste'=>'Books and Magazines',
     'accessori'=>'Accessories',
     'motori'=>'Motors',
+    'arte'=>'Art',
+    'liquori'=>'Liquor',
+    'orologi'=>'Watches',
+    'monete'=>'Coins',
 
 
     //cardblade

@@ -35,6 +35,7 @@ return
     'login'=>'Accedi',
     'register'=>'Registrati',
     'exit'=>'Esci',
+    'revisorZone'=>'Zona del Revisore',
 
     //footer da modificare e poi aggiungere le relative chiavi
     'aboutus'=>'Chi siamo',
@@ -78,6 +79,10 @@ return
     'libri e riviste'=>'Libri e riviste',
     'accessori'=>'Accessori',
     'motori'=>'Motori',
+    'arte'=>'Arte',
+    'liquori'=>'Liquori',
+    'orologi'=>'Orologi',
+    'monete'=>'Monete',
 
 
     //cardblade
