@@ -2,7 +2,7 @@
     <div class="article-detail-page">
         <!-- Go Back Button -->
         <div class="container mt-3 d-flex justify-content-center p-5 d-md-none">
-            <a href="{{ route('article.index') }}" class="btn customcolor customoutline">
+            <a href="javascript:history.back()" class="btn customcolor customoutline">
                 <i class="fas fa-arrow-left"></i> {{ __('ui.back') }}
             </a>
         </div>
