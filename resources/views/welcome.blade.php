@@ -3,20 +3,21 @@
     <div class="container-fluid text-center">
 
         <!-- Carousel con articoli in evidenza -->
-        @if($featuredArticles->count() > 0)
+        @if ($featuredArticles->count() > 0)
             <section class="py-4">
                 <div class="container">
                     <h3 class="text-center mb-4">{{ __('ui.featuredarticles') }}</h3>
                     <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            @foreach($featuredArticles as $index => $article)
-                                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="{{ $index }}"
-                                    class="{{ $index === 0 ? 'active' : '' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                            @foreach ($featuredArticles as $index => $article)
+                                <button type="button" data-bs-target="#featuredCarousel"
+                                    data-bs-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"
+                                    aria-label="Slide {{ $index + 1 }}"></button>
                             @endforeach
                         </div>
 
                         <div class="carousel-inner">
-                            @foreach($featuredArticles as $index => $article)
+                            @foreach ($featuredArticles as $index => $article)
                                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                     <div class="position-relative">
                                         <img src="https://picsum.photos/800/400?random={{ $article->id }}"
@@ -26,8 +27,10 @@
                                                 <h4 class="fw-bold mb-2">{{ $article->title }}</h4>
                                                 <p class="mb-3">{{ Str::limit($article->body, 120) }}</p>
                                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                                    <span class="price-tag">€{{ number_format($article->price, 2) }}</span>
-                                                    <span class="category-tag">{{ $article->category->name ?? 'N/A' }}</span>
+                                                    <span
+                                                        class="price-tag">€{{ number_format($article->price, 2) }}</span>
+                                                    <span
+                                                        class="category-tag">{{ $article->category->name ?? 'N/A' }}</span>
                                                 </div>
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <small class="text-light">
@@ -66,14 +69,14 @@
             <div class="marquee_header">{{ __('ui.latestarticles') }}</div>
             <div class="marquee__inner">
                 <div class="marquee__group">
-                    @foreach($articles as $article)
+                    @foreach ($articles as $article)
                         <div style="min-width:250px;">
                             <x-card :article="$article" />
                         </div>
                     @endforeach
                 </div>
                 <div class="marquee__group">
-                    @foreach($articles as $article)
+                    @foreach ($articles as $article)
                         <div style="min-width:250px;">
                             <x-card :article="$article" />
                         </div>
@@ -124,5 +127,49 @@
                 @endforelse
             </div>
         </div>
+
+        <!-- Test Carousel grid system -->
+        <style>
+            .box {
+                background-color: blue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-auto-columns: 200px;
+                grid-auto-rows: 200px;
+                gap: 1em;
+                grid-template-areas:
+                    "box-1 box-1 box-2 box-3"
+                    "box-1 box-1 box-4 box-5";
+            }
+
+            @media (max-width: 56em) {
+                .grid-container {
+                    grid-template-areas:
+                        "box-1 box-1 box-2"
+                        "box-1 box-1 box-3"
+                        "box-4 box-5 box-5";
+                }
+            }
+            @media (max-width: 40em) {
+                .grid-container {
+                    grid-template-areas:
+                        "box-1 box-2"
+                        "box-3 box-4"
+                        "box-5 box-5";
+                }
+            }
+        </style>
+        <div class="container">
+            <div class="grid-container">
+                <div class="box" style="grid-area: box-1"></div>
+                <div class="box" style="grid-area: box-2"></div>
+                <div class="box" style="grid-area: box-3"></div>
+                <div class="box" style="grid-area: box-4"></div>
+                <div class="box" style="grid-area: box-5"></div>
+            </div>
+        </div>
+
     </div>
 </x-layout>
