@@ -495,8 +495,10 @@
                 <!-- Sezione Galleria -->
                 <div class="gallery-section">
                     <div class="gallery-grid">
-                        @foreach($article_to_check->images as $image)
-                            <img src="{{ Storage::url($image->path) }}" class="gallery-image mb-4 mx-4" alt="Immagine articolo">
+                        @foreach ($article_to_check->images as $key => $image)
+                            <div class="col-6 col-md-4 mb-4 text-center">
+                                <img src="{{ $image->getUrl(350, 350) }}" class="img-fluid rounded shadow" alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
+                            </div>
                         @endforeach
                     </div>
                 </div>
