@@ -616,7 +616,7 @@
                 <div class="no-articles-icon">📋</div>
                 <h2 class="no-articles-title">{{ __('ui.therearenoarticlestoreview') }}</h2>
                 <a href="{{ route('homepage') }}" class="return-btn">
-                    🏠 {{ __('ui.returntohomepage') }}
+                    {{ __('ui.returntohomepage') }}
                 </a>
             </div>
         @endif
