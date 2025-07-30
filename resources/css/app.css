@@ -885,3 +885,15 @@ body {
         margin-bottom: 1rem;
     }
 }
+
+
+.gallery-image {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;   /* Limita la larghezza */
+    max-height: 300px;  /* Limita l'altezza */
+    width: 100%;
+    height: auto;
+}

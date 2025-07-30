@@ -2,10 +2,12 @@
     <div class="article-detail-page">
         <!-- Go Back Button -->
         <div class="container mt-3 d-flex justify-content-center p-5 d-md-none">
-            <a href="{{ route('article.index') }}" class="btn customcolor customoutline">
+            <a href="javascript:history.back()" class="btn customcolor customoutline">
                 <i class="fas fa-arrow-left"></i> {{ __('ui.back') }}
             </a>
+
         </div>
+
 
         <!-- Main Content -->
         <div class="container py-4">
@@ -13,32 +15,30 @@
                 <!-- Gallery Section -->
                 <div class="col-12 col-lg-7 mb-4">
                     <div class="product-gallery">
-                        <div id="productCarousel" class="carousel slide" data-bs-ride="false">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://picsum.photos/600/500" class="d-block w-100 main-image"
-                                        alt="{{ $article->title }}">
+                        @if($article->images->count() > 0)
+                            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    @foreach($article->images as $key => $image)
+                                        <div class="carousel-item @if($loop->first) active @endif">
+                                            <img src="{{ Storage::url($image->path) }}" class="d-block w-100 rounded shadow main-image"
+                                                alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                                        </div>
+                                    @endforeach
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="https://picsum.photos/601/500" class="d-block w-100 main-image"
-                                        alt="{{ $article->title }}">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://picsum.photos/602/500" class="d-block w-100 main-image"
-                                        alt="{{ $article->title }}">
-                                </div>
+                                @if($article->images->count() > 1)
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                @endif
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                        @else
+                            <img src="https://picsum.photos/600/500" class="d-block w-100 rounded shadow main-image" alt="Nessuna foto inserita dall'utente">
+                        @endif
                     </div>
                 </div>
 
@@ -64,8 +64,9 @@
                                     alt="Venditore" class="seller-avatar">
                                 <div>
                                     <h6 class="mb-0">
-                                        <a class="text-decoration-none" href="{{ route('user.profile', $article->user) }}">{{ $article->user->name }}</a>
-                                        
+                                        <a class="text-decoration-none"
+                                            href="{{ route('user.profile', $article->user) }}">{{ $article->user->name }}</a>
+
                                         @if($article->user->hasVerifiedEmail())
                                             <span class="badge bg-success ms-2" title="Utente verificato">
                                                 <i class="fas fa-check-circle"></i> {{ __('ui.verif') }}
@@ -116,7 +117,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <p><strong>{{ __('ui.category') }}</strong> {{ $article->category->name }}</p>
-                                <p><strong>{{ __('ui.published') }}</strong> {{ $article->created_at->format('d/m/Y') }}</p>
+                                <p><strong>{{ __('ui.published') }}</strong> {{ $article->created_at->format('d/m/Y') }}
+                                </p>
                             </div>
                             <div class="col-md-6">
                                 <!-- <p><strong>ID Articolo:</strong> #{{ $article->id }}</p> -->

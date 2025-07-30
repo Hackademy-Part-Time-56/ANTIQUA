@@ -129,12 +129,12 @@
                                 </defs>
                             </g>
                         </svg>
-                        {{ __('ui.profile') }}
+                        {{ __('ui.userprofile') }}
                     </a>
                 </div>
             </div>
             @endauth
-            <div class="dropdown">
+            <div class="dropdown mt-1">
                 <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center" type="button"
                     id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="{{ asset('vendor/blade-flags/language-' . app()->getLocale() . '.svg') }}" width="24"
@@ -176,9 +176,9 @@
             </div>
 
             <div>
-                <a class="nav-link" href="{{ route('articles.favorites') }}">
+                <a class="nav-link btn-favorite mt-1" href="{{ route('articles.favorites') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                         viewBox="0 0 24 24">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
@@ -196,41 +196,5 @@
             </svg>
         </button>
     </div>
-
-    <!-- Secondary Navigation -->
-    <!-- <div class="navbar-secondary">
-        <div class="navbar-containertwo">
-            <nav class="secondary-nav">
-                <a href="{{ route('homepage') }}"
-                    class="secondary-link {{ request()->routeIs('homepage') ? 'active' : '' }}">Home</a>
-                <a href="{{ route('article.index') }}"
-                    class="secondary-link {{ request()->routeIs('article.index') ? 'active' : '' }}">Tutti gli
-                    articoli</a>
-
-                <div class="category-dropdown">
-                    <button class="secondary-link category-trigger">
-                        Categorie
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="category-mega-menu">
-                        <div class="mega-menu-grid">
-                            @foreach ($categories as $category)
-<a href="{{ route('byCategory', ['category' => $category]) }}" class="category-item">
-                                    <div class="category-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                                        </svg>
-                                    </div>
-                                    <span>{{ $category->name }}</span>
-                                </a>
-@endforeach
-                        </div>
-                    </div>
-                </div>
-                -->
 
 </nav>

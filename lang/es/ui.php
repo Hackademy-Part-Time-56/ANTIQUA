@@ -6,6 +6,10 @@ return
     'reachmillionsofinterestedbuyers'=>'llegar a millones de compradores interesados',
     'postanad'=>'Publicar un anuncio',
     'noarticleshavebeencreatedyet'=>'Aún no se han creado artículos',
+    'specit'=>'Artículos especiales',
+    'selctbyex'=>'Seleccionados por los mejores expertos',
+    'populararticles'=>'Artículos populares',
+    'latestarticles'=>'Últimos artículos',
 
     //index.blade.php
     'reviewerdashboard'=>'Panel de control del revisor',
@@ -36,7 +40,8 @@ return
     'login'=>'Iniciar sesión',
     'register'=>'Registrarse',
     'exit'=>'Salir',
-    'revisorZone'=>'Zona del revisor', 
+    'revisorZone'=>'Zona del revisor',
+    'userprofile'=>'Perfil de usuario',
 
     //footer da modificare
     'aboutus'=>'Sobre nosotros',
@@ -112,6 +117,35 @@ return
     'insuredship'=>'Envío asegurado',
     'category'=>'Categoría: ',
     'published'=>'Publicado el: ',
+    'offreviewer'=>'Revisor oficial',
+    'editprof'=>'Editar perfil',
+    'PI'=>'Información profesional',
+    'contactdetloc'=>'Datos de contacto y Ubicación',
+    'stat'=>'Estadísticas',
+    'totalsale'=>'Ventas totales',
+    'membersince'=>'Miembro desde: ',
+    'lastactivty'=>'Última actividad',
+
+
+    //edit.blade.php
+    'personalinf'=>'Información personal',
+    'bio'=>'Biografía:',
+    'spec'=>'Especialización:',
+    //'es'=>'Por ejemplo: muebles antiguos, cerámica, arte...',
+    'phonenum'=>'Número de teléfono:',
+    'loc'=>'Ubicación:',
+    'companyinfo'=>'Información de la empresa',
+    'companyname'=>'Nombre de la empresa:',
+    'businesstype'=>'Tipo de negocio:',
+    'selectBT'=>'Seleccione el tipo de empresa',
+    'I'=>'Individual',
+    'C'=>'Empresa',
+    'P'=>'Profesional',
+    'iva'=>'Número de IVA:',
+    'taxadd'=>'Dirección fiscal:',
+    'savech'=>'Guardar cambios',
+    'provcity'=>'Ciudad,provincia',
+    'snpc'=>'calle,número,códigopostal,ciudad',
 
     //searched.blade.php
     'searchresults'=>'Resultados de la búsqueda:',

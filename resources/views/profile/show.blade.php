@@ -194,10 +194,32 @@
 
         .profile-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "bio bio bio"
+                "prof stats contact";
             gap: 2rem;
             margin-bottom: 2rem;
         }
+
+        .bio-card {
+            grid-area: bio;
+        }
+
+        .stats-card {
+            grid-area: stats;
+        }
+
+        .info-card:nth-of-type(2) {
+            grid-area: prof;
+        }
+
+        /* Informazioni Professionali */
+        .info-card:nth-of-type(3) {
+            grid-area: contact;
+        }
+
+        /* Contatti & Ubicazione */
 
         .info-card {
             background: var(--glass-bg);
@@ -325,61 +347,65 @@
             }
 
             .profile-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 gap: 1rem;
             }
 
+            .bio-card,
+            .stats-card,
             .info-card {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Animazioni */
-        .profile-header {
-            animation: slideInDown 0.8s ease-out;
-        }
-
-        .info-card {
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .info-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .info-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .info-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .info-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
+                width: 100%;
+                grid-area: unset;
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+            /* Animazioni */
+            .profile-header {
+                animation: slideInDown 0.8s ease-out;
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .info-card {
+                animation: fadeInUp 0.6s ease-out backwards;
+            }
+
+            .info-card:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+
+            .info-card:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .info-card:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+
+            .info-card:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+
+            @keyframes slideInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-30px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
         }
     </style>
@@ -397,6 +423,12 @@
     </div>
 
     <div class="profile-container pt-5">
+        <!-- Go Back Button -->
+        <div class="container mt-3 d-flex justify-content-center p-5 d-md-none">
+            <a href="javascript:history.back()" class="btn customcolor customoutline">
+                <i class="fas fa-arrow-left"></i> {{ __('ui.back') }}
+            </a>
+        </div>
         <!-- Header del Profilo -->
         <div class="profile-header">
             <div class="profile-avatar">
@@ -422,7 +454,7 @@
                             <path d="M12 9h.01" />
                         </svg>
                     </span>
-                    Revisore Ufficiale
+                    {{ __('ui.offreviewer') }}
                 </div>
             @endif
 
@@ -440,7 +472,7 @@
                                     <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                                 </svg>
                             </span>
-                            Modifica Profilo
+                            {{ __('ui.editprof') }}
                         </a>
                     </div>
                 @endif
@@ -449,6 +481,26 @@
 
         <!-- Griglia delle Informazioni -->
         <div class="profile-grid">
+            <!-- Bio -->
+            @if($user->bio)
+                <div class="info-card bio-card">
+                    <div class="card-title">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-ampersand">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M19 20l-10.403 -10.972a2.948 2.948 0 0 1 0 -4.165a2.94 2.94 0 0 1 4.161 0a2.948 2.948 0 0 1 0 4.165l-4.68 4.687a3.685 3.685 0 0 0 0 5.207a3.675 3.675 0 0 0 5.2 0l5.722 -5.922" />
+                            </svg>
+                        </div>
+                        Biografia
+                    </div>
+                    <p style="color: var(--text-primary); line-height: 1.6; margin: 0;">
+                        {{ $user->bio }}
+                    </p>
+                </div>
+            @endif
             <!-- Informazioni Professional i-->
             <div class="info-card">
                 <div class="card-title">
@@ -467,7 +519,7 @@
                             <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
                         </svg>
                     </div>
-                    Informazioni Professionali
+                    {{ __('ui.PI') }}
                 </div>
 
                 @if($user->is_revisor && $user->specialization)
@@ -516,7 +568,7 @@
                             <path d="M4 16h3" />
                         </svg>
                     </div>
-                    Contatti & Ubicazione
+                    {{ __('ui.contactdetloc') }}
                 </div>
 
                 @if($user->phone_number)
@@ -557,50 +609,28 @@
                             <path d="M15.088 13.328l2.837 -4.586" />
                         </svg>
                     </div>
-                    Statistiche
+                    {{ __('ui.stat') }}
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">Vendite Totali</span>
+                    <span class="info-label">{{ __('ui.totalsale') }}</span>
                     <span class="info-value">{{ $user->total_sales ?? '0' }}</span>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">Iscritto dal</span>
+                    <span class="info-label">{{ __('ui.membersince') }}</span>
                     <span class="info-value">
                         {{ $user->member_since ? \Carbon\Carbon::parse($user->member_since)->format('d/m/Y') : 'Non disponibile' }}
                     </span>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">Ultima Attività</span>
+                    <span class="info-label">{{ __('ui.lastactivty') }}</span>
                     <span class="info-value">
                         {{ $user->last_active ? \Carbon\Carbon::parse($user->last_active)->diffForHumans() : 'Non disponibile' }}
                     </span>
                 </div>
             </div>
-
-            <!-- Bio -->
-            @if($user->bio)
-                <div class="info-card">
-                    <div class="card-title">
-                        <div class="card-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="icon icon-tabler icons-tabler-outline icon-tabler-ampersand">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path
-                                    d="M19 20l-10.403 -10.972a2.948 2.948 0 0 1 0 -4.165a2.94 2.94 0 0 1 4.161 0a2.948 2.948 0 0 1 0 4.165l-4.68 4.687a3.685 3.685 0 0 0 0 5.207a3.675 3.675 0 0 0 5.2 0l5.722 -5.922" />
-                            </svg>
-                        </div>
-                        Biografia
-                    </div>
-                    <p style="color: var(--text-primary); line-height: 1.6; margin: 0;">
-                        {{ $user->bio }}
-                    </p>
-                </div>
-            @endif
         </div>
     </div>
 </x-layout>

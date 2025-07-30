@@ -6,6 +6,10 @@ return
     'reachmillionsofinterestedbuyers'=>'Reach millions of interested buyers',
     'postanad'=>'Post an ad',
     'noarticleshavebeencreatedyet'=>'No articles have been created yet',
+    'specit'=>'Special items',
+    'selctbyex'=>'Selected by top experts',
+    'populararticles'=>'Popular articles',
+    'latestarticles'=>'Latest articles',
 
     //index.blade.php
     'reviewerdashboard'=>'Reviewer dashboard',
@@ -37,6 +41,7 @@ return
     'register'=>'Register',
     'exit'=>'Exit',
     'revisorZone'=>'Revisor Zone',
+    'userprofile'=>'User profile',
 
     //footer da modificare e poi aggiungere le relative chiavi
     'aboutus'=>'About us',
@@ -111,6 +116,35 @@ return
     'insuredship'=>'Insured shipping',
     'category'=>'Category: ',
     'published'=>'Published on: ',
+    'offreviewer'=>'Official reviewer',
+    'editprof'=>'Edit profile',
+    'PI'=>'Professional information',
+    'contactdetloc'=>'Contact Details & Location',
+    'stat'=>'Statistics',
+    'totalsale'=>'Total sales',
+    'membersince'=>'Member since: ',
+    'lastactivty'=>'Last activity',
+
+
+
+    //edit.blade.php
+    'personalinf'=>'Personal information',
+    'bio'=>'Biography:',
+    'spec'=>'Specialization:',
+    'phonenum'=>'Phone number:',
+    'loc'=>'Location:',
+    'companyinfo'=>'Company information',
+    'companyname'=>'Company name:',
+    'businesstype'=>'Business type:',
+    'selectBT'=>'Select business type',
+    'I'=>'Individual',
+    'C'=>'Company',
+    'P'=>'Professional',
+    'iva'=>'Number IVA:',
+    'taxadd'=>'Tax address:',
+    'savech'=>'Save changes',
+    'provcity'=>'City,province',
+    'snpc'=>'street,number,postcode,city',
 
     //searched.blade.php
     'searchresults'=>'Search results for:',
