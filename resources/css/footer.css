@@ -114,16 +114,7 @@ h3{
     color: white;
 }
 
-.newsletter-form button {
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
+
 
 .newsletter-form button:hover {
     background-color: white;
@@ -202,6 +193,14 @@ h3{
 
     .footer-section {
         min-width: 180px;
+    }
+
+    .buttonProva {
+        background-color: transparent;
+        border: 1px solid #000; 
+        color: white; 
+        padding: 10px 20px;
+        cursor: pointer;
     }
 
     .footer-newsletter-social {

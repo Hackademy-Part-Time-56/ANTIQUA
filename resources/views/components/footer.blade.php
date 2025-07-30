@@ -75,8 +75,8 @@ $payment_methods = [
                 <p>{{ __('ui.subscribetoournewsletter') }}</p>
                 <form action="/iscriviti-newsletter" method="POST" class="newsletter-form">
                     <input type="email" name="email" placeholder="La tua email" required aria-label="Inserisci la tua email per la newsletter">
-                    <button type="submit">{{ __('ui.subscribe') }}</button>
-                </form>
+                    </form>
+                <button class="buttonProva footer-section footer-newsletter-social text-white bg-color-transparent"  type="submit">{{ __('ui.subscribe') }}</button>
 
                 <div class="social-icons">
                     <?php foreach ($social_links as $social): ?>
