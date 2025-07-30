@@ -129,7 +129,7 @@
                                 </defs>
                             </g>
                         </svg>
-                        {{ __('ui.profile') }}
+                        {{ __('ui.userprofile') }}
                     </a>
                 </div>
             </div>

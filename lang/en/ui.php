@@ -6,6 +6,10 @@ return
     'reachmillionsofinterestedbuyers'=>'Reach millions of interested buyers',
     'postanad'=>'Post an ad',
     'noarticleshavebeencreatedyet'=>'No articles have been created yet',
+    'specit'=>'Special items',
+    'selctbyex'=>'Selected by top experts',
+    'populararticles'=>'Popular articles',
+    'latestarticles'=>'Latest articles',
 
     //index.blade.php
     'reviewerdashboard'=>'Reviewer dashboard',
@@ -37,6 +41,7 @@ return
     'register'=>'Register',
     'exit'=>'Exit',
     'revisorZone'=>'Revisor Zone',
+    'userprofile'=>'User profile',
 
     //footer da modificare e poi aggiungere le relative chiavi
     'aboutus'=>'About us',

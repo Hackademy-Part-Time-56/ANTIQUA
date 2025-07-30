@@ -6,6 +6,10 @@ return
     'reachmillionsofinterestedbuyers'=>'llegar a millones de compradores interesados',
     'postanad'=>'Publicar un anuncio',
     'noarticleshavebeencreatedyet'=>'Aún no se han creado artículos',
+    'specit'=>'Artículos especiales',
+    'selctbyex'=>'Seleccionados por los mejores expertos',
+    'populararticles'=>'Artículos populares',
+    'latestarticles'=>'Últimos artículos',
 
     //index.blade.php
     'reviewerdashboard'=>'Panel de control del revisor',
@@ -36,7 +40,8 @@ return
     'login'=>'Iniciar sesión',
     'register'=>'Registrarse',
     'exit'=>'Salir',
-    'revisorZone'=>'Zona del revisor', 
+    'revisorZone'=>'Zona del revisor',
+    'userprofile'=>'Perfil de usuario',
 
     //footer da modificare
     'aboutus'=>'Sobre nosotros',
