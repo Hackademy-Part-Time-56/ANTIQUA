@@ -116,6 +116,7 @@
     font-weight: 600;
     line-height: 1.4;
     min-height: 52px;
+    min-width: 272px;
 }
 
 .title-link {
