@@ -454,7 +454,7 @@
                             <path d="M12 9h.01" />
                         </svg>
                     </span>
-                    Revisore Ufficiale
+                    {{ __('ui.offreviewer') }}
                 </div>
             @endif
 
@@ -472,7 +472,7 @@
                                     <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                                 </svg>
                             </span>
-                            Modifica Profilo
+                            {{ __('ui.editprof') }}
                         </a>
                     </div>
                 @endif
@@ -519,7 +519,7 @@
                             <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
                         </svg>
                     </div>
-                    Informazioni Professionali
+                    {{ __('ui.PI') }}
                 </div>
 
                 @if($user->is_revisor && $user->specialization)
@@ -568,7 +568,7 @@
                             <path d="M4 16h3" />
                         </svg>
                     </div>
-                    Contatti & Ubicazione
+                    {{ __('ui.contactdetloc') }}
                 </div>
 
                 @if($user->phone_number)
@@ -609,23 +609,23 @@
                             <path d="M15.088 13.328l2.837 -4.586" />
                         </svg>
                     </div>
-                    Statistiche
+                    {{ __('ui.stat') }}
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">Vendite Totali</span>
+                    <span class="info-label">{{ __('ui.totalsale') }}</span>
                     <span class="info-value">{{ $user->total_sales ?? '0' }}</span>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">Iscritto dal</span>
+                    <span class="info-label">{{ __('ui.membersince') }}</span>
                     <span class="info-value">
                         {{ $user->member_since ? \Carbon\Carbon::parse($user->member_since)->format('d/m/Y') : 'Non disponibile' }}
                     </span>
                 </div>
 
                 <div class="info-item">
-                    <span class="info-label">Ultima Attività</span>
+                    <span class="info-label">{{ __('ui.lastactivty') }}</span>
                     <span class="info-value">
                         {{ $user->last_active ? \Carbon\Carbon::parse($user->last_active)->diffForHumans() : 'Non disponibile' }}
                     </span>

@@ -96,35 +96,35 @@
                             <div class="grid-container">
                                 <div class="box special" style="grid-area: box-1; flex-direction: column;">
                                     <span style="font-size:2.2rem; color:#ff6600; font-weight:800; line-height:1.1;">
-                                        Oggetti speciali
+                                        {{ __('ui.specit') }}
                                     </span>
                                     <span style="font-size:1.1rem; color:#888; font-weight:500; margin-top:0.5em;">
-                                        Selezionati dai migliori esperti
+                                        {{ __('ui.selctbyex') }}
                                     </span>
                                 </div>
                                 <a href="{{ route('byCategory', ['category' => 'arte']) }}" class="box"
                                     style="grid-area: box-2; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/arte.webp') }}" alt="Arte"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Arte</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.arte') }}</span>
                                 </a>
                                 <a href="{{ route('byCategory', ['category' => '18']) }}" class="box"
                                     style="grid-area: box-3; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/orologi.jpg') }}" alt="Orologi"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Orologi</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.orologi') }}</span>
                                 </a>
                                 <a href="{{ route('byCategory', ['category' => 'monete']) }}" class="box"
                                     style="grid-area: box-4; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/monete.jpg') }}" alt="Monete"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Monete</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.monete') }}</span>
                                 </a>
                                 <a href="{{ route('byCategory', ['category' => 'liquori']) }}" class="box"
                                     style="grid-area: box-5; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/liquori.jpg') }}" alt="Liquori"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Liquori</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.liquori') }}</span>
                                 </a>
                             </div>
                         </div>
