@@ -27,7 +27,7 @@
         <div class="col-md-6">
             <label for="category" class="form-label fw-semibold">Categoria</label>
             <select id="category" wire:model="category" class="form-select form-select-lg">
-                <option value="" disabled selected>Seleziona una categoria</option>
+                <option value="" selected>Seleziona una categoria</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
