@@ -113,6 +113,36 @@ return
     'insuredship'=>'Spedizione assicurata',
     'category'=>'Categoria: ',
     'published'=>'Pubblicato il: ',
+    'offreviewer'=>'Revisore ufficiale',                              
+    'editprof'=>'Modifica profilo', //ugualeperedit
+    'PI'=>'Informazioni professionali',
+    'contactdetloc'=>'Contatti & Ubicazione',
+    'stat'=>'Statistiche',
+    'totalsale'=>'Vendite totali',
+    'membersince'=>'Iscritto dal: ',
+    'lastactivty'=>'Ultima attività',
+
+    //edit.blade.php
+    'personalinf'=>'Informazioni personali',
+    'bio'=>'Biografia:',
+    'spec'=>'Specializzazione:',
+    //'es'=>'es: Mobili di epoca, Ceramiche, Arte...',
+    'phonenum'=>'Telefono:',
+    'loc'=>'Località:',
+    'companyinfo'=>'Informazioni aziendali',
+    'companyname'=>'Nome azienda:',
+    'businesstype'=>'Tipo attività:',
+    'selectBT'=>'Seleziona tipo attività',
+    'I'=>'Individuale',
+    'C'=>'Azienda',
+    'P'=>'Professionista',
+    'iva'=>'Partita IVA:',
+    'taxadd'=>'Indirizzo fiscale:',
+    'savech'=>'Salva modifiche',
+    'provcity'=>'Città,provincia',
+    'snpc'=>'via,numero,CAP,città',
+
+    
 
     //searched.blade.php
     'searchresults'=>'Risultati della ricerca per:',

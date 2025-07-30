@@ -386,7 +386,7 @@
                             d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
                         <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                     </svg></div>
-                Modifica Profilo
+                {{ __('ui.editprof') }}
             </h1>
         </div>
 
@@ -400,12 +400,12 @@
                     <div class="form-section">
                         <div class="section-title">
                             <div class="section-icon">👤</div>
-                            Informazioni Personali
+                            {{ __('ui.personalinf') }}
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name" class="form-label">Nome</label>
+                                <label for="name" class="form-label">{{ __('ui.name:') }}</label>
                                 <input type="text" name="name" id="name" class="form-input"
                                     value="{{ old('name', $user->name) }}" required
                                     placeholder="Inserisci il tuo nome completo">
@@ -414,7 +414,7 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="bio" class="form-label">Biografia</label>
+                                <label for="bio" class="form-label">{{ __('ui.bio') }}</label>
                                 <textarea name="bio" id="bio" class="form-textarea"
                                     placeholder="Racconta qualcosa di te, della tua esperienza nel settore antiquario...">{{ old('bio', $user->bio) }}</textarea>
                             </div>
@@ -422,14 +422,14 @@
 
                         <div class="form-row two-cols">
                             <div class="form-group">
-                                <label for="specialization" class="form-label">Specializzazione</label>
+                                <label for="specialization" class="form-label">{{ __('ui.spec') }}</label>
                                 <input type="text" name="specialization" id="specialization" class="form-input"
                                     value="{{ old('specialization', $user->specialization) }}"
                                     placeholder="es. Mobili d'epoca, Ceramiche, Arte...">
                             </div>
 
                             <div class="form-group">
-                                <label for="phone_number" class="form-label">Telefono</label>
+                                <label for="phone_number" class="form-label">{{ __('ui.phonenum') }}</label>
                                 <input type="text" name="phone_number" id="phone_number" class="form-input"
                                     value="{{ old('phone_number', $user->phone_number) }}"
                                     placeholder="+39 123 456 7890">
@@ -438,9 +438,9 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="location" class="form-label">Località</label>
+                                <label for="location" class="form-label">{{ __('ui.loc') }}</label>
                                 <input type="text" name="location" id="location" class="form-input"
-                                    value="{{ old('location', $user->location) }}" placeholder="Città, Provincia">
+                                    value="{{ old('location', $user->location) }}" placeholder={{ __('ui.provcity') }}>
                             </div>
                         </div>
                     </div>
@@ -462,24 +462,24 @@
                                     <path d="M14 16l1 0" />
                                     <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
                                 </svg></div>
-                            Informazioni Aziendali
+                            {{ __('ui.companyinfo') }}
                         </div>
 
                         <div class="form-row two-cols">
                             <div class="form-group">
-                                <label for="company_name" class="form-label">Nome Azienda</label>
+                                <label for="company_name" class="form-label">{{ __('ui.companyname') }}</label>
                                 <input type="text" name="company_name" id="company_name" class="form-input"
                                     value="{{ old('company_name', $user->company_name) }}"
                                     placeholder="Nome della tua azienda">
                             </div>
 
                             <div class="form-group">
-                                <label for="business_type" class="form-label">Tipo Attività</label>
+                                <label for="business_type" class="form-label">{{ __('ui.businesstype') }}</label>
                                 <select name="business_type" id="business_type" class="form-select">
-                                    <option value="">Seleziona tipo attività</option>
-                                    <option value="individual" {{ old('business_type', $user->business_type) == 'individual' ? 'selected' : '' }}>Individuale</option>
-                                    <option value="company" {{ old('business_type', $user->business_type) == 'company' ? 'selected' : '' }}>Azienda</option>
-                                    <option value="professional" {{ old('business_type', $user->business_type) == 'professional' ? 'selected' : '' }}>Professionista
+                                    <option value="">{{ __('ui.selectBT') }}</option>
+                                    <option value="individual" {{ old('business_type', $user->business_type) == 'individual' ? 'selected' : '' }}>{{ __('ui.I') }}</option>
+                                    <option value="company" {{ old('business_type', $user->business_type) == 'company' ? 'selected' : '' }}>{{ __('ui.C') }}</option>
+                                    <option value="professional" {{ old('business_type', $user->business_type) == 'professional' ? 'selected' : '' }}>{{ __('ui.P') }}
                                     </option>
                                 </select>
                             </div>
@@ -487,7 +487,7 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="vat_number" class="form-label">Partita IVA</label>
+                                <label for="vat_number" class="form-label">{{ __('ui.iva') }}</label>
                                 <input type="text" name="vat_number" id="vat_number" class="form-input"
                                     value="{{ old('vat_number', $user->vat_number) }}" placeholder="IT12345678901">
                             </div>
@@ -495,10 +495,10 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="business_address" class="form-label">Indirizzo Fiscale</label>
+                                <label for="business_address" class="form-label">{{ __('ui.taxadd') }}</label>
                                 <input type="text" name="business_address" id="business_address" class="form-input"
                                     value="{{ old('business_address', $user->business_address) }}"
-                                    placeholder="Via, Numero, CAP, Città">
+                                    placeholder={{ __('ui.snpc') }}>
                             </div>
                         </div>
                     </div>
@@ -514,7 +514,7 @@
                             <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
                             <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
                             <path d="M16 5l3 3" />
-                        </svg> Salva Modifiche
+                        </svg> {{ __('ui.savech') }}
                     </button>
                 </div>
             </form>

@@ -111,6 +111,35 @@ return
     'insuredship'=>'Insured shipping',
     'category'=>'Category: ',
     'published'=>'Published on: ',
+    'offreviewer'=>'Official reviewer',
+    'editprof'=>'Edit profile',
+    'PI'=>'Professional information',
+    'contactdetloc'=>'Contact Details & Location',
+    'stat'=>'Statistics',
+    'totalsale'=>'Total sales',
+    'membersince'=>'Member since: ',
+    'lastactivty'=>'Last activity',
+
+
+
+    //edit.blade.php
+    'personalinf'=>'Personal information',
+    'bio'=>'Biography:',
+    'spec'=>'Specialization:',
+    'phonenum'=>'Phone number:',
+    'loc'=>'Location:',
+    'companyinfo'=>'Company information',
+    'companyname'=>'Company name:',
+    'businesstype'=>'Business type:',
+    'selectBT'=>'Select business type',
+    'I'=>'Individual',
+    'C'=>'Company',
+    'P'=>'Professional',
+    'iva'=>'Number IVA:',
+    'taxadd'=>'Tax address:',
+    'savech'=>'Save changes',
+    'provcity'=>'City,province',
+    'snpc'=>'street,number,postcode,city',
 
     //searched.blade.php
     'searchresults'=>'Search results for:',
