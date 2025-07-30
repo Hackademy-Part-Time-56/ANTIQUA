@@ -494,10 +494,10 @@
             <div class="review-content">
                 <!-- Sezione Galleria -->
                 <div class="gallery-section">
-                    <div class="col-12 ">
-                        @for ($i = 0; $i < 6; $i++)
-                            <img src="https://picsum.photos/300" class="gallery-image mb-4 mx-4" alt="Immagine articolo {{ $i + 1 }}">
-                        @endfor
+                    <div class="gallery-grid">
+                        @foreach($article_to_check->images as $image)
+                            <img src="{{ Storage::url($image->path) }}" class="gallery-image mb-4 mx-4" alt="Immagine articolo">
+                        @endforeach
                     </div>
                 </div>
 

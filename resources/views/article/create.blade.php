@@ -27,27 +27,6 @@
             </div>
         </div>
 
-        <!-- Progress Steps -->
-        <div class="progress-section">
-            <div class="container">
-                <div class="progress-steps">
-                    <div class="step active">
-                        <div class="step-number">1</div>
-                        <div class="step-label">{{ __('ui.details') }}</div>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-label">{{ __('ui.img') }}</div>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-label">{{ __('ui.confirm') }}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Form Section -->
         <div class="form-section">

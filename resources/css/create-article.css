@@ -46,65 +46,6 @@
     margin: 0;
 }
 
-/* Progress Section */
-.progress-section {
-    background-color: white;
-    padding: 2rem 0;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.progress-steps {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.step-number {
-    width: 40px;
-    height: 40px;
-    background-color: #f8f9fa;
-    border: 2px solid #dee2e6;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    color: #6c757d;
-    transition: all 0.3s ease;
-}
-
-.step.active .step-number {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-    color: white;
-}
-
-.step-label {
-    font-size: 0.875rem;
-    color: #6c757d;
-    font-weight: 500;
-}
-
-.step.active .step-label {
-    color: #0d6efd;
-}
-
-.step-line {
-    flex: 1;
-    height: 2px;
-    background-color: #dee2e6;
-    margin: 0 1rem;
-}
-
 /* Form Section */
 .form-section {
     padding: 3rem 0;
@@ -179,6 +120,54 @@
     height: 16px;
     color: #28a745;
     flex-shrink: 0;
+}
+
+.create-article-card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.img-preview-card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f8fafc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.img-preview {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    transition: box-shadow 0.2s;
+}
+
+.img-preview-card:hover .img-preview {
+    box-shadow: 0 4px 16px rgba(255,102,0,0.18);
+}
+
+.btn-danger.btn-sm {
+    font-size: 1rem;
+    padding: 0.25rem 0.6rem;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff6600 0%, #ffb347 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ff6600 0%, #ff6600 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(255,102,0,0.18);
 }
 
 /* Responsive */
