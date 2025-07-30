@@ -197,40 +197,4 @@
         </button>
     </div>
 
-    <!-- Secondary Navigation -->
-    <!-- <div class="navbar-secondary">
-        <div class="navbar-containertwo">
-            <nav class="secondary-nav">
-                <a href="{{ route('homepage') }}"
-                    class="secondary-link {{ request()->routeIs('homepage') ? 'active' : '' }}">Home</a>
-                <a href="{{ route('article.index') }}"
-                    class="secondary-link {{ request()->routeIs('article.index') ? 'active' : '' }}">Tutti gli
-                    articoli</a>
-
-                <div class="category-dropdown">
-                    <button class="secondary-link category-trigger">
-                        Categorie
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="category-mega-menu">
-                        <div class="mega-menu-grid">
-                            @foreach ($categories as $category)
-<a href="{{ route('byCategory', ['category' => $category]) }}" class="category-item">
-                                    <div class="category-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                                        </svg>
-                                    </div>
-                                    <span>{{ $category->name }}</span>
-                                </a>
-@endforeach
-                        </div>
-                    </div>
-                </div>
-                -->
-
 </nav>

@@ -1,5 +1,5 @@
 <div>
-    <button wire:click="toggleFavorite" class="btn-favorite" style="position:absolute;top:10px;right:10px;" title="Aggiungi ai preferiti" onclick="this.style.animation='heartBeat 0.5s ease';">
+    <button wire:click="toggleFavorite" class="btn-favorite" style="position:absolute; top:10px; right:20px" title="Aggiungi ai preferiti" onclick="this.style.animation='heartBeat 0.5s ease';">
         @if($isFavorite)
             <!-- Cuore pieno -->
             <svg fill="currentColor" viewBox="0 0 24 24">

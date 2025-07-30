@@ -5,6 +5,7 @@
     transition: all 0.3s ease;
     max-width: 320px;
     margin: 0 auto 1.5rem;
+    position: relative; /* necessario per il posizionamento assoluto */
 }
 
 .article-card:hover {
@@ -114,6 +115,7 @@
     font-weight: 600;
     line-height: 1.4;
     min-height: 52px;
+    min-width: 272px;
 }
 
 .title-link {
@@ -232,6 +234,7 @@
 }
 
 .btn-favorite {
+    z-index: 2; /* sopra il badge overlay */
     width: 44px;
     height: 44px;
     border: 2px solid #e9ecef;
@@ -242,6 +245,13 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
+}
+
+.article-card .btn-favorite {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    z-index: 2;
 }
 
 .btn-favorite:hover {

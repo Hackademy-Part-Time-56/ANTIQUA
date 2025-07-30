@@ -5,7 +5,9 @@
             <a href="javascript:history.back()" class="btn customcolor customoutline">
                 <i class="fas fa-arrow-left"></i> {{ __('ui.back') }}
             </a>
+
         </div>
+
 
         <!-- Main Content -->
         <div class="container py-4">
@@ -64,8 +66,9 @@
                                     alt="Venditore" class="seller-avatar">
                                 <div>
                                     <h6 class="mb-0">
-                                        <a class="text-decoration-none" href="{{ route('user.profile', $article->user) }}">{{ $article->user->name }}</a>
-                                        
+                                        <a class="text-decoration-none"
+                                            href="{{ route('user.profile', $article->user) }}">{{ $article->user->name }}</a>
+
                                         @if($article->user->hasVerifiedEmail())
                                             <span class="badge bg-success ms-2" title="Utente verificato">
                                                 <i class="fas fa-check-circle"></i> {{ __('ui.verif') }}
@@ -116,7 +119,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <p><strong>{{ __('ui.category') }}</strong> {{ $article->category->name }}</p>
-                                <p><strong>{{ __('ui.published') }}</strong> {{ $article->created_at->format('d/m/Y') }}</p>
+                                <p><strong>{{ __('ui.published') }}</strong> {{ $article->created_at->format('d/m/Y') }}
+                                </p>
                             </div>
                             <div class="col-md-6">
                                 <!-- <p><strong>ID Articolo:</strong> #{{ $article->id }}</p> -->
