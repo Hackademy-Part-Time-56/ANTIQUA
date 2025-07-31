@@ -1,4 +1,6 @@
 @import 'bootstrap';
+@import './style.css';
+@import 'bootstrap-icons';
 
 .customcolor {
     color: #ff6600;

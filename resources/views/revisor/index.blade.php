@@ -491,143 +491,197 @@
         </div>
 
         @if ($article_to_check)
-            <div class="review-content">
-                <!-- Sezione Galleria -->
-                <div class="gallery-section">
-                    <div class="gallery-grid">
-                        @foreach ($article_to_check->images as $key => $image)
-                            <div class="col-6 col-md-4 mb-4 text-center">
-                                <img src="{{ $image->getUrl(450, 220) }}" class="img-fluid rounded shadow" alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
-                            </div>
+        <div class="review-content">
+            <!-- Sezione Galleria -->
+            <div class="gallery-section">
+                <div class="gallery-grid">
+                    @foreach ($article_to_check->images as $key => $image)
+                    <div class="col-6 col-md-4 mb-4 text-center">
+                        <img src="{{ $image->getUrl(450, 220) }}" class="img-fluid rounded shadow" alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
+                    </div>
+                </div>
+                <div class="col-md-5 p-3">
+                    <div class="card-body">
+                        <h5>Labels</h5>
+                        @if ($image->labels)
+                        @foreach ($image->labels as $label)
+                        @if( $label );
                         @endforeach
+                        @else
+                        <p>No labels</p>
+                        @endif
                     </div>
                 </div>
-
-                <!-- Sezione Dettagli -->
-                <div class="details-section">
-                    <div>
-                        <h2 class="article-title">{{ $article_to_check->title }}</h2>
-
-                        <div class="article-meta">
-                            <div class="meta-item">
-                                <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="currentColor"
-                                        class="icon icon-tabler icons-tabler-filled icon-tabler-feather">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M8 9.585v6.415h6.414l-2.707 2.707a1 1 0 0 1 -.112 .097l-.11 .071l-.114 .054l-.105 .035l-.149 .03l-.117 .006h-4.586l-1.707 1.707a1 1 0 1 1 -1.414 -1.414l1.707 -1.709v-4.584l.003 -.075l.017 -.126l.03 -.111l.044 -.111l.052 -.098l.067 -.096l.08 -.09z" />
-                                        <path d="M19.414 11l-3 3h-4.914l2.914 -3z" />
-                                        <path d="M13 4.586v4.998l-3 3v-4.999z" />
-                                        <path
-                                            d="M16.482 3a4.515 4.515 0 0 1 4.518 4.514a4.7 4.7 0 0 1 -.239 1.487l-5.761 -.001v-5.76c.469 -.158 .968 -.24 1.482 -.24" />
-                                    </svg>
-                                </span>
-                                <span class="meta-label">{{ __('ui.author:') }}</span>
-                                <span class="meta-value">{{ $article_to_check->user->name }}</span>
-                            </div>
-
-                            <div class="meta-item">
-                                <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"
-                                        class="icon icon-tabler icons-tabler-outline icon-tabler-basket-dollar">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M17 10l-2 -6" />
-                                        <path d="M7 10l2 -6" />
-                                        <path
-                                            d="M13 20h-5.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304" />
-                                        <path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                        <path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
-                                        <path d="M19 21v1m0 -8v1" />
-                                    </svg></span>
-                                <span class="meta-label">{{ __('ui.price:') }}</span>
-                                <span class="meta-value">€{{ number_format($article_to_check->price, 2) }}</span>
-                            </div>
-
-                            <div class="meta-item">
-                                <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"
-                                        class="icon icon-tabler icons-tabler-outline icon-tabler-category">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M4 4h6v6h-6z" />
-                                        <path d="M14 4h6v6h-6z" />
-                                        <path d="M4 14h6v6h-6z" />
-                                        <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                                    </svg></span>
-                                <span class="category-tag">#{{ $article_to_check->category->name }}</span>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5>Image</h5>
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <div class="text-center mx-auto {{ $image->adult }}">
+                                </div>
                             </div>
                         </div>
-
-                        <div class="article-description">
-                            {{ $article_to_check->description }}
-                        </div>
+                        <div class="col-10">adult</div>
                     </div>
-
-                    <!-- Azioni -->
-                    <div class="d-flex pb-4 justify-content-around align-items-end">
-                        <!-- Form per rifiutare -->
-                        <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <div class="radio-group">
-                                <div class="radio-container danger">
-                                    <label for="reject-btn" class="radio-button"></label>
-                                    <input type="submit" id="reject-btn" name="action" value="reject"
-                                        class="radio-input-element" style="cursor: pointer;" />
-                                    <svg class="radio-icon-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M6 18 18 6M6 6l12 12"></path>
-                                    </svg>
-                                    <div class="glow"></div>
-                                </div>
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="text-center mx-auto {{ $image->violence }}">
                             </div>
-                            <div class="text-center mt-2">
-                                <small class="text-muted">{{ __('ui.reject') }}</small>
+                        </div>
+                        <div class="col-10">violence</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="text-center mx-auto {{ $image->sport }}">
                             </div>
-                        </form>
-                        <!-- Form per accettare con stima prezzo -->
-                        <form method="POST" action="{{ route('accept', $article_to_check) }}">
-                            @csrf
-                            @method('PATCH')
-                            <div class="mb-3">
-                                <label for="estimated_price" class="form-label">Stima prezzo (€)</label>
-                                <input type="number" step="0.01" name="estimated_price" id="estimated_price"
-                                    class="form-control" required>
+                        </div>
+                        <div class="col-10">sport</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="text-center mx-auto {{ $image->racy }}">
                             </div>
-                            <div class="radio-group">
-                                <div class="radio-container success">
-                                    <label for="accept-btn" class="radio-button"></label>
-                                    <input type="submit" id="accept-btn" name="action" value="accept"
-                                        class="radio-input-element" style="cursor: pointer;" />
-                                    <svg class="radio-icon-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <polyline points="20,6 9,17 4,12"></polyline>
-                                    </svg>
-                                    <div class="glow"></div>
-                                </div>
+                        </div>
+                        <div class="col-10">racy</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="text-center mx-auto {{ $image->medical }}">
                             </div>
-                            <div class="text-center mt-2">
-                                <small class="text-muted">Accetta e salva stima</small>
-                            </div>
-                        </form>
+                        </div>
+                        <div class="col-10">medical</div>
                     </div>
                 </div>
             </div>
-        @else
-            <!-- Nessun articolo da revisionare -->
-            <div class="no-articles">
-                <div class="no-articles-icon">📋</div>
-                <h2 class="no-articles-title">{{ __('ui.therearenoarticlestoreview') }}</h2>
-                <a href="{{ route('homepage') }}" class="return-btn">
-                    {{ __('ui.returntohomepage') }}
-                </a>
-            </div>
-        @endif
+            @endforeach
+        </div>
+    </div>
 
-        <!-- Messaggio di successo -->
-        @if (session()->has('message'))
-            <div class="success-message">
-                ✅ {{ session('message') }}
+    <!-- Sezione Dettagli -->
+    <div class="details-section">
+        <div>
+            <h2 class="article-title">{{ $article_to_check->title }}</h2>
+
+            <div class="article-meta">
+                <div class="meta-item">
+                    <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            class="icon icon-tabler icons-tabler-filled icon-tabler-feather">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M8 9.585v6.415h6.414l-2.707 2.707a1 1 0 0 1 -.112 .097l-.11 .071l-.114 .054l-.105 .035l-.149 .03l-.117 .006h-4.586l-1.707 1.707a1 1 0 1 1 -1.414 -1.414l1.707 -1.709v-4.584l.003 -.075l.017 -.126l.03 -.111l.044 -.111l.052 -.098l.067 -.096l.08 -.09z" />
+                            <path d="M19.414 11l-3 3h-4.914l2.914 -3z" />
+                            <path d="M13 4.586v4.998l-3 3v-4.999z" />
+                            <path
+                                d="M16.482 3a4.515 4.515 0 0 1 4.518 4.514a4.7 4.7 0 0 1 -.239 1.487l-5.761 -.001v-5.76c.469 -.158 .968 -.24 1.482 -.24" />
+                        </svg>
+                    </span>
+                    <span class="meta-label">{{ __('ui.author:') }}</span>
+                    <span class="meta-value">{{ $article_to_check->user->name }}</span>
+                </div>
+
+                <div class="meta-item">
+                    <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-basket-dollar">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M17 10l-2 -6" />
+                            <path d="M7 10l2 -6" />
+                            <path
+                                d="M13 20h-5.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304" />
+                            <path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                            <path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
+                            <path d="M19 21v1m0 -8v1" />
+                        </svg></span>
+                    <span class="meta-label">{{ __('ui.price:') }}</span>
+                    <span class="meta-value">€{{ number_format($article_to_check->price, 2) }}</span>
+                </div>
+
+                <div class="meta-item">
+                    <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4h6v6h-6z" />
+                            <path d="M14 4h6v6h-6z" />
+                            <path d="M4 14h6v6h-6z" />
+                            <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        </svg></span>
+                    <span class="category-tag">#{{ $article_to_check->category->name }}</span>
+                </div>
             </div>
-        @endif
+
+            <div class="article-description">
+                {{ $article_to_check->description }}
+            </div>
+        </div>
+
+        <!-- Azioni -->
+        <div class="d-flex pb-4 justify-content-around align-items-end">
+            <!-- Form per rifiutare -->
+            <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
+                @csrf
+                @method('PATCH')
+                <div class="radio-group">
+                    <div class="radio-container danger">
+                        <label for="reject-btn" class="radio-button"></label>
+                        <input type="submit" id="reject-btn" name="action" value="reject"
+                            class="radio-input-element" style="cursor: pointer;" />
+                        <svg class="radio-icon-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M6 18 18 6M6 6l12 12"></path>
+                        </svg>
+                        <div class="glow"></div>
+                    </div>
+                </div>
+                <div class="text-center mt-2">
+                    <small class="text-muted">{{ __('ui.reject') }}</small>
+                </div>
+            </form>
+            <!-- Form per accettare con stima prezzo -->
+            <form method="POST" action="{{ route('accept', $article_to_check) }}">
+                @csrf
+                @method('PATCH')
+                <div class="mb-3">
+                    <label for="estimated_price" class="form-label">Stima prezzo (€)</label>
+                    <input type="number" step="0.01" name="estimated_price" id="estimated_price"
+                        class="form-control" required>
+                </div>
+                <div class="radio-group">
+                    <div class="radio-container success">
+                        <label for="accept-btn" class="radio-button"></label>
+                        <input type="submit" id="accept-btn" name="action" value="accept"
+                            class="radio-input-element" style="cursor: pointer;" />
+                        <svg class="radio-icon-element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <div class="glow"></div>
+                    </div>
+                </div>
+                <div class="text-center mt-2">
+                    <small class="text-muted">Accetta e salva stima</small>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    @else
+    <!-- Nessun articolo da revisionare -->
+    <div class="no-articles">
+        <div class="no-articles-icon">📋</div>
+        <h2 class="no-articles-title">{{ __('ui.therearenoarticlestoreview') }}</h2>
+        <a href="{{ route('homepage') }}" class="return-btn">
+            {{ __('ui.returntohomepage') }}
+        </a>
+    </div>
+    @endif
+
+    <!-- Messaggio di successo -->
+    @if (session()->has('message'))
+    <div class="success-message">
+        ✅ {{ session('message') }}
+    </div>
+    @endif
     </div>
 </x-layout>
