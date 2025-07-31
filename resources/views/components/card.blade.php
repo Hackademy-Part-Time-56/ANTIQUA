@@ -2,7 +2,7 @@
     <div class="article-card">
         <div class="card-image-wrapper">
             @if($article->images && count($article->images))
-                <img src="{{ Storage::url($article->images->first()->path) }}" class="card-image" alt="Immagine dell'articolo {{ $article->title }}">
+                <img src="{{ $article->images->first()->getUrl(350, 350) }}" class="card-image" alt="Immagine dell'articolo {{ $article->title }}">
             @else
                 <img src="{{ asset('images/default.jpg') }}" class="card-image" alt="Immagine di default">
             @endif
