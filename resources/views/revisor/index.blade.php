@@ -177,7 +177,6 @@
         }
 
         .gallery-image {
-            aspect-ratio: 1;
             border-radius: 12px;
             object-fit: cover;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
