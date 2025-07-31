@@ -2,7 +2,8 @@
     <h2 class="mb-4 text-center fw-bold text-primary">Crea un nuovo articolo</h2>
     <div class="mb-3">
         <label for="title" class="form-label fw-semibold">Titolo</label>
-        <input type="text" class="form-control form-control-lg" id="title" wire:model="title" placeholder="Titolo dell'articolo">
+        <input type="text" class="form-control form-control-lg" id="title" wire:model="title"
+            placeholder="Titolo dell'articolo">
         @error('title')
             <p class="text-danger fst-italic mt-1">{{ $message }}</p>
         @enderror
@@ -10,7 +11,8 @@
 
     <div class="mb-3">
         <label for="description" class="form-label fw-semibold">Descrizione</label>
-        <textarea id="description" cols="30" rows="5" class="form-control form-control-lg" wire:model="description" placeholder="Descrivi il tuo articolo"></textarea>
+        <textarea id="description" cols="30" rows="5" class="form-control form-control-lg" wire:model="description"
+            placeholder="Descrivi il tuo articolo"></textarea>
         @error('description')
             <p class="text-danger fst-italic mt-1">{{ $message }}</p>
         @enderror
@@ -19,7 +21,8 @@
     <div class="row g-3">
         <div class="col-md-6">
             <label for="price" class="form-label fw-semibold">Prezzo (€)</label>
-            <input type="number" step="0.01" class="form-control form-control-lg" id="price" wire:model="price" placeholder="Prezzo">
+            <input type="number" step="0.01" class="form-control form-control-lg" id="price" wire:model="price"
+                placeholder="Prezzo">
             @error('price')
                 <p class="text-danger fst-italic mt-1">{{ $message }}</p>
             @enderror
@@ -41,7 +44,8 @@
     <div class="mb-4 mt-3">
         <label class="form-label fw-semibold">Immagini</label>
         <input type="file" wire:model.live="temporary_images" multiple
-            class="form-control shadow-sm @error('temporary_images.*') is-invalid @enderror" placeholder="Carica immagini">
+            class="form-control shadow-sm @error('temporary_images.*') is-invalid @enderror"
+            placeholder="Carica immagini">
         @error('temporary_images.*')
             <p class="fst-italic text-danger mt-1">{{ $message }}</p>
         @enderror
@@ -50,11 +54,15 @@
         @enderror
     </div>
 
-    @if (!empty($images))
-        <div class="mb-4">
-            Max 6 immagini, dimensione massima 1MB ciascuna.
-            <p class="fw-semibold mb-2">Anteprima immagini:</p>
-            <div class="d-flex flex-wrap gap-3 justify-content-center">
+
+    <div class="mb-4">
+        Max 6 immagini, dimensione massima 1MB ciascuna.
+        <p class="fw-semibold mb-2">Anteprima immagini:</p>
+        <div class="spinner-border text-primary" wire:loading role="status">
+            <span class="visually-hidden">Caricamento...</span>
+        </div>
+        @if (!empty($images))
+            <div wire:loading.remove class="d-flex flex-wrap gap-3 justify-content-center">
                 @foreach ($images as $key => $image)
                     <div class="img-preview-card position-relative">
                         <div class="img-preview shadow rounded-3"
@@ -66,8 +74,9 @@
                     </div>
                 @endforeach
             </div>
-        </div>
-    @endif
+        @endif
+    </div>
+
 
     <div class="d-flex justify-content-center mt-4">
         <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill shadow">{{ __('ui.create') }}</button>
