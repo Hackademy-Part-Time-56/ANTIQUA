@@ -63,7 +63,11 @@
 
 .main-image {
     height: 500px;
-    object-fit: cover;
+    object-fit: fill;
+}
+.main-imagex {
+    height: 500px;
+    width: 1500px;
 }
 
 .carousel-control-prev-icon,
@@ -167,6 +171,11 @@
 @media (max-width: 991px) {
     .main-image {
         height: 400px;
+        width: 100%;
+    }
+    .main-imagex {
+        height: 400px;
+        width: 100%;
     }
 
     .custompadding {
@@ -181,6 +190,12 @@
 
     .main-image {
         height: 300px;
+        width: 100%;
+    }
+
+    .main-imagex {
+        height: 300px;
+        width: 100%;
     }
 
     .product-title {

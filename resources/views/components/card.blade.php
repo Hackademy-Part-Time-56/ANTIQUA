@@ -1,13 +1,8 @@
 <a href="{{ route('article.show', compact('article')) }}" class="article-card-link">
     <div class="article-card">
         <div class="card-image-wrapper">
-            @if($article->images && count($article->images))
-                <img src="{{ $article->images->first()->getUrl(450, 220) }}" class="card-image" alt="Immagine dell'articolo {{ $article->title }}">
-            @else
-                <img src="{{ asset('images/default.jpg') }}" class="card-image" alt="Immagine di default">
-            @endif
+            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(750, 500) : 'https://picsum.photos/600/500' }}" class="card-image" alt="Test">
         </div>
-
         <div class="card-content">
             <div class="category-tag">
                 @if($article->category)
@@ -33,7 +28,6 @@
             <div class="favorite-btn">
                 <livewire:favorite-button :article="$article" :key="$article->id" />
             </div>
-
         </div>
     </div>
 </a>
