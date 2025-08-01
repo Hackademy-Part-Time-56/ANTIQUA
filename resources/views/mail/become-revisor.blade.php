@@ -12,7 +12,7 @@
         <p>{{ __('ui.name:') }}{{$user->name}}</p>
         <p>{{ __('ui.email:') }}{{$user->email}}</p>
         <p></p>{{ __('ui.makethemreviewer') }}
-        <a href="{{route('make.revisor',compact('user'))}}">Rendi Revisor</a>
+        <a href="{{route('make.revisor',compact('user'))}}">Rendi Revisore</a>
     </div>
 </body>
 </html>
