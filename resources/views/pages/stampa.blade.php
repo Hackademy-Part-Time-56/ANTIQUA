@@ -27,10 +27,17 @@
     <p class="mt-5"><em>Ultimo aggiornamento: agosto 2025</em></p>
 </div>
 
-<div class="container">
+        <div class="text-center mt-5 mb-5">
+            <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+                ⬅ Torna alla Home
+            </a>
+        </div>
 
-    <a href="{{ route('homepage') }}" class="btn btn-success mb-4 ">Indietro</a>
+        <style>
+        h1, h2 {
+            color: #ff6600;
+        }
 
-</div>
+    </style>
 
 </x-layout>

@@ -43,10 +43,17 @@
         <li>Fumetti, francobolli e oggetti da collezione</li>
     </ul>
 
-<div class="container mt-5">
+        <div class="text-center mt-5">
+            <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+                ⬅ Torna alla Home
+            </a>
+        </div>
+        
+        <style>
+        h1, h2 {
+            color: #ff6600;
+        }
 
-    <a href="{{ route('homepage') }}" class="btn btn-success mb-4 ">Indietro</a>
-
-</div>
+    </style>
 
 </x-layout>

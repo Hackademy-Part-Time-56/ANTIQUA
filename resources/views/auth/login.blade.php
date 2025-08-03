@@ -332,10 +332,10 @@
         </div>
     </div>
 
-    <div class="container text-center">
-
-    <a href="{{ route('homepage') }}" class="btn btn-success mb-5">Indietro</a>
-
-</div>
+        <div class="text-center mb-5">
+            <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+                ⬅ Torna alla Home
+            </a>
+        </div>
 
 </x-layout>

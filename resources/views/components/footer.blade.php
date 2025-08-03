@@ -80,13 +80,7 @@ $payment_methods = [
                     </form>
                 <button class="buttonProva footer-section footer-newsletter-social text-white bg-color-transparent"  type="submit">{{ __('ui.subscribe') }}</button>
 
-                <div class="social-icons">
-                    <?php foreach ($social_links as $social): ?>
-                        <a href="<?php echo htmlspecialchars($social['url']); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo htmlspecialchars($social['name']); ?>">
-                            <i class="fab <?php echo htmlspecialchars($social['icon']); ?>"></i>
-                        </a>
-                    <?php endforeach; ?>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -99,7 +93,15 @@ $payment_methods = [
                     <img src="<?php echo htmlspecialchars($method['src']); ?>" alt="<?php echo htmlspecialchars($method['alt']); ?>">
                 <?php endforeach; ?>
             </div>
+            <div class="social-icons">
+                    <?php foreach ($social_links as $social): ?>
+                        <a href="<?php echo htmlspecialchars($social['url']); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo htmlspecialchars($social['name']); ?>">
+                            <i class="fab <?php echo htmlspecialchars($social['icon']); ?>"></i>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
         </div>
+        
     </div>
 
 </footer>
