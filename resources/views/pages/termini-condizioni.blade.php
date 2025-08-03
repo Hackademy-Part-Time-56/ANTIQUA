@@ -102,5 +102,10 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        .btn-outline-dark:hover {
+            background-color: #ff6600;
+            color: white;
+            border-color: #ff6600;
+        }
     </style>
 </x-layout>

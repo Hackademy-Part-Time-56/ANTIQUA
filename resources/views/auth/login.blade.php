@@ -338,4 +338,11 @@
             </a>
         </div>
 
+        <style>
+        .btn-outline-dark:hover {
+            background-color: #ff6600;
+            color: white;
+            border-color: #ff6600;
+        }
+        </style>
 </x-layout>

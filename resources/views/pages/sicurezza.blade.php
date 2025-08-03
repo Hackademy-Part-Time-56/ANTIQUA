@@ -116,5 +116,11 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+        
+        .btn-outline-dark:hover {
+            background-color: #ff6600;
+            color: white;
+            border-color: #ff6600;
+        }
     </style>
 </x-layout>

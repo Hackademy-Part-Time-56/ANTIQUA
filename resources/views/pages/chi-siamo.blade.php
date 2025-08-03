@@ -53,7 +53,11 @@
         h1, h2 {
             color: #ff6600;
         }
-
+        .btn-outline-dark:hover {
+            background-color: #ff6600;
+            color: white;
+            border-color: #ff6600;
+        }
     </style>
 
 </x-layout>

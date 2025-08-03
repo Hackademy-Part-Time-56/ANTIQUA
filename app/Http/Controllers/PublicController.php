@@ -77,8 +77,8 @@ class PublicController extends Controller
     public function sicurezza() { return view('pages.sicurezza'); }
 
     public function terminiCondizioni() { return view('pages.termini-condizioni'); }
-    public function privacy() { return view('pages.privacy'); }
-    public function cookie() { return view('pages.cookie'); }
+    public function privacy() { return view('pages.informativa-privacy'); }
+    public function cookie() { return view('pages.politica-cookie'); }
     public function noteLegali() { return view('pages.note-legali'); }
 
     public function categoriePopolari() { return view('pages.categorie-popolari'); }

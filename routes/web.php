@@ -68,8 +68,8 @@ Route::get('/pagamenti', [PublicController::class, 'pagamenti'])->name('pagament
 Route::get('/sicurezza', [PublicController::class, 'sicurezza'])->name('sicurezza');
 
 Route::get('/termini-condizioni', [PublicController::class, 'terminiCondizioni'])->name('termini-condizioni');
-Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
-Route::get('/cookie', [PublicController::class, 'cookie'])->name('cookie');
+Route::get('/informativa-privacy', [PublicController::class, 'privacy'])->name('informativa-privacy');
+Route::get('/politica-cookie', [PublicController::class, 'cookie'])->name('politica-cookie');
 Route::get('/note-legali', [PublicController::class, 'noteLegali'])->name('note-legali');
 
 Route::get('/categorie-popolari', [PublicController::class, 'categoriePopolari'])->name('categorie-popolari');
