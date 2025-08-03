@@ -8,11 +8,12 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Namu\WireChat\Traits\Chatable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Chatable;
 
     /**
      * The attributes that are mass assignable.
@@ -67,5 +68,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function favoriteArticles(): BelongsToMany
     {
         return $this->belongsToMany(Article::class, 'favorites', 'user_id', 'article_id')->withTimestamps();
+    }
+
+    public function canCreateChats(): bool
+    {
+        return $this->hasVerifiedEmail();
     }
 }

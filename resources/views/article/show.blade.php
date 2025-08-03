@@ -20,24 +20,28 @@
                                 <div class="carousel-inner">
                                     @foreach($article->images as $key => $image)
                                         <div class="carousel-item @if($loop->first) active @endif">
-                                            <img src="{{ $image->getUrl(750, 500) }}" class="d-block w-100 rounded shadow main-image"
+                                            <img src="{{ $image->getUrl(750, 500) }}"
+                                                class="d-block w-100 rounded shadow main-image"
                                                 alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                         </div>
                                     @endforeach
                                 </div>
                                 @if($article->images->count() > 1)
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                        data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                        data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
                                 @endif
                             </div>
                         @else
-                            <img src="https://picsum.photos/600/500" class="d-block w-100 rounded shadow main-image" alt="Nessuna foto inserita dall'utente">
+                            <img src="https://picsum.photos/600/500" class="d-block w-100 rounded shadow main-image"
+                                alt="Nessuna foto inserita dall'utente">
                         @endif
                     </div>
                 </div>
@@ -86,9 +90,16 @@
                             <button class="btn btn-primary btn-lg w-100 mb-2">
                                 {{ __('ui.buynow') }}
                             </button>
-                            <button class="btn btn-outline-primary w-100">
-                                {{ __('ui.contactseller') }}
-                            </button>
+                            @auth
+                                <a href="/chats" class="btn btn-primary w-100">
+                                    <i class="bi bi-chat-dots me-2"></i>
+                                    {{ __('ui.contactseller') }}
+                                </a>
+                            @else
+                                <div class="alert alert-info mt-3">
+                                    Effettua il login per contattare il venditore.
+                                </div>
+                            @endauth
                         </div>
 
                         <div class="product-features">

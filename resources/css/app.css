@@ -1,6 +1,9 @@
 @import 'bootstrap';
 @import './style.css';
 @import 'bootstrap-icons';
+@import 'tailwindcss';
+@source '../../vendor/namu/wirechat/resources/views/**/*.blade.php';
+@source '../../vendor/namu/wirechat/src/Livewire/**/*.php';
 
 .customcolor {
     color: #ff6600;
