@@ -1,7 +1,7 @@
 <form wire:submit="store" class="create-article-card shadow-lg rounded-4 p-4 my-5 mx-auto" style="max-width:600px;">
-    <h2 class="mb-4 text-center fw-bold text-primary">Crea un nuovo articolo</h2>
+    <h2 class="mb-4 text-center fw-bold text-primary">{{ __('ui.newart') }}</h2>
     <div class="mb-3">
-        <label for="title" class="form-label fw-semibold">Titolo</label>
+        <label for="title" class="form-label fw-semibold">{{ __('ui.title') }}</label>
         <input type="text" class="form-control form-control-lg" id="title" wire:model="title"
             placeholder="Titolo dell'articolo">
         @error('title')
@@ -10,7 +10,7 @@
     </div>
 
     <div class="mb-3">
-        <label for="description" class="form-label fw-semibold">Descrizione</label>
+        <label for="description" class="form-label fw-semibold">{{ __('ui.description:') }}</label>
         <textarea id="description" cols="30" rows="5" class="form-control form-control-lg" wire:model="description"
             placeholder="Descrivi il tuo articolo"></textarea>
         @error('description')
@@ -20,7 +20,7 @@
 
     <div class="row g-3">
         <div class="col-md-6">
-            <label for="price" class="form-label fw-semibold">Prezzo (€)</label>
+            <label for="price" class="form-label fw-semibold">{{ __('ui.price:') }}</label>
             <input type="number" step="0.01" class="form-control form-control-lg" id="price" wire:model="price"
                 placeholder="Prezzo">
             @error('price')
@@ -28,9 +28,9 @@
             @enderror
         </div>
         <div class="col-md-6">
-            <label for="category" class="form-label fw-semibold">Categoria</label>
+            <label for="category" class="form-label fw-semibold">{{ __('ui.cat') }}</label>
             <select id="category" wire:model="category" class="form-select form-select-lg">
-                <option value="" selected>Seleziona una categoria</option>
+                <option value="" selected>{{ __('ui.selectacategory') }}</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
@@ -42,7 +42,7 @@
     </div>
 
     <div class="mb-4 mt-3">
-        <label class="form-label fw-semibold">Immagini</label>
+        <label class="form-label fw-semibold">{{ __('ui.img') }}</label>
         <input type="file" wire:model.live="temporary_images" multiple
             class="form-control shadow-sm @error('temporary_images.*') is-invalid @enderror"
             placeholder="Carica immagini">
@@ -56,10 +56,10 @@
 
 
     <div class="mb-4">
-        Max 6 immagini, dimensione massima 1MB ciascuna.
-        <p class="fw-semibold mb-2">Anteprima immagini:</p>
+        {{ __('ui.uptosiximg') }}
+        <p class="fw-semibold mb-2">{{ __('ui.imgprev') }}</p>
         <div class="spinner-border text-primary" wire:loading role="status">
-            <span class="visually-hidden">Caricamento...</span>
+            <span class="visually-hidden">{{ __('ui.load') }}</span>
         </div>
         @if (!empty($images))
             <div wire:loading.remove class="d-flex flex-wrap gap-3 justify-content-center">

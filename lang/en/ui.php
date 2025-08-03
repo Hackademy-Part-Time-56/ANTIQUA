@@ -19,6 +19,8 @@ return
     'accept'=>'Accept',
     'therearenoarticlestoreview'=>'There are no articles to review',
     'returntohomepage'=>'Return to home page',
+    'priceest'=>'Price estimate (€)',
+    'acceptandsave'=>'Accept and save estimate',
 
 
     //becomerevisor
@@ -33,6 +35,12 @@ return
     'description:'=>'Description:',
     'selectacategory'=>'Select a category:',
     'create'=>'Create',
+    'newart'=>'Create a new post',
+    'cat'=>'Category',
+    'uptosiximg'=>'Up to 6 images, maximum size 1MB each.',
+    'imgprev'=>'Image preview::',
+    'load'=>'Loading...',
+
 
     //navbar
     'searcharticles...'=>'Search for items...',

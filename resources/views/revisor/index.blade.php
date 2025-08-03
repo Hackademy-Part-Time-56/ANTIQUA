@@ -628,7 +628,7 @@
                         @csrf
                         @method('PATCH')
                         <div class="mb-3">
-                            <label for="estimated_price" class="form-label">Stima prezzo (€)</label>
+                            <label for="estimated_price" class="form-label">{{ __('ui.priceest') }}</label>
                             <input type="number" step="0.01" name="estimated_price" id="estimated_price"
                                 class="form-control" required>
                         </div>
@@ -644,7 +644,7 @@
                             </div>
                         </div>
                         <div class="text-center mt-2">
-                            <small class="text-muted">Accetta e salva stima</small>
+                            <small class="text-muted">{{ __('ui.acceptandsave') }}</small>
                         </div>
                     </form>
                 </div>

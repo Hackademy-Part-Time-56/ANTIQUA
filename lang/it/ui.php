@@ -20,6 +20,8 @@ return
     'accept'=>'Accetta',
     'therearenoarticlestoreview'=>'Non ci sono articoli da revisionare',
     'returntohomepage'=>'Torna alla home',
+    'priceest'=>'Stima prezzo (€)',
+    'acceptandsave'=>'Accetta e salva stima',
 
     //becomerevisor
     'useraskedwork'=>'Un utente ha chiesto di lavorare con noi.',
@@ -33,6 +35,11 @@ return
     'description:'=>'Descrizione:',
     'selectacategory'=>'Seleziona una categoria:',
     'create'=>'Crea',
+    'newart'=>'Crea un nuovo articolo',
+    'cat'=>'Categoria',
+    'uptosiximg'=>'Max 6 immagini, dimensione massima 1MB ciascuna.',
+    'imgprev'=>'Anteprima immagini:',
+    'load'=>'Caricamento...',
 
     //navbar
     'searcharticles...'=>'Cerca Articoli...',
