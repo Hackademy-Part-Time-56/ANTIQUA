@@ -332,4 +332,10 @@
         </div>
     </div>
 
+    <div class="container text-center">
+
+    <a href="{{ route('homepage') }}" class="btn btn-success mb-5">Indietro</a>
+
+</div>
+
 </x-layout>

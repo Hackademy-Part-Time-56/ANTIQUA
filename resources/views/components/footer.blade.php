@@ -29,7 +29,9 @@ $payment_methods = [
         <div class="footer-container">
             <div class="footer-section footer-about">
                 <div class="footer-logo">
+                    <a href="{{ route('homepage') }}">
                     <img src="{{ asset('images/logo-bianco.png') }}" alt="Il Tuo Logo" class="logo-placeholder">
+                    </a>
                 </div>
                 <ul class="footer-links">
                     <li><a href="/chi-siamo">{{ __('ui.aboutus') }}</a></li>

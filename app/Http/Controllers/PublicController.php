@@ -64,4 +64,25 @@ class PublicController extends Controller
         session()->put('locale', $lang);
         return redirect()->back();
     }
+
+    public function chiSiamo() { return view('pages.chi-siamo'); }
+    public function lavoraConNoi() { return view('pages.lavora-con-noi'); }
+    public function stampa() { return view('pages.stampa'); }
+    public function contatti() { return view('pages.contatti'); }
+
+    public function centroAssistenza() { return view('pages.centro-assistenza'); }
+    public function comeFunziona() { return view('pages.come-funziona'); }
+    public function spedizione() { return view('pages.spedizione'); }
+    public function pagamenti() { return view('pages.pagamenti'); }
+    public function sicurezza() { return view('pages.sicurezza'); }
+
+    public function terminiCondizioni() { return view('pages.termini-condizioni'); }
+    public function privacy() { return view('pages.privacy'); }
+    public function cookie() { return view('pages.cookie'); }
+    public function noteLegali() { return view('pages.note-legali'); }
+
+    public function categoriePopolari() { return view('pages.categorie-popolari'); }
+    public function asteInCorso() { return view('pages.aste-in-corso'); }
+    public function appMobili() { return view('pages.app-mobili'); }
+    public function blog() { return view('pages.blog'); }
 }

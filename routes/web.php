@@ -55,3 +55,24 @@ Route::post('/email/verification-notification', function () {
 Route::get('/user/{user}', [UserProfileController::class, 'show'])->name('user.profile');
 Route::get('/profile/edit', [UserProfileController::class, 'edit'])->middleware('auth')->name('profile.edit');
 Route::post('/profile/update', [UserProfileController::class, 'update'])->middleware('auth')->name('profile.update');
+
+Route::get('/chi-siamo', [PublicController::class, 'chiSiamo'])->name('chi-siamo');
+Route::get('/lavora-con-noi', [PublicController::class, 'lavoraConNoi'])->name('lavora-con-noi'); // già esistente
+Route::get('/stampa', [PublicController::class, 'stampa'])->name('stampa');
+Route::get('/contatti', [PublicController::class, 'contatti'])->name('contatti');
+
+Route::get('/centro-assistenza', [PublicController::class, 'centroAssistenza'])->name('centro-assistenza');
+Route::get('/come-funziona', [PublicController::class, 'comeFunziona'])->name('come-funziona');
+Route::get('/spedizione', [PublicController::class, 'spedizione'])->name('spedizione');
+Route::get('/pagamenti', [PublicController::class, 'pagamenti'])->name('pagamenti');
+Route::get('/sicurezza', [PublicController::class, 'sicurezza'])->name('sicurezza');
+
+Route::get('/termini-condizioni', [PublicController::class, 'terminiCondizioni'])->name('termini-condizioni');
+Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
+Route::get('/cookie', [PublicController::class, 'cookie'])->name('cookie');
+Route::get('/note-legali', [PublicController::class, 'noteLegali'])->name('note-legali');
+
+Route::get('/categorie-popolari', [PublicController::class, 'categoriePopolari'])->name('categorie-popolari');
+Route::get('/aste-in-corso', [PublicController::class, 'asteInCorso'])->name('aste-in-corso');
+Route::get('/app-mobili', [PublicController::class, 'appMobili'])->name('app-mobili');
+Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
