@@ -8,67 +8,61 @@
     <div class="row row-cols-1 row-cols-md-2 g-4">
 
         <div class="col">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
             <h5 class="card-title text-orange">🍪 Cosa sono i cookie?</h5>
             <p class="card-text">
-                I cookie sono piccoli file di testo memorizzati sul tuo dispositivo usati per riconoscerti, ricordare preferenze e migliorare la tua esperienza di navigazione. Utilizziamo anche tecnologie simili come web beacon o fingerprinting. :contentReference[oaicite:1]{index=1}
-            </p>
+                I cookie sono piccoli file di testo memorizzati sul tuo dispositivo usati per riconoscerti, ricordare preferenze e migliorare la tua esperienza di navigazione. Utilizziamo anche tecnologie simili come web beacon o fingerprinting.</p>
             </div>
         </div>
         </div>
 
         <div class="col">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
             <h5 class="card-title text-orange">🕒 Durata dei cookie</h5>
             <p class="card-text">
-                Alcuni cookie restano attivi solo per la sessione di navigazione, altri persistono più a lungo sul tuo dispositivo. :contentReference[oaicite:2]{index=2}
-            </p>
+                Alcuni cookie restano attivi solo per la sessione di navigazione, altri persistono più a lungo sul tuo dispositivo.</p>
             </div>
         </div>
         </div>
 
         <div class="col">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
             <h5 class="card-title text-orange">⚙️ Tipologie di cookie</h5>
             <p class="card-text">
-                Usiamo cookie funzionali per la navigazione, cookie analytics per comprendere l’uso del sito, e cookie di marketing per proporre contenuti rilevanti. Alcuni cookie di queste categorie sono gestiti da terze parti. :contentReference[oaicite:3]{index=3}
-            </p>
+                Usiamo cookie funzionali per la navigazione, cookie analytics per comprendere l’uso del sito, e cookie di marketing per proporre contenuti rilevanti. Alcuni cookie di queste categorie sono gestiti da terze parti.</p>
             </div>
         </div>
         </div>
 
         <div class="col">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
             <h5 class="card-title text-orange">✅ Cookie funzionali (necessari)</h5>
             <p class="card-text">
-                Questi cookie garantiscono funzioni essenziali del sito – come mantenere il login o preferenze utente – e non possono essere disattivati. :contentReference[oaicite:4]{index=4}
-            </p>
+                Questi cookie garantiscono funzioni essenziali del sito – come mantenere il login o preferenze utente – e non possono essere disattivati.</p>
             </div>
         </div>
         </div>
 
         <div class="col">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
             <h5 class="card-title text-orange">📈 Cookie di analisi</h5>
             <p class="card-text">
-                Raccogliamo dati aggregati sulle visite al sito per capire come migliorare i contenuti e l’esperienza utente. :contentReference[oaicite:5]{index=5}
-            </p>
+                Raccogliamo dati aggregati sulle visite al sito per capire come migliorare i contenuti e l’esperienza utente.</p>
             </div>
         </div>
         </div>
 
         <div class="col">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
             <h5 class="card-title text-orange">📣 Cookie di marketing</h5>
             <p class="card-text">
-                Utilizziamo cookie per mostrare annunci pertinenti basati sui tuoi interessi. Questi possono essere impostati anche da servizi di terze parti. :contentReference[oaicite:6]{index=6}
-            </p>
+                Utilizziamo cookie per mostrare annunci pertinenti basati sui tuoi interessi. Questi possono essere impostati anche da servizi di terze parti.</p>
             </div>
         </div>
         </div>
