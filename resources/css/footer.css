@@ -131,7 +131,6 @@ h3{
 .social-icons {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
 }
 
 .social-icons a {
@@ -154,8 +153,9 @@ h3{
 
 /* Sezione Bottom Footer (Copyright e Metodi di Pagamento) */
 .footer-bottom {
-    background-color: #ff6600; /* Stesso sfondo, ma potresti volerlo leggermente diverso */
-    padding: 20px 0;
+    background-color: #ff6600; 
+    padding: 20px;
+    margin-right: 80px;
 }
 
 .footer-bottom .bottom-content {

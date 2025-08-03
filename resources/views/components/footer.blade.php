@@ -72,16 +72,7 @@ $payment_methods = [
                 </ul>
             </div>
 
-            <div class="footer-section footer-newsletter-social">
-                <h3>{{ __('ui.stayconnected') }}</h3>
-                <p>{{ __('ui.subscribetoournewsletter') }}</p>
-                <form action="/iscriviti-newsletter" method="POST" class="newsletter-form">
-                    <input class="text-center" type="email" name="email" placeholder="La tua email" required aria-label="Inserisci la tua email per la newsletter">
-                    </form>
-                <button class="buttonProva footer-section footer-newsletter-social text-white bg-color-transparent"  type="submit">{{ __('ui.subscribe') }}</button>
 
-                
-            </div>
         </div>
     </div>
 
