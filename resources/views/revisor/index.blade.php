@@ -503,7 +503,7 @@
         @if ($article_to_check)
         <div class="review-content">
             <!-- Sezione Galleria -->
-            <div class="col-12 col-lg-7 mb-4">
+            <div class="gallery-section">
                 <div class="product-gallery">
                     @if($article_to_check->images->count() > 0)
                         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
