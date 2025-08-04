@@ -17,9 +17,13 @@ class CreateNewUser implements CreatesNewUsers
      *
      * @param  array<string, string>  $input
      */
-    public function create(array $input): User
+    public function create(array $input): User    
     {
-        Validator::make($input, [
+        $user = User::where('email', $input['email'])
+            ->where('google_id', '!=', null)
+            ->first();
+
+        $validator = Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
@@ -29,7 +33,18 @@ class CreateNewUser implements CreatesNewUsers
                 Rule::unique(User::class),
             ],
             'password' => $this->passwordRules(),
-        ])->validate();
+        ]);
+
+        if ($user) {
+            $validator->after(function ($validator) {
+                $validator->errors()->add(
+                    'email',
+                    'Questo indirizzo email è già registrato tramite Google. Accedi con Google.'
+                );
+            });
+        }
+
+        $validator->validate();
 
         return User::create([
             'name' => $input['name'],

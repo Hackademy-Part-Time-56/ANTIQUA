@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\UserProfileController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -76,3 +77,6 @@ Route::get('/categorie-popolari', [PublicController::class, 'categoriePopolari']
 Route::get('/aste-in-corso', [PublicController::class, 'asteInCorso'])->name('aste-in-corso');
 Route::get('/app-mobili', [PublicController::class, 'appMobili'])->name('app-mobili');
 Route::get('/blog', [PublicController::class, 'blog'])->name('blog');
+
+Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
+Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
