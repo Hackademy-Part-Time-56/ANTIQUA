@@ -28,7 +28,7 @@ Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('r
 
 Route::get( '/revisor/index',[RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 
-Route::get('/revisor/request',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::post('/revisor/request', [\App\Http\Controllers\RevisorController::class, '__invoke'])->name('become.revisor');
 
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 
@@ -58,7 +58,7 @@ Route::get('/profile/edit', [UserProfileController::class, 'edit'])->middleware(
 Route::post('/profile/update', [UserProfileController::class, 'update'])->middleware('auth')->name('profile.update');
 
 Route::get('/chi-siamo', [PublicController::class, 'chiSiamo'])->name('chi-siamo');
-Route::get('/lavora-con-noi', [PublicController::class, 'lavoraConNoi'])->name('lavora-con-noi'); // già esistente
+Route::get('/lavora-con-noi', [PublicController::class, 'lavoraConNoi'])->name('lavora-con-noi')->middleware('auth');
 Route::get('/stampa', [PublicController::class, 'stampa'])->name('stampa');
 Route::get('/contatti', [PublicController::class, 'contatti'])->name('contatti');
 

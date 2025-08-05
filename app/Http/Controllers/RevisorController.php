@@ -49,4 +49,19 @@ class RevisorController extends Controller
         Artisan::call('app:make-user-revisor{email}',['email'=>$user->email]);
         return redirect()->back();
     }
+
+    public function __invoke(Request $request, User $user)
+    {
+        $data = $request->validate([
+            'nome' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'ruolo' => 'nullable|string|max:255',
+            'cv' => 'nullable|url|max:255',
+            'messaggio' => 'nullable|string|max:2000',
+        ]);
+
+        Mail::to('admin@presto.it')->send(new \App\Mail\BecomeRevisor((object)$data, Auth::user()));
+
+        return back()->with('success', 'Candidatura inviata con successo!');
+    }
 }

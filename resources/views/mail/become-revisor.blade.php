@@ -9,10 +9,28 @@
     <div>
         <h1>{{ __('ui.useraskedwork') }}</h1>
         <h2>{{ __('ui.theirinformation') }}</h2>
-        <p>{{ __('ui.name:') }}{{$user->name}}</p>
-        <p>{{ __('ui.email:') }}{{$user->email}}</p>
-        <p></p>{{ __('ui.makethemreviewer') }}
-        <a href="{{route('make.revisor',compact('user'))}}">Rendi Revisore</a>
+        @if(property_exists($data, 'nome'))
+            <p><strong>Nome:</strong> {{ $data->nome }}</p>
+            <p><strong>Email:</strong> {{ $data->email }}</p>
+            @if($data->ruolo)
+                <p><strong>Ruolo di interesse:</strong> {{ $data->ruolo }}</p>
+            @endif
+            @if($data->cv)
+                <p><strong>CV:</strong> <a href="{{ $data->cv }}">{{ $data->cv }}</a></p>
+            @endif
+            @if($data->messaggio)
+                <p><strong>Messaggio:</strong><br>{{ $data->messaggio }}</p>
+            @endif
+        @else
+            <p><strong>Utente:</strong> {{ $data->name }}</p>
+            <p><strong>Email:</strong> {{ $data->email }}</p>
+        @endif
+
+        
+            <p>{{ __('ui.makethemreviewer') }}</p>
+            <a href="{{ route('make.revisor', compact('user', 'data')) }}">Rendi Revisore</a>
+        
+        
     </div>
 </body>
 </html>

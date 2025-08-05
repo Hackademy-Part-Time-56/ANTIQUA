@@ -35,7 +35,7 @@ $payment_methods = [
                 </div>
                 <ul class="footer-links">
                     <li><a href="/chi-siamo">{{ __('ui.aboutus') }}</a></li>
-                    <li><a href="{{route('become.revisor')}}">{{ __('ui.workwithus') }}</a></li>
+                    <li><a href="{{route('lavora-con-noi')}}">{{ __('ui.workwithus') }}</a></li>
                     <li><a href="/stampa">{{ __('ui.press') }}</a></li>
                     <li><a href="/contatti">{{ __('ui.contact') }}</a></li>
                 </ul>
