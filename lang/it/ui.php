@@ -138,9 +138,22 @@ return
     'emailaddress'=>'Indirizzo email:',
     'pw'=>'Password:',
     'confirmpw'=>'Conferma la password:',
+    'minchars'=>'Almeno 8 caratteri',
+    'uppercase'=>'Una lettera maiuscola',
+    'lowercase'=>'Una lettera minuscola',
+    'number'=>'Un numero',
+    'specialchar'=>'Un carattere speciale (!@#$%^&*)',
+    'alreadyregistered'=>'Sei già registrato?',
+    
 
 
     //login.blade.php
+    'forgotpw'=>'Hai dimenticato la password?',
+    'or'=>'Oppure',
+    'notregistered'=>'Non sei registrato?',
+    'google'=>'Accedi con Google',
+    'backhome'=>'⬅ Torna alla Home',
+
 
     //show.blade.php
     'detailsarticles'=>'Dettagli articolo: ',
@@ -213,6 +226,9 @@ return
     //preferiti
     'yourfav'=>'I tuoi articoli preferiti',
     'havenotadded'=>'Non hai ancora aggiunto articoli ai preferiti.',
-
+    'noarticlesadded'=>'Non hai ancora aggiunto nessun articolo ai tuoi preferiti.
+                        Inizia a esplorare la nostra collezione di antiquariato per trovare
+                        pezzi unici che catturano il tuo interesse!',
+    'exp'=>'🔍 Esplora Antiquariato',
 
 ];

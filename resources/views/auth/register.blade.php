@@ -402,24 +402,23 @@
                     <div class="password-requirements" id="passwordRequirements">
                         <div class="requirement" id="lengthReq">
                             <span class="requirement-icon">✓</span>
-                            Almeno 8 caratteri
+                            {{ __('ui.minchars') }}
                         </div>
                         <div class="requirement" id="upperReq">
                             <span class="requirement-icon">✓</span>
-                            Una lettera maiuscola
+                            {{ __('ui.uppercase') }}
                         </div>
                         <div class="requirement" id="lowerReq">
                             <span class="requirement-icon">✓</span>
-                            Una lettera minuscola
+                            {{ __('ui.lowercase') }}
                         </div>
                         <div class="requirement" id="numberReq">
                             <span class="requirement-icon">✓</span>
-                            Un numero
+                            {{ __('ui.number') }}
                         </div>
                         <div class="requirement" id="specialReq">
                             <span class="requirement-icon">✓</span>
-                            Un carattere speciale (!@#$%^&*)
-                        </div>
+                            {{ __('ui.specialchar') }}
                     </div>
                 </div>
 
@@ -440,9 +439,9 @@
                 </button>
             </form>
             <div style="text-align:center; margin-top: 1rem;">
-                <span>Sei già registrato?</span>
+                <span>{{ __('ui.alreadyregistered') }}</span>
                 <a href="{{ route('login') }}" style="color: var(--primary-color); font-weight: 600; text-decoration: underline; margin-left: 0.3em;">
-                    Accedi
+                    {{ __('ui.login') }}
                 </a>
             </div>
         </div>

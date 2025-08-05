@@ -134,8 +134,19 @@ return
     'emailaddress'=>'Email address:',
     'pw'=>'Password:',
     'confirmpw'=>'Confirm password:',
+    'minchars'=>'At least 8 characters',
+    'uppercase'=>'One uppercase letter',
+    'lowercase'=>'One lowercase letter',
+    'number'=>'One number',
+    'specialchar'=>'One special character (!@#$%^&*)',
+    'alreadyregistered'=>'Already registered?',
 
     //login.blade.php
+    'forgotpw'=>'Forgot your password?',
+    'or'=>'Or',
+    'notregistered'=>'Not registered?',
+    'google'=>'Login with Google',
+    'backhome'=>'⬅ Back to Home',
 
     //show.blade.php
     'detailsarticles'=>'Article details: ',
@@ -206,4 +217,8 @@ return
     //preferiti
     'yourfav'=>'Your favorites',
     'havenotadded'=>'You have not added any items to your favorites yet.',
+    'noarticlesadded'=>'You have not added any articles to your favorites yet. 
+                        Start exploring our antique collection to find unique pieces that capture your interest!',
+    'exp'=>'🔍 Explore Antiques',
+    
 ];

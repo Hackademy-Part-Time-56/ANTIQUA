@@ -134,8 +134,19 @@ return
     'emailaddress'=>'Dirección de correo electrónico',
     'pw'=>'Contraseña',
     'confirmpw'=>'Confirmar contraseña',
+    'minchars'=>'Al menos 8 caracteres',
+    'uppercase'=>'Una letra mayúscula',
+    'lowercase'=>'Una letra minúscula',
+    'number'=>'Un número',
+    'specialchar'=>'Un carácter especial (!@#$%^&*)',
+    'alreadyregistered'=>'Ya estás registrado?',
 
     //login.blade.php
+    'forgotpw'=>'Olvidaste tu contraseña?',
+    'or'=>'O',
+    'notregistered'=>'No estás registrado?',
+    'google'=>'Iniciar sesión con Google',
+    'backhome'=>'⬅ Volver a la página principal',
 
     //show.blade.php
     'detailsarticles'=>'Detalles del artículo: ',
@@ -206,5 +217,9 @@ return
      //preferiti
     'yourfav'=>'Tus favoritos',
     'havenotadded'=>'Aún no has añadido ningún artículo a tus favoritos.',
+    'noarticlesadded'=>'Aún no has añadido ningún artículo a tus favoritos. 
+                        Comienza a explorar nuestra colección de antigüedades para encontrar 
+                        piezas únicas que capturen tu interés!',
+    'exp'=>'🔍 Explorar Antigüedades',
 
 ];
