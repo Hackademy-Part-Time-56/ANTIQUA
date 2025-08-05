@@ -6,10 +6,36 @@ return
     'reachmillionsofinterestedbuyers'=>'Raggiungi milioni di acquirenti interessati',
     'postanad'=>'Pubblica annuncio',
     'noarticleshavebeencreatedyet'=>'Non sono ancora stati creati articoli',
+    //pagina1
     'specit'=>'Oggetti speciali',
     'selctbyex'=>'Selezionati dai migliori esperti',
+    //finepagina1
     'populararticles'=>'Articoli popolari',
     'latestarticles'=>'Ultimi articoli',
+    //pagina2
+    'bestjewelry'=>'I migliori gioielli',
+    'brilliantandprecious'=>'Brillanti e preziosi',
+    'diamonds'=>'Diamanti',
+    'necklaces'=>'Collane',
+    'earrings'=>'Orecchini',
+    'rings'=>'Anelli',
+    //finepagina2
+    //pagina3
+    'experts'=>'Esperti di fiducia',
+    'justforyou'=>'Appositi per te',
+    //finepagina3
+    'whychoose'=>'Perché scegliere Antiqua?',
+    'findyourobject'=>'Trova il tuo oggetto speciale',
+    'discoverunique'=>'Scopri pezzi unici e rari per ogni passione',
+    'selectedbyexperts'=>'Selezionato da esperti',
+    'chosenandverified'=>'Oggetti scelti e verificati dai migliori professionisti.',
+    'buyerprotection'=>'Tutela degli acquirenti',
+    'securepurchases'=>'Acquisti sicuri e assistenza dedicata per ogni cliente.',
+    'chosenbymillions'=>'Scelto da milioni di persone',
+    'communityofenthusiasts'=>'Una community di appassionati in tutta Italia.',
+
+
+
 
 
     //index.blade.php
