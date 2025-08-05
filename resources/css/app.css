@@ -66,7 +66,7 @@
 
 .main-image {
     height: 543px;
-    object-fit: fill;
+    object-fit: contain;
 }
 .main-imagex {
     height: 500px;
