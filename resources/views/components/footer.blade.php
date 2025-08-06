@@ -48,7 +48,6 @@ $payment_methods = [
                     <li><a href="/come-funziona">{{ __('ui.howitworks') }}</a></li>
                     <li><a href="/spedizione">{{ __('ui.shipping') }}</a></li>
                     <li><a href="/pagamenti">{{ __('ui.payments') }}</a></li>
-                    <li><a href="/sicurezza">{{ __('ui.security') }}</a></li>
                 </ul>
             </div>
 
@@ -68,7 +67,7 @@ $payment_methods = [
                     <li><a href="/categorie">{{ __('ui.popularcategories') }}</a></li>
                     <li><a href="/aste-in-corso">{{ __('ui.liveauctions') }}</a></li>
                     <li><a href="/app-mobili">{{ __('ui.mobileapps') }}</a></li>
-                    <li><a href="/blog">{{ __('ui.blog') }}</a></li>
+                    <li><a href="{{route('chats')}}">{{ __('ui.blog') }}</a></li>
                 </ul>
             </div>
 
