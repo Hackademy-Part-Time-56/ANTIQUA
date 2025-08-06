@@ -394,6 +394,7 @@
         <div class="form-card">
             <form action="{{ route('profile.update') }}" method="POST">
                 @csrf
+                <input type="hidden" name="profile_completed" value="1">
 
                 <div class="form-sections">
                     <!-- Sezione Informazioni Personali -->

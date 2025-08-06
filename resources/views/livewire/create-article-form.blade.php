@@ -22,7 +22,7 @@
         <div class="col-md-6">
             <label for="price" class="form-label fw-semibold">{{ __('ui.price:') }}</label>
             <input type="number" step="0.01" class="form-control form-control-lg" id="price" wire:model="price"
-                placeholder="Prezzo">
+                placeholder="{{ __('ui.price') }}">
             @error('price')
                 <p class="text-danger fst-italic mt-1">{{ $message }}</p>
             @enderror

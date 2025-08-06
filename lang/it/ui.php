@@ -147,7 +147,7 @@ return
     'popularcategories'=>'Categorie Popolari',
     'liveauctions'=>'Aste in corso',
     'mobileapps'=>'App Mobili',
-    'blog'=>'Blog',
+    'blog'=>'Chat',
 
     'stayconnected'=>'Rimani Connesso',
     'subscribetoournewsletter'=>'Iscriviti alla nostra newsletter per scoprire le ultime novità, aste e promozioni esclusive!',
