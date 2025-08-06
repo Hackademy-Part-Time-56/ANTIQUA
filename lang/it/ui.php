@@ -78,6 +78,27 @@ return
 
     //footer da modificare e poi aggiungere le relative chiavi
     'aboutus'=>'Chi siamo',
+    'h1'=>'Chi è Antiqua',
+    'firstparagraph'=>' Antiqua è la piattaforma leader per vendere e acquistare oggetti speciali selezionati da esperti. Ogni giorno milioni di appassionati visitano Antiqua per scoprire tesori unici e straordinari: dalle opere d’arte ai gioielli vintage, dai fumetti rari ai veicoli da collezione.',
+    'h2'=>'Cosa rende Antiqua unica?',
+    'secondparagraph'=>'A differenza di altri marketplace, su Antiqua ogni oggetto è selezionato e verificato da esperti professionisti. Questo garantisce agli utenti un’esperienza d’asta sicura, trasparente e di alta qualità.',
+    'why'=>'🔍 Oggetti accuratamente selezionati.',
+    'why1'=>'🛡️ Acquisti sicuri e garantiti.',
+    'why2'=>'🌍 Una community internazionale.',
+    'why3'=>'📱 Un’esperienza fluida anche da mobile.',
+    'h2.1'=>'Il nostro team di esperti',
+    'thirdparagraph'=>'Antiqua collabora con oltre 240 esperti in tutto il mondo, ognuno con competenze specifiche nel proprio settore. La loro missione è scoprire, valutare e proporre solo il meglio, affinché ogni utente possa fare un acquisto consapevole e soddisfacente.',
+    'h2.2'=>'Dove siamo',
+    'fourthparagraph'=>' Antiqua ha sede in Europa, ma il nostro team lavora in modalità ibrida e internazionale, per offrire un servizio di alta qualità a utenti in più di 60 paesi.',
+    'h2.3'=>'Cosa puoi trovare su Antiqua?',
+    'fifthparagraph'=>'Ogni settimana pubblichiamo migliaia di aste in categorie come: ',
+    'subct1'=>'Arte contemporanea e moderna;',
+    'subct2'=>'Orologi di lusso e gioielli;',
+    'subct3'=>'Veicoli d’epoca;',
+    'subct4'=>'Design, antiquariato e vintage;',
+    'subct5'=>'Fumetti, francobolli e oggetti da collezione.',
+
+
     'workwithus'=>'Lavora con noi',
     'press'=>'Stampa',
     'contact'=>'Contatti',
@@ -145,14 +166,24 @@ return
     'specialchar'=>'Un carattere speciale (!@#$%^&*)',
     'alreadyregistered'=>'Sei già registrato?',
     
-
-
     //login.blade.php
     'forgotpw'=>'Hai dimenticato la password?',
     'or'=>'Oppure',
     'notregistered'=>'Non sei registrato?',
     'google'=>'Accedi con Google',
     'backhome'=>'⬅ Torna alla Home',
+
+    //forgotpw
+    'recoverpw'=>'Recupera password',
+    'enteremail'=>'Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password.',
+    'emailadd'=>'Indirizzo Email',
+    'sendresetlink'=>'Invia link di reset',
+    'backtologin'=>'← Torna al Login',
+
+    //resetpw
+    'newpassword'=>'Nuova Password',
+    'confirmpassword'=>'Conferma Password',
+    'resetpw'=>'Reimposta Password',
 
 
     //show.blade.php

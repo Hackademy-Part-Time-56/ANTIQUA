@@ -75,6 +75,26 @@ return
 
     //footer da modificare
     'aboutus'=>'Sobre nosotros',
+    'h1'=>'Quién es Antiqua',
+    'firstparagraph'=>'Antiqua es la plataforma líder para vender y comprar objetos especiales seleccionados por expertos. Cada día, millones de entusiastas visitan Antiqua para descubrir tesoros únicos y extraordinarios: desde obras de arte hasta joyas vintage, desde cómics raros hasta vehículos de colección.',
+    'h2'=>'Qué hace que Antiqua sea única?',
+    'secondparagraph'=>'A diferencia de otros mercados, en Antiqua cada objeto es seleccionado y verificado por expertos profesionales. Esto garantiza a los usuarios una experiencia de subasta segura, transparente y de alta calidad.',
+    'why'=>'🔍 Objetos cuidadosamente seleccionados.',
+    'why1'=>'🛡️ Compras seguras y garantizadas.',
+    'why2'=>'🌍 Una comunidad internacional.',
+    'why3'=>'📱 Una experiencia fluida también desde dispositivos móviles.',
+    'h2.1'=>'Nuestro equipo de expertos',
+    'thirdparagraph'=>'Antiqua colabora con más de 240 expertos en todo el mundo, cada uno con competencias específicas en su sector. Su misión es descubrir, evaluar y proponer solo lo mejor, para que cada usuario pueda hacer una compra consciente y satisfactoria.',
+    'h2.2'=>'Dónde estamos',
+    'fourthparagraph'=>'Antiqua tiene su sede en Europa, pero nuestro equipo trabaja de manera híbrida e internacional, para ofrecer un servicio de alta calidad a usuarios en más de 60 países.',
+    'h2.3'=>'Qué puedes encontrar en Antiqua?',
+    'fifthparagraph'=>'Cada semana publicamos miles de subastas en categorías como: ',
+    'subct1'=>'Arte contemporáneo y moderno;',
+    'subct2'=>'Relojes de lujo y joyas;',
+    'subct3'=>'Vehículos de época;',
+    'subct4'=>'Diseño, antigüedades y vintage;',
+    'subct5'=>'Cómics, sellos y objetos de colección.',
+
     'workwithus'=>'Trabaja con nosotros',
     'press'=>'Prensa',
     'contact'=>'Contáctanos',
@@ -147,6 +167,18 @@ return
     'notregistered'=>'No estás registrado?',
     'google'=>'Iniciar sesión con Google',
     'backhome'=>'⬅ Volver a la página principal',
+
+    //forgotpw
+    'recoverpw'=>'Recuperar contraseña',
+    'enteremail'=>'Inserta tu dirección de correo electrónico y te enviaremos un enlace para restablecer la contraseña.',
+    'emailadd'=>'Dirección de correo electrónico',
+    'sendresetlink'=>'Enviar enlace de restablecimiento',
+    'backtologin'=>'← Volver a Iniciar Sesión',
+
+    //resetpw
+    'newpassword'=>'Nueva contraseña',
+    'confirmpassword'=>'Confirmar contraseña',
+    'resetpw'=>'Reiniciar contraseña',
 
     //show.blade.php
     'detailsarticles'=>'Detalles del artículo: ',

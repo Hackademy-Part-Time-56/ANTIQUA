@@ -145,11 +145,11 @@
     <div class="forgot-container">
         <div class="forgot-card">
             <div class="brand-section">
-                <h1 class="brand-title">Recupera Password</h1>
+                <h1 class="brand-title">{{ __('ui.recoverpw') }}</h1>
             </div>
 
             <div class="description">
-                Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password.
+                {{ __('ui.enteremail') }}
             </div>
 
             @if (session('status'))
@@ -170,7 +170,7 @@
                 @csrf
                 
                 <div class="form-group">
-                    <label for="email" class="form-label">Indirizzo Email</label>
+                    <label for="email" class="form-label">{{ __('ui.emailadd') }}</label>
                     <input 
                         type="email" 
                         class="form-input" 
@@ -183,12 +183,12 @@
                 </div>
 
                 <button type="submit" class="submit-btn">
-                    Invia Link di Reset
+                    {{ __('ui.sendresetlink') }}
                 </button>
             </form>
 
             <div class="back-link">
-                <a href="{{ route('login') }}">← Torna al Login</a>
+                <a href="{{ route('login') }}">{{ __('ui.backtologin') }}</a>
             </div>
         </div>
     </div>
