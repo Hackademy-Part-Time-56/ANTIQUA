@@ -6,6 +6,7 @@ return
     'reachmillionsofinterestedbuyers'=>'Reach millions of interested buyers',
     'postanad'=>'Post an ad',
     'noarticleshavebeencreatedyet'=>'No articles have been created yet',
+    'betheFirsttopublish'=>'Be the first to publish an article',
     //pagina1
     'specit'=>'Special items',
     'selctbyex'=>'Selected by top experts',
@@ -97,6 +98,34 @@ return
     'subct5'=>'Comics, stamps, and collectibles.',
 
     'workwithus'=>'Work with us',
+    'workwithantiqua'=>'Work with Antiqua',
+    'joinaproject'=>'Join a project that celebrates the timeless charm of antiques. We are looking for people who share our passion for history and craftsmanship.',
+    'responscat'=>'Online Catalog Manager',
+    'remote'=>'Remote',
+    'type'=>'Type: ',
+    'pt'=>'Part-time',
+    'jobdescription'=>'Manage the insertion and description of new vintage items in our digital catalog.',
+    'antiquesconsultant'=>'Antiques Consultant',
+    'lt'=>'Remote / To clients',
+    'collaboration'=>'Collaboration',
+    'supportclients'=>'Support clients in the authentication and evaluation of rare objects.',
+    'applynow'=>'Apply now',
+    'backenddeveloper'=>'Laravel Backend Developer',
+    'lt1'=>'Hybrid (Vienna or Remote)',
+    'fulltime'=>'Full-time',
+    'desc'=>'Develop advanced features for the ecommerce platform.',
+    'spontaneousapplication'=>'Spontaneous application',
+    'notpos'=>'Don’t see the right position? Send us your CV anyway: we are always looking for talents who share our passion for antiques.',
+    'nc'=>'Full name:',
+    'ri'=>'Role of interest:',
+    'link'=>'Link to CV (Google Drive, PDF, etc.)',
+    'mex'=>'Message:',
+    'sendapplication'=>'Send application',
+
+
+
+
+
     'press'=>'Press',
     'contact'=>'Contact',
     'helpandsupport'=>'Help and Support',

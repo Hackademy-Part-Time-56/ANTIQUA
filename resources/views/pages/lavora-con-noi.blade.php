@@ -1,8 +1,8 @@
 <x-layout>
     <header style="padding: 3rem 2rem; text-align: center; color: #ff6600; margin-bottom: 2rem;">
-        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: Georgia, serif;">Lavora con Antiqua</h1>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: Georgia, serif;">{{__('ui.workwithantiqua')}}</h1>
         <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; font-family: Georgia, serif;">
-            Unisciti a un progetto che celebra il fascino intramontabile dell'antiquariato. Cerchiamo persone che condividano la nostra passione per la storia e l'artigianalità.
+            {{__('ui.joinaproject')}}
         </p>
     </header>
 
@@ -10,31 +10,31 @@
         <div class="row">
             @foreach([
                 [
-                    'titolo' => 'Responsabile Catalogo Online',
-                    'localita' => 'Remoto',
-                    'tipo' => 'Part-time',
-                    'descrizione' => 'Gestisci l’inserimento e la descrizione dei nuovi articoli d’epoca nel nostro catalogo digitale.'
+                    'titolo' => __('ui.responscat'),
+                    'localita' => __('ui.remote'),
+                    'tipo' => __('ui.pt'),
+                    'descrizione' => __('ui.jobdescription')
                 ],
                 [
-                    'titolo' => 'Consulente Antiquario',
-                    'localita' => 'Remoto / Presso clienti',
-                    'tipo' => 'Collaborazione',
-                    'descrizione' => 'Supporta i clienti nell’autenticazione e nella valutazione di oggetti rari.'
+                    'titolo' => __('ui.antiquesconsultant'),
+                    'localita' => __('ui.lt'),
+                    'tipo' => __('ui.collaboration'),
+                    'descrizione' => __('ui.supportclients')
                 ],
                 [
-                    'titolo' => 'Laravel Backend Developer',
-                    'localita' => 'Ibrido (Vienna o Remoto)',
-                    'tipo' => 'Full-time',
-                    'descrizione' => 'Sviluppa funzionalità avanzate per la piattaforma ecommerce.'
+                    'titolo' => __('ui.backenddeveloper'),
+                    'localita' => __('ui.lt1'),
+                    'tipo' => __('ui.fulltime'),
+                    'descrizione' => __('ui.desc')
                 ]
             ] as $job)
             <div class="col-md-4 mb-3">
                 <div class="job-card bg-light text-center" style="padding: 1.5rem; border-radius: 8px; border: 1px solid #ddd;">
                     <h3 style="color: #333; margin-top: 0; font-family: Georgia, serif;">{{ $job['titolo'] }}</h3>
-                    <p><strong>Località:</strong> {{ $job['localita'] }}</p>
-                    <p><strong>Tipo:</strong> {{ $job['tipo'] }}</p>
+                    <p><strong>{{ __('ui.loc') }}</strong> {{ $job['localita'] }}</p>
+                    <p><strong>{{ __('ui.type') }}</strong> {{ $job['tipo'] }}</p>
                     <p>{{ $job['descrizione'] }}</p>
-                    <a href="#form-candidatura" style="background: #333; color: #fff; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; display: inline-block; margin-top: 0.5rem;">Candidati ora</a>
+                    <a href="#form-candidatura" style="background: #333; color: #fff; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; display: inline-block; margin-top: 0.5rem;">{{ __('ui.applynow') }}</a>
                 </div>
             </div>
             @endforeach
@@ -42,31 +42,31 @@
     </section>
 
     <section id="form-candidatura" style="background: #fff; padding: 3rem 2rem; max-width: 700px; margin: 0 auto 4rem auto; border-radius: 8px; border: 1px solid #ddd;">
-        <h2 style="font-family: Georgia, serif;">Candidatura spontanea</h2>
+        <h2 style="font-family: Georgia, serif;">{{ __('ui.spontaneousapplication') }}</h2>
         <p style="font-family: Georgia, serif;">
-            Non vedi la posizione adatta? Inviaci comunque il tuo CV: siamo sempre alla ricerca di talenti che condividano la nostra passione per l’antiquariato.
+            {{ __('ui.notpos') }}
         </p>
 
         <form method="POST" action="{{route('become.revisor')}}">
             @csrf
 
-            <label for="nome" style="margin-top:1rem; font-weight:bold;">Nome completo</label>
+            <label for="nome" style="margin-top:1rem; font-weight:bold;">{{ __('ui.nc') }}</label>
             <input type="text" id="nome" name="nome" required style="padding: 0.8rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;">
 
-            <label for="email" style="margin-top:1rem; font-weight:bold;">Email</label>
+            <label for="email" style="margin-top:1rem; font-weight:bold;">{{ __('ui.email:') }}</label>
             <input type="email" id="email" name="email" required style="padding: 0.8rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;">
 
-            <label for="ruolo" style="margin-top:1rem; font-weight:bold;">Ruolo di interesse</label>
+            <label for="ruolo" style="margin-top:1rem; font-weight:bold;">{{ __('ui.ri') }}</label>
             <input type="text" id="ruolo" name="ruolo" style="padding: 0.8rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;">
 
-            <label for="cv" style="margin-top:1rem; font-weight:bold;">Link al CV (Google Drive, PDF, ecc.)</label>
+            <label for="cv" style="margin-top:1rem; font-weight:bold;">{{ __('ui.link') }}</label>
             <input type="url" id="cv" name="cv" style="padding: 0.8rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;">
 
-            <label for="messaggio" style="margin-top:1rem; font-weight:bold;">Messaggio</label>
+            <label for="messaggio" style="margin-top:1rem; font-weight:bold;">{{ __('ui.mex') }}</label>
             <textarea id="messaggio" name="messaggio" rows="5" placeholder="Parlaci un po' di te..." style="padding: 0.8rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; width: 100%;"></textarea>
 
             <button type="submit" style="margin-top: 1.5rem; background: #333; color: #fff; padding: 0.8rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">
-                Invia candidatura
+                {{ __('ui.sendapplication') }}
             </button>
         </form>
 
@@ -77,7 +77,7 @@
 
     <div class="text-center mt-5 mb-5">
         <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-            ⬅ Torna alla Home
+            {{ __('ui.backhome') }}
         </a>
     </div>
 

@@ -6,6 +6,7 @@ return
     'reachmillionsofinterestedbuyers'=>'Raggiungi milioni di acquirenti interessati',
     'postanad'=>'Pubblica annuncio',
     'noarticleshavebeencreatedyet'=>'Non sono ancora stati creati articoli',
+    'betheFirsttopublish'=>'Sii il primo a pubblicare un articolo',
     //pagina1
     'specit'=>'Oggetti speciali',
     'selctbyex'=>'Selezionati dai migliori esperti',
@@ -100,6 +101,33 @@ return
 
 
     'workwithus'=>'Lavora con noi',
+    'workwithantiqua'=>'Lavora con Antiqua',
+    'joinaproject'=>'Unisciti a un progetto che celebra il fascino intramontabile dell’antiquariato. Cerchiamo persone che condividano la nostra passione per la storia e l’artigianalità.',
+    'responscat'=>'Responsabile Catalogo Online',
+    'remote'=>'Remoto',
+    'type'=>'Tipo: ',
+    'pt'=>'Part-time',
+    'jobdescription'=>'Gestisci l’inserimento e la descrizione dei nuovi articoli d’epoca nel nostro catalogo digitale.',
+    'antiquesconsultant'=>'Consulente Antiquario',
+    'lt'=>'Remoto / Presso clienti',
+    'collaboration'=>'Collaborazione',
+    'supportclients'=>'Supporta i clienti nell’autenticazione e nella valutazione di oggetti rari.',
+    'applynow'=>'Candidati ora',
+    'backenddeveloper'=>'Laravel Backend Developer',
+    'lt1'=>'Ibrido (Vienna o Remoto)',
+    'fulltime'=>'Full-time',
+    'desc'=>'Sviluppa funzionalità avanzate per la piattaforma ecommerce.',
+    'spontaneousapplication'=>'Candidatura spontanea',
+    'notpos'=>'Non vedi la posizione adatta? Inviaci comunque il tuo CV: siamo sempre alla ricerca di talenti che condividano la nostra passione per l’antiquariato.',
+    'nc'=>'Nome completo:',
+    'ri'=>'Ruolo di interesse:',
+    'link'=>'Link al CV (Google Drive, PDF, ecc.)',
+    'mex'=>'Messaggio:',
+    'sendapplication'=>'Invia candidatura',
+
+
+
+
     'press'=>'Stampa',
     'contact'=>'Contatti',
     'helpandsupport'=>'Aiuto & Supporto',
