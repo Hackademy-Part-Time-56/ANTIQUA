@@ -1,7 +1,7 @@
 <a href="{{ route('article.show', compact('article')) }}" class="article-card-link">
     <div class="article-card">
         <div class="card-image-wrapper">
-            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(750, 500) : 'https://picsum.photos/600/500' }}" class="card-image" alt="Test">
+            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(700, 1000) : 'https://picsum.photos/600/500' }}" class="card-image" alt="Test">
         </div>
         <div class="card-content">
             <div class="category-tag">

@@ -119,7 +119,7 @@ return
     'verif'=>'Verified',
     'notverif'=>'Unverified',
     'buynow'=>'Buy now',
-    'contactseller'=>'Contact seller',
+    'contactseller'=>'Open LiveChat',
     'buyerguarantee'=>'Buyer guarantee',
     'insuredship'=>'Insured shipping',
     'category'=>'Category: ',

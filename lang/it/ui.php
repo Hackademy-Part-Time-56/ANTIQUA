@@ -121,7 +121,7 @@ return
     'verif'=>'Verificato',
     'notverif'=>'Non verificato',
     'buynow'=>'Acquista ora',
-    'contactseller'=>'Contatta il venditore',
+    'contactseller'=>'Apri LiveChat',
     'buyerguarantee'=>'Garanzia acquirente',
     'insuredship'=>'Spedizione assicurata',
     'category'=>'Categoria: ',

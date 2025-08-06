@@ -71,6 +71,7 @@
 .main-imagex {
     height: 500px;
     width: 1500px;
+    object-fit: contain;
 }
 
 .carousel-control-prev-icon,

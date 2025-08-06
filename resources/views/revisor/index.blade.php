@@ -510,7 +510,7 @@
                             <div class="carousel-inner">
                                 @foreach($article_to_check->images as $key => $image)
                                     <div class="carousel-item @if($loop->first) active @endif">
-                                        <img src="{{ $image->getUrl(1200, 1000) }}" class="d-block w-100 rounded shadow main-imagex"
+                                        <img src="{{ $image->getUrl(700, 1000) }}" class="d-block w-100 rounded shadow main-imagex"
                                             alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
                                         <div class="mb-2">
                                             <div class="row justify-content-center align-items-center">

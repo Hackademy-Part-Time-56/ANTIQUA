@@ -44,6 +44,29 @@
                                 alt="Nessuna foto inserita dall'utente">
                         @endif
                     </div>
+                    <!-- Description Section -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div class="description-section">
+                                <h3 class="mb-3">{{ __('ui.description:') }}</h3>
+                                <p>{{ $article->description }}</p>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong>{{ __('ui.category') }}</strong> {{ $article->category->name }}</p>
+                                        <p><strong>{{ __('ui.published') }}</strong>
+                                            {{ $article->created_at->format('d/m/Y') }}
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- <p><strong>ID Articolo:</strong> #{{ $article->id }}</p> -->
+                                        <!-- <p><strong>Visualizzazioni:</strong> 125</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Product Info Section -->
@@ -110,30 +133,6 @@
                             <div class="feature-item">
                                 <i class="bi bi-truck text-success"></i>
                                 <span>{{ __('ui.insuredship') }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Description Section -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <div class="description-section">
-                        <h3 class="mb-3">{{ __('ui.description:') }}</h3>
-                        <p>{{ $article->description }}</p>
-
-                        <hr class="my-4">
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p><strong>{{ __('ui.category') }}</strong> {{ $article->category->name }}</p>
-                                <p><strong>{{ __('ui.published') }}</strong> {{ $article->created_at->format('d/m/Y') }}
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <!-- <p><strong>ID Articolo:</strong> #{{ $article->id }}</p> -->
-                                <!-- <p><strong>Visualizzazioni:</strong> 125</p> -->
                             </div>
                         </div>
                     </div>

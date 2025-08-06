@@ -186,7 +186,7 @@
                                     style="grid-area: box-3; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/in.jpg') }}" alt="Isaac Newton"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Isaac Newton</span>
+                                    <span style="color:#222; font-weight:600;height:60px;">Isaac Newton</span>
                                 </a>
                                 <a href="{{ route('user.profile', 3) }}" class="box"
                                     style="grid-area: box-4; flex-direction: column; text-decoration:none;">
