@@ -16,13 +16,15 @@ class UserProfileController extends Controller
     public function edit()
     {
         $user = Auth::user();
+        $user->update(['profile_completed' => true]);
         return view('profile.edit', compact('user'));
     }
 
     public function update(Request $request)
     {
-        $user = Auth::user();
-        $data = $request->validate([
+        $user = auth()->user();
+        
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'bio' => 'nullable|string|max:1000',
             'specialization' => 'nullable|string|max:255',
@@ -34,8 +36,13 @@ class UserProfileController extends Controller
             'phone_number' => 'nullable|string|max:30',
             'location' => 'nullable|string|max:255',
         ]);
-        $user->fill($data);
-        $user->save();
-        return redirect()->route('user.profile', $user)->with('message', 'Profilo aggiornato!');
+        
+        // Aggiorna i dati validati
+        $user->update($validatedData);
+        
+        // Marca il profilo come completato
+        $user->update(['profile_completed' => true]);
+
+        return redirect()->route('user.profile', ['user' => $user->id])->with('success', __('ui.profile_updated'));
     }
 }

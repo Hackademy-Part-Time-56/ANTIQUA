@@ -1,4 +1,5 @@
 <x-layout>
+    <x-profile-completion-popup />
     <x-category-navigation />
     <div class="container-fluid text-center">
 
