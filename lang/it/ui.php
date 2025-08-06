@@ -6,10 +6,36 @@ return
     'reachmillionsofinterestedbuyers'=>'Raggiungi milioni di acquirenti interessati',
     'postanad'=>'Pubblica annuncio',
     'noarticleshavebeencreatedyet'=>'Non sono ancora stati creati articoli',
+    //pagina1
     'specit'=>'Oggetti speciali',
     'selctbyex'=>'Selezionati dai migliori esperti',
+    //finepagina1
     'populararticles'=>'Articoli popolari',
     'latestarticles'=>'Ultimi articoli',
+    //pagina2
+    'bestjewelry'=>'I migliori gioielli',
+    'brilliantandprecious'=>'Brillanti e preziosi',
+    'diamonds'=>'Diamanti',
+    'necklaces'=>'Collane',
+    'earrings'=>'Orecchini',
+    'rings'=>'Anelli',
+    //finepagina2
+    //pagina3
+    'experts'=>'Esperti di fiducia',
+    'justforyou'=>'Appositi per te',
+    //finepagina3
+    'whychoose'=>'Perché scegliere Antiqua?',
+    'findyourobject'=>'Trova il tuo oggetto speciale',
+    'discoverunique'=>'Scopri pezzi unici e rari per ogni passione',
+    'selectedbyexperts'=>'Selezionato da esperti',
+    'chosenandverified'=>'Oggetti scelti e verificati dai migliori professionisti.',
+    'buyerprotection'=>'Tutela degli acquirenti',
+    'securepurchases'=>'Acquisti sicuri e assistenza dedicata per ogni cliente.',
+    'chosenbymillions'=>'Scelto da milioni di persone',
+    'communityofenthusiasts'=>'Una community di appassionati in tutta Italia.',
+
+
+
 
 
     //index.blade.php
@@ -52,6 +78,27 @@ return
 
     //footer da modificare e poi aggiungere le relative chiavi
     'aboutus'=>'Chi siamo',
+    'h1'=>'Chi è Antiqua',
+    'firstparagraph'=>' Antiqua è la piattaforma leader per vendere e acquistare oggetti speciali selezionati da esperti. Ogni giorno milioni di appassionati visitano Antiqua per scoprire tesori unici e straordinari: dalle opere d’arte ai gioielli vintage, dai fumetti rari ai veicoli da collezione.',
+    'h2'=>'Cosa rende Antiqua unica?',
+    'secondparagraph'=>'A differenza di altri marketplace, su Antiqua ogni oggetto è selezionato e verificato da esperti professionisti. Questo garantisce agli utenti un’esperienza d’asta sicura, trasparente e di alta qualità.',
+    'why'=>'🔍 Oggetti accuratamente selezionati.',
+    'why1'=>'🛡️ Acquisti sicuri e garantiti.',
+    'why2'=>'🌍 Una community internazionale.',
+    'why3'=>'📱 Un’esperienza fluida anche da mobile.',
+    'h2.1'=>'Il nostro team di esperti',
+    'thirdparagraph'=>'Antiqua collabora con oltre 240 esperti in tutto il mondo, ognuno con competenze specifiche nel proprio settore. La loro missione è scoprire, valutare e proporre solo il meglio, affinché ogni utente possa fare un acquisto consapevole e soddisfacente.',
+    'h2.2'=>'Dove siamo',
+    'fourthparagraph'=>' Antiqua ha sede in Europa, ma il nostro team lavora in modalità ibrida e internazionale, per offrire un servizio di alta qualità a utenti in più di 60 paesi.',
+    'h2.3'=>'Cosa puoi trovare su Antiqua?',
+    'fifthparagraph'=>'Ogni settimana pubblichiamo migliaia di aste in categorie come: ',
+    'subct1'=>'Arte contemporanea e moderna;',
+    'subct2'=>'Orologi di lusso e gioielli;',
+    'subct3'=>'Veicoli d’epoca;',
+    'subct4'=>'Design, antiquariato e vintage;',
+    'subct5'=>'Fumetti, francobolli e oggetti da collezione.',
+
+
     'workwithus'=>'Lavora con noi',
     'press'=>'Stampa',
     'contact'=>'Contatti',
@@ -112,9 +159,32 @@ return
     'emailaddress'=>'Indirizzo email:',
     'pw'=>'Password:',
     'confirmpw'=>'Conferma la password:',
-
-
+    'minchars'=>'Almeno 8 caratteri',
+    'uppercase'=>'Una lettera maiuscola',
+    'lowercase'=>'Una lettera minuscola',
+    'number'=>'Un numero',
+    'specialchar'=>'Un carattere speciale (!@#$%^&*)',
+    'alreadyregistered'=>'Sei già registrato?',
+    
     //login.blade.php
+    'forgotpw'=>'Hai dimenticato la password?',
+    'or'=>'Oppure',
+    'notregistered'=>'Non sei registrato?',
+    'google'=>'Accedi con Google',
+    'backhome'=>'⬅ Torna alla Home',
+
+    //forgotpw
+    'recoverpw'=>'Recupera password',
+    'enteremail'=>'Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password.',
+    'emailadd'=>'Indirizzo Email',
+    'sendresetlink'=>'Invia link di reset',
+    'backtologin'=>'← Torna al Login',
+
+    //resetpw
+    'newpassword'=>'Nuova Password',
+    'confirmpassword'=>'Conferma Password',
+    'resetpw'=>'Reimposta Password',
+
 
     //show.blade.php
     'detailsarticles'=>'Dettagli articolo: ',
@@ -187,6 +257,9 @@ return
     //preferiti
     'yourfav'=>'I tuoi articoli preferiti',
     'havenotadded'=>'Non hai ancora aggiunto articoli ai preferiti.',
-
+    'noarticlesadded'=>'Non hai ancora aggiunto nessun articolo ai tuoi preferiti.
+                        Inizia a esplorare la nostra collezione di antiquariato per trovare
+                        pezzi unici che catturano il tuo interesse!',
+    'exp'=>'🔍 Esplora Antiquariato',
 
 ];

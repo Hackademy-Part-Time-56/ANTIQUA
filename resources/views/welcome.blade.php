@@ -133,35 +133,35 @@
                             <div class="grid-container">
                                 <div class="box special" style="grid-area: box-1; flex-direction: column;">
                                     <span style="font-size:2.2rem; color:#ff6600; font-weight:800; line-height:1.1;">
-                                        I migliori gioielli
+                                        {{ __('ui.bestjewelry') }}
                                     </span>
                                     <span style="font-size:1.1rem; color:#888; font-weight:500; margin-top:0.5em;">
-                                        Brillanti e preziosi
+                                        {{ __('ui.brilliantandprecious') }}
                                     </span>
                                 </div>
                                 <a href="{{ route('article.search', ['query' => 'Diamanti']) }}" class="box"
                                     style="grid-area: box-2; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/diamante.jpg') }}" alt="Diamante"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Diamanti</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.diamonds') }}</span>
                                 </a>
                                 <a href="{{ route('article.search', ['query' => 'Collane']) }}" class="box"
                                     style="grid-area: box-3; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/collana.webp') }}" alt="Collana"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Collana</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.necklaces') }}</span>
                                 </a>
                                 <a href="{{ route('article.search', ['query' => 'Orecchini']) }}" class="box"
                                     style="grid-area: box-4; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/orecchini.jpg') }}" alt="Orecchini"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Orecchini</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.earrings') }}</span>
                                 </a>
                                 <a href="{{ route('article.search', ['query' => 'Anelli']) }}" class="box"
                                     style="grid-area: box-5; flex-direction: column; text-decoration:none;">
                                     <img src="{{ asset('images/anello.jpg') }}" alt="Anello"
                                         style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:0.5em;">
-                                    <span style="color:#222; font-weight:600;">Anello</span>
+                                    <span style="color:#222; font-weight:600;">{{ __('ui.rings') }}</span>
                                 </a>
                             </div>
                         </div>
@@ -170,10 +170,10 @@
                             <div class="grid-container">
                                 <div class="box special" style="grid-area: box-1; flex-direction: column;">
                                     <span style="font-size:2.2rem; color:#ff6600; font-weight:800; line-height:1.1;">
-                                        Esperti di fiducia
+                                        {{ __('ui.experts') }}
                                     </span>
                                     <span style="font-size:1.1rem; color:#888; font-weight:500; margin-top:0.5em;">
-                                        Appositi per te
+                                        {{ __('ui.justforyou') }}
                                     </span>
                                 </div>
                                 <a href="{{ route('user.profile', 2) }}" class="box"
@@ -289,7 +289,7 @@
     <div class="container my-5">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 text-center mb-4">
-                <h2 style="color:#ff6600; font-weight:800;">Perché scegliere Antiqua?</h2>
+                <h2 style="color:#ff6600; font-weight:800;">{{ __('ui.whychoose') }}</h2>
             </div>
             <div class="col-12 col-md-10">
                 <div class="row g-4 justify-content-center">
@@ -306,8 +306,8 @@
                                             stroke-linejoin="round"></path>
                                     </g>
                                 </svg></span>
-                            <h5 class="mt-3 mb-2" style="font-weight:700;">Trova il tuo oggetto speciale</h5>
-                            <p class="text-muted">Scopri pezzi unici e rari per ogni passione.</p>
+                            <h5 class="mt-3 mb-2" style="font-weight:700;">{{ __('ui.findyourobject') }}</h5>
+                            <p class="text-muted">{{ __('ui.discoverunique') }}</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -330,8 +330,8 @@
                                             stroke-linejoin="round"></path>
                                     </g>
                                 </svg></span>
-                            <h5 class="mt-3 mb-2" style="font-weight:700;">Selezionato da esperti</h5>
-                            <p class="text-muted">Oggetti scelti e verificati dai migliori professionisti.</p>
+                            <h5 class="mt-3 mb-2" style="font-weight:700;">{{ __('ui.selectedbyexperts') }}</h5>
+                            <p class="text-muted">{{ __('ui.chosenandverified') }}</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -347,8 +347,8 @@
                                             stroke-linejoin="round"></path>
                                     </g>
                                 </svg></span>
-                            <h5 class="mt-3 mb-2" style="font-weight:700;">Tutela degli acquirenti</h5>
-                            <p class="text-muted">Acquisti sicuri e assistenza dedicata per ogni cliente.</p>
+                            <h5 class="mt-3 mb-2" style="font-weight:700;">{{ __('ui.buyerprotection') }}</h5>
+                            <p class="text-muted">{{ __('ui.securepurchases') }}</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 text-center">
@@ -371,8 +371,8 @@
                                         </path>
                                     </g>
                                 </svg></span>
-                            <h5 class="mt-3 mb-2" style="font-weight:700;">Scelto da milioni di persone</h5>
-                            <p class="text-muted">Una community di appassionati in tutta Italia.</p>
+                            <h5 class="mt-3 mb-2" style="font-weight:700;">{{ __('ui.chosenbymillions') }}</h5>
+                            <p class="text-muted">{{ __('ui.communityofenthusiasts') }}</p>
                         </div>
                     </div>
                 </div>

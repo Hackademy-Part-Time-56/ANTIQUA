@@ -113,7 +113,7 @@
     <div class="reset-container">
         <div class="reset-card">
             <div class="brand-section">
-                <h1 class="brand-title">Nuova Password</h1>
+                <h1 class="brand-title">{{ __('ui.newpassword') }}</h1>
             </div>
 
             @if ($errors->any())
@@ -129,7 +129,7 @@
                 <input type="hidden" name="token" value="{{ $request->route('token') }}">
                 
                 <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
+                    <label for="email" class="form-label">{{ __('ui.email:') }}</label>
                     <input 
                         type="email" 
                         class="form-input" 
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password" class="form-label">Nuova Password</label>
+                    <label for="password" class="form-label">{{ __('ui.newpassword') }}</label>
                     <input 
                         type="password" 
                         class="form-input" 
@@ -154,7 +154,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password_confirmation" class="form-label">Conferma Password</label>
+                    <label for="password_confirmation" class="form-label">{{ __('ui.confirmpassword') }}</label>
                     <input 
                         type="password" 
                         class="form-input" 
@@ -166,7 +166,7 @@
                 </div>
 
                 <button type="submit" class="submit-btn">
-                    Reimposta Password
+                    {{ __('ui.resetpw') }}
                 </button>
             </form>
         </div>

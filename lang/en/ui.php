@@ -6,10 +6,33 @@ return
     'reachmillionsofinterestedbuyers'=>'Reach millions of interested buyers',
     'postanad'=>'Post an ad',
     'noarticleshavebeencreatedyet'=>'No articles have been created yet',
+    //pagina1
     'specit'=>'Special items',
     'selctbyex'=>'Selected by top experts',
+    //finepagina1
     'populararticles'=>'Popular articles',
     'latestarticles'=>'Latest articles',
+    //pagina2
+    'bestjewelry'=>'Best jewelry',
+    'brilliantandprecious'=>'Brilliant and precious',
+    'diamonds'=>'Diamonds',
+    'necklaces'=>'Necklaces',
+    'earrings'=>'Earrings',
+    'rings'=>'Rings',
+    //finepagina2
+    //pagina3
+    'experts'=>'Trusted experts',
+    'justforyou'=>'Just for you',
+    //finepagina3
+    'whychoose'=>'Why choose Antiqua?',
+    'findyourobject'=>'Find your special object',
+    'discoverunique'=>'Discover unique and rare pieces for every passion',
+    'selectedbyexperts'=>'Selected by experts',
+    'chosenandverified'=>'Items chosen and verified by top professionals.',
+    'buyerprotection'=>'Buyer protection',
+    'securepurchases'=>'Secure purchases and dedicated support for every customer.',
+    'chosenbymillions'=>'Chosen by millions of people',
+    'communityofenthusiasts'=>'A community of enthusiasts across Italy.',
 
     //index.blade.php
     'reviewerdashboard'=>'Reviewer dashboard',
@@ -53,6 +76,26 @@ return
 
     //footer da modificare e poi aggiungere le relative chiavi
     'aboutus'=>'About us',
+    'h1'=>'Who is Antiqua?',
+    'firstparagraph'=>'Antiqua is the leading platform for selling and buying special items selected by experts. Every day, millions of enthusiasts visit Antiqua to discover unique and extraordinary treasures: from works of art to vintage jewelry, from rare comics to collectible vehicles.',
+    'h2'=>'What makes Antiqua unique?',
+    'secondparagraph'=>'Unlike other marketplaces, at Antiqua every item is selected and verified by professional experts. This guarantees users a safe, transparent, and high-quality auction experience.',
+    'why'=>'🔍 Carefully selected items.',
+    'why1'=>'🛡️ Safe and guaranteed purchases.',
+    'why2'=>'🌍 An international community.',
+    'why3'=>'📱 A seamless experience also from mobile devices.',
+    'h2.1'=>'Our team of experts',
+    'thirdparagraph'=>'Antiqua collaborates with over 240 experts worldwide, each with specific skills in their field. Their mission is to discover, evaluate, and propose only the best, so that each user can make a conscious and satisfying purchase.',
+    'h2.2'=>'Where we are',
+    'fourthparagraph'=>'Antiqua is headquartered in Europe, but our team works in a hybrid and international manner, to offer high-quality service to users in over 60 countries.',
+    'h2.3'=>'What can you find on Antiqua?',
+    'fifthparagraph'=>'Every week we publish thousands of auctions in categories such as: ',
+    'subct1'=>'Contemporary and modern art;',
+    'subct2'=>'Luxury watches and jewelry;',
+    'subct3'=>'Vintage vehicles;',
+    'subct4'=>'Design, antiques, and vintage;',
+    'subct5'=>'Comics, stamps, and collectibles.',
+
     'workwithus'=>'Work with us',
     'press'=>'Press',
     'contact'=>'Contact',
@@ -111,8 +154,31 @@ return
     'emailaddress'=>'Email address:',
     'pw'=>'Password:',
     'confirmpw'=>'Confirm password:',
+    'minchars'=>'At least 8 characters',
+    'uppercase'=>'One uppercase letter',
+    'lowercase'=>'One lowercase letter',
+    'number'=>'One number',
+    'specialchar'=>'One special character (!@#$%^&*)',
+    'alreadyregistered'=>'Already registered?',
 
     //login.blade.php
+    'forgotpw'=>'Forgot your password?',
+    'or'=>'Or',
+    'notregistered'=>'Not registered?',
+    'google'=>'Login with Google',
+    'backhome'=>'⬅ Back to Home',
+
+    //forgotpw
+    'recoverpw'=>'Recover password',
+    'enteremail'=>'Enter your email address and we will send you a link to reset your password.',
+    'emailadd'=>'Email Address',
+    'sendresetlink'=>'Send reset link',
+    'backtologin'=>'← Back to Login',
+
+    //resetpw
+    'newpassword'=>'New password',
+    'confirmpassword'=>'Confirm password',
+    'resetpw'=>'Reset password',
 
     //show.blade.php
     'detailsarticles'=>'Article details: ',
@@ -183,4 +249,8 @@ return
     //preferiti
     'yourfav'=>'Your favorites',
     'havenotadded'=>'You have not added any items to your favorites yet.',
+    'noarticlesadded'=>'You have not added any articles to your favorites yet. 
+                        Start exploring our antique collection to find unique pieces that capture your interest!',
+    'exp'=>'🔍 Explore Antiques',
+    
 ];

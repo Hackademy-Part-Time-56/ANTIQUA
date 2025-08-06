@@ -2,50 +2,52 @@
 
 
 <div class="container py-5">
-    <h1 class="mb-4">Chi è Antiqua</h1>
+    <h1 class="mb-4">{{ __('ui.h1') }}</h1>
 
     <p>
-        Antiqua è la piattaforma leader per vendere e acquistare oggetti speciali selezionati da esperti. Ogni giorno milioni di appassionati visitano Antiqua per scoprire tesori unici e straordinari: dalle opere d’arte ai gioielli vintage, dai fumetti rari ai veicoli da collezione.
+       {{ __('ui.firstparagraph') }}
     </p>
 
-    <h2 class="mt-5">Cosa rende Antiqua unica?</h2>
+    <h2 class="mt-5">{{ __('ui.h2') }}</h2>
 
     <p>
-        A differenza di altri marketplace, su Antiqua ogni oggetto è selezionato e verificato da esperti professionisti. Questo garantisce agli utenti un’esperienza d’asta sicura, trasparente e di alta qualità.
+       {{ __('ui.secondparagraph') }}
     </p>
 
     <ul>
-        <li>🔍 Oggetti accuratamente selezionati</li>
-        <li>🛡️ Acquisti sicuri e garantiti</li>
-        <li>🌍 Una community internazionale</li>
-        <li>📱 Un’esperienza fluida anche da mobile</li>
+        <li>{{ __('ui.why') }}</li>
+        <li>{{ __('ui.why1') }}</li>
+        <li>{{ __('ui.why2') }}</li>
+        <li>{{ __('ui.why3') }}</li>
     </ul>
 
-    <h2 class="mt-5">Il nostro team di esperti</h2>
+    <h2 class="mt-5">{{ __('ui.h2.1') }}</h2>
     <p>
-        Antiqua collabora con oltre 240 esperti in tutto il mondo, ognuno con competenze specifiche nel proprio settore. La loro missione è scoprire, valutare e proporre solo il meglio, affinché ogni utente possa fare un acquisto consapevole e soddisfacente.
+        {{ __('ui.thirdparagraph') }}
     </p>
 
-    <h2 class="mt-5">Dove siamo</h2>
+    <h2 class="mt-5">{{ __('ui.h2.2') }}</h2>
     <p>
-        Antiqua ha sede in Europa, ma il nostro team lavora in modalità ibrida e internazionale, per offrire un servizio di alta qualità a utenti in più di 60 paesi.
+        {{ __('ui.fourthparagraph') }}
     </p>
 
-    <h2 class="mt-5">Cosa puoi trovare su Antiqua?</h2>
+    <h2 class="mt-5">{{ __('ui.h2.3') }}</h2>
     <p>
-        Ogni settimana pubblichiamo migliaia di aste in categorie come:
+        {{ __('ui.fifthparagraph') }}
+    </p>
+
     </p>
     <ul>
-        <li>Arte contemporanea e moderna</li>
-        <li>Orologi di lusso e gioielli</li>
-        <li>Veicoli d’epoca</li>
-        <li>Design, antiquariato e vintage</li>
-        <li>Fumetti, francobolli e oggetti da collezione</li>
+        <li>{{ __('ui.subct1') }}</li>
+        <li>{{ __('ui.subct2') }}</li>
+        <li>{{ __('ui.subct3') }}</li>
+        <li>{{ __('ui.subct4') }}</li>
+        <li>{{ __('ui.subct5') }}</li>
     </ul>
 
         <div class="text-center mt-5">
             <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-                ⬅ Torna alla Home
+                {{__('ui.backhome')}}
             </a>
         </div>
         

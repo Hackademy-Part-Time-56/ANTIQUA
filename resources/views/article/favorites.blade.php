@@ -279,12 +279,10 @@
                 <div class="empty-icon">💔</div>
                 <h2 class="empty-title">{{ __('ui.havenotadded') }}</h2>
                 <p class="empty-description">
-                    Non hai ancora aggiunto nessun articolo ai tuoi preferiti.
-                    Inizia a esplorare la nostra collezione di antiquariato per trovare
-                    pezzi unici che catturano il tuo interesse!
+                    {{ __('ui.noarticlesadded') }}
                 </p>
                 <a href="{{ route('homepage') }}" class="browse-btn">
-                    🔍 Esplora Antiquariato
+                    {{ __('ui.exp') }}
                 </a>
             </div>
         @endforelse
