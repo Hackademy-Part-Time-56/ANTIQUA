@@ -1,14 +1,14 @@
 <nav class="navbar-modern navbar navbar-expand-lg bg-body-tertiary">
-    <div class="navbar-container">
+    <div class="navbar-container mt-3">
         <!-- Logo Section -->
         <div class="navbar-brand-section">
             <a class="navbar-logo" href="{{ route('homepage') }}">
-                <img class="logo" src="{{ asset('images/logo.png') }}" alt="Antiqua Logo">
+                <img class="logo mb-2" src="{{ asset('images/logo.png') }}" alt="Antiqua Logo">
             </a>
         </div>
 
         <!-- Searchbar -->
-        <form class="d-flex ms-auto mt-3 mobile-center-search" role="search" action="{{ route('article.search') }}"
+        <form class="d-flex ms-auto mobile-center-search" role="search" action="{{ route('article.search') }}"
             method="GET">
             <div class="position-relative w-100 custom-search-container">
                 <button type="submit" class="btn custom-search-button"
