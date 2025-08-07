@@ -1,22 +1,22 @@
 <x-layout>
     <div class="container my-5">
 
-        <h1 class="mb-4 text-center fw-bold" style="color:#4B3B2B;">Come funziona <span style="color:#ff6600;">ANTIQUA</span></h1>
+        <h1 class="mb-4 text-center fw-bold" style="color:#4B3B2B;">{{ __('ui.howitworks') }} <span style="color:#ff6600;">ANTIQUA</span></h1>
 
         <p class="lead text-center mb-5">
-            Scopri come acquistare, vendere e vivere il mondo dell’arte e dell’antiquariato in modo semplice e sicuro.
+            {{ __('ui.howitworksdesc') }}
         </p>
 
         <div class="row g-4">
 
             @php
                 $features = [
-                    ['icon' => '🎨', 'title' => 'Scopri oggetti unici', 'text' => 'Esplora aste online con pezzi rari, selezionati da esperti, pronti a trovare una nuova casa.'],
-                    ['icon' => '⏰', 'title' => 'Partecipa alle aste', 'text' => 'Registrati e fai offerte in tempo reale per aggiudicarti i tuoi oggetti preferiti.'],
-                    ['icon' => '💼', 'title' => 'Vendi con facilità', 'text' => 'Metti in vendita i tuoi pezzi d’arte con il supporto del nostro team di esperti.'],
-                    ['icon' => '🔒', 'title' => 'Sicurezza e affidabilità', 'text' => 'Acquista e vendi con la certezza di transazioni sicure e controlli rigorosi.'],
-                    ['icon' => '🤝', 'title' => 'Assistenza dedicata', 'text' => 'Il nostro supporto è sempre disponibile per guidarti in ogni fase.'],
-                    ['icon' => '📦', 'title' => 'Spedizioni sicure', 'text' => 'Gestiamo con cura e tracciabilità ogni spedizione per garantire che il tuo acquisto arrivi in perfette condizioni.'],
+                    ['icon' => '🎨', 'title' => __('ui.discoverunique1'), 'text' => __('ui.discoverunique2')],
+                    ['icon' => '⏰', 'title' => __('ui.participate'), 'text' => __('ui.offer')],
+                    ['icon' => '💼', 'title' => __('ui.sellwith'), 'text' => __('ui.sellwithdesc')],
+                    ['icon' => '🔒', 'title' => __('ui.security1'), 'text' => __('ui.securitydesc')],
+                    ['icon' => '🤝', 'title' => __('ui.security2'), 'text' => __('ui.securitydesc2')],
+                    ['icon' => '📦', 'title' => __('ui.secureshipping'), 'text' => __('ui.shippingdesc')],
                 ];
             @endphp
 
@@ -36,7 +36,7 @@
 
         <div class="text-center mt-5">
             <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-                ⬅ Torna alla Home
+                {{ __('ui.backhome') }}
             </a>
         </div>
 

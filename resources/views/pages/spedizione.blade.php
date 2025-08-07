@@ -1,18 +1,17 @@
 <x-layout>
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold" style="color:#ff6600;">Spedizione con ANTIQUA</h1>
-            <p class="lead">Consegna sicura, tracciabile e assicurata per ogni tuo acquisto.</p>
+            <h1 class="display-4 fw-bold" style="color:#ff6600;">{{__('ui.shippingwith')}}</h1>
+            <p class="lead">{{__('ui.delivery')}}</p>
         </div>
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange fw-bold">📦 Imballaggio professionale</h5>
+                        <h5 class="card-title text-orange fw-bold">📦 {{__('ui.packaging')}}</h5>
                         <p class="card-text">
-                            Ogni oggetto è imballato con cura da esperti per garantire che arrivi in condizioni perfette.
-                            Usiamo materiali resistenti e protezioni su misura.
+                            {{__('ui.packagingdesc')}}
                         </p>
                     </div>
                 </div>
@@ -21,10 +20,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange fw-bold">🚚 Tempi di spedizione</h5>
+                        <h5 class="card-title text-orange fw-bold">🚚 {{__('ui.shippingtime')}}</h5>
                         <p class="card-text">
-                            Spedizione entro 3-5 giorni lavorativi dopo il pagamento. I tempi di consegna variano da 5 a 10 giorni lavorativi,
-                            a seconda della destinazione.
+                            {{__('ui.shippingtime1')}}
                         </p>
                     </div>
                 </div>
@@ -33,10 +31,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange fw-bold">📦 Corrieri e tracciabilità</h5>
+                        <h5 class="card-title text-orange fw-bold">📦 {{__('ui.tracking')}}</h5>
                         <p class="card-text">
-                            Collaboriamo con corrieri affidabili come DHL, UPS e Poste Italiane.
-                            Ogni spedizione è tracciabile tramite codice che ti verrà inviato via email.
+                            {{__('ui.trackingdesc')}}
                         </p>
                     </div>
                 </div>
@@ -45,10 +42,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange fw-bold">💶 Costi di spedizione</h5>
+                        <h5 class="card-title text-orange fw-bold">💶 {{__('ui.costs')}}</h5>
                         <p class="card-text">
-                            Il costo viene calcolato in base al peso, dimensioni e destinazione.
-                            Troverai il costo esatto durante il checkout, senza sorprese.
+                            {{__('ui.costsdesc')}}
                         </p>
                     </div>
                 </div>
@@ -57,10 +53,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange fw-bold">🛡️ Assicurazione inclusa</h5>
+                        <h5 class="card-title text-orange fw-bold">🛡️ {{__('ui.insurance')}}</h5>
                         <p class="card-text">
-                            Tutti gli articoli spediti tramite ANTIQUA sono coperti da assicurazione.
-                            In caso di danneggiamento o smarrimento, ti garantiamo il rimborso o una soluzione rapida.
+                            {{__('ui.insurancedesc')}}
                         </p>
                     </div>
                 </div>
@@ -69,10 +64,10 @@
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange fw-bold">❗ Problemi con la consegna?</h5>
+                        <h5 class="card-title text-orange fw-bold">❗ {{__('ui.deliveryissues')}}</h5>
                         <p class="card-text">
-                            Contattaci subito tramite <a href="{{ route('contatti') }}">la nostra pagina contatti</a>.
-                            Il nostro team è sempre disponibile per supportarti.
+                            {{__('ui.deliveryissuesdesc')}} <a href="{{ route('contatti') }}">{{__('ui.deliveryissuesdesc2')}}</a>.
+                            {{__('ui.deliveryissuesdesc3')}}
                         </p>
                     </div>
                 </div>
@@ -81,7 +76,7 @@
 
         <div class="text-center mt-5">
             <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-                ⬅ Torna alla Home
+                {{ __('ui.backhome') }}
             </a>
         </div>
     </div>

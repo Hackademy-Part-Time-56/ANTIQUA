@@ -1,15 +1,15 @@
 <x-layout>
     <div class="container my-5">
         <div class="text-center mb-4">
-            <h1 class="display-4" style="color:#ff6600" >Aiuto & Supporto</h1>
-            <p class="lead text-muted">Benvenuto nella pagina di assistenza di <strong>ANTIQUA</strong>. Qui troverai risposte alle domande più frequenti e informazioni utili per usare al meglio il nostro servizio.</p>
+            <h1 class="display-4" style="color:#ff6600" >{{ __('ui.helpandsupport') }}</h1>
+            <p class="lead text-muted">{{ __('ui.welcome') }} <strong>ANTIQUA</strong>. {{ __('ui.faq') }}</p>
         </div>
 
         <!-- Sezione Come Funziona -->
         <section class="row mb-5">
             <div class="col-md-6">
-                <h2 style="color:#ff6600">Come funziona <strong>ANTIQUA</strong>?</h2>
-                <p class="text-muted">ANTIQUA è la piattaforma online per scoprire, acquistare e vendere oggetti d’antiquariato unici e autentici. Ti offriamo un'esperienza semplice, sicura e trasparente.</p>
+                <h2 style="color:#ff6600">{{ __('ui.howitworks') }} <strong>ANTIQUA</strong>?</h2>
+                <p class="text-muted">{{ __('ui.about') }}</p>
             </div>
             <div class="col-md-6">
             
@@ -18,19 +18,19 @@
 
         <!-- Sezione Domande Frequenti -->
         <section class="mb-5">
-            <h2 style="color:#ff6600">Domande frequenti</h2>
+            <h2 style="color:#ff6600">{{ __('ui.ask') }}</h2>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="list-unstyled">
-                        <li><strong>Come posso registrarmi?</strong><br>Per creare un account, clicca su <em>Registrati</em> in alto a destra e compila il modulo con i tuoi dati.</li>
-                        <li><strong>Come funziona l’acquisto?</strong><br>Puo scegliere un articolo e fare la tua offerta o acquistarlo direttamente.</li>
-                        <li><strong>Come posso vendere i miei oggetti?</strong><br>Registrati come venditore e segui la procedura per mettere in vendita i tuoi articoli.</li>
+                        <li><strong>{{ __('ui.howtoregister') }}</strong><br>{{ __('ui.howtoregister0') }} <em>{{ __('ui.register') }}</em> {{ __('ui.right') }}</li>
+                        <li><strong>{{ __('ui.howtoregister1') }}</strong><br>{{ __('ui.howtoregister2') }}</li>
+                        <li><strong>{{ __('ui.howtoregister3') }}</strong><br>{{ __('ui.howtoregister4') }}</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="list-unstyled">
-                        <li><strong>Quali metodi di pagamento sono accettati?</strong><br>Accettiamo pagamenti tramite carta di credito, PayPal e bonifico bancario.</li>
-                        <li><strong>Come posso contattare l’assistenza?</strong><br>Puoi scriverci tramite la pagina <a href="{{ route('contatti') }}">Contatti</a> o inviare una mail a <a href="mailto:supporto@antiqua.com">supporto@antiqua.com</a>.</li>
+                        <li><strong>{{ __('ui.metpay') }}</strong><br>{{ __('ui.metpay0') }}</li>
+                        <li><strong>{{ __('ui.sup') }}</strong><br>{{ __('ui.sup1') }} <a href="{{ route('contatti') }}">{{ __('ui.contact') }}</a> {{ __('ui.sup2') }} <a href="mailto:supporto@antiqua.com">supporto@antiqua.com</a>.</li>
                     </ul>
                 </div>
             </div>
@@ -38,20 +38,20 @@
 
         <!-- Sezione Norme e Regolamenti -->
         <section class="mb-5">
-            <h2 style="color:#ff6600">Norme e regolamenti</h2>
-            <p class="text-muted">Ti invitiamo a leggere attentamente i nostri <a href="temini-condizioni" class="text-decoration-none">Termini e condizioni</a> e la <a href="{{ route('informativa-privacy') }}" class="text-decoration-none">Politica sulla privacy</a> per maggiori dettagli.</p>
+            <h2 style="color:#ff6600">{{ __('ui.regulations') }}</h2>
+            <p class="text-muted">{{ __('ui.read') }} <a href="temini-condizioni" class="text-decoration-none">{{ __('ui.termsandcondition') }}</a> {{ __('ui.e') }} <a href="{{ route('informativa-privacy') }}" class="text-decoration-none">{{ __('ui.polp') }}</a> {{ __('ui.fordet') }}</p>
         </section>
 
         <!-- Sezione Ulteriori informazioni -->
         <section class="text-center">
-            <h2 style="color:#ff6600">Ulteriori informazioni</h2>
-            <p class="text-muted">Se non hai trovato risposta alla tua domanda, ti consigliamo di contattare direttamente il nostro servizio clienti tramite la pagina <a href="{{ route('contatti') }}" class="text-decoration-none">Contatti</a>.</p>
+            <h2 style="color:#ff6600">{{ __('ui.uinf') }}</h2>
+            <p class="text-muted">{{ __('ui.notfound') }} <a href="{{ route('contatti') }}" class="text-decoration-none">{{ __('ui.contact') }}</a>.</p>
         </section>
 
         <!-- Pulsante Torna alla Home -->
         <div class="text-center mt-5">
             <a href="{{ route('homepage') }}" class="btn btn-lg btn-outline-primary px-5 py-3 rounded-pill">
-                ⬅ Torna alla Home
+                {{ __('ui.backhome') }}
             </a>
         </div>
 

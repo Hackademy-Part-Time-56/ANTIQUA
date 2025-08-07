@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container py-5">
     <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold" style="color:#ff6600;">Politica sui Cookie</h1>
-        <p class="lead">La privacy del tuo browser è importante per noi. Leggi come gestiamo i cookie su ANTIQUA.</p>
+        <h1 class="display-5 fw-bold" style="color:#ff6600;">{{ __('ui.cookiepolicy') }}</h1>
+        <p class="lead">{{ __('ui.cookiepolicydesc') }}</p>
     </div>
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -10,9 +10,10 @@
         <div class="col">
         <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
-            <h5 class="card-title text-orange">🍪 Cosa sono i cookie?</h5>
+            <h5 class="card-title text-orange">🍪 {{ __('ui.whatarecookies') }}</h5>
             <p class="card-text">
-                I cookie sono piccoli file di testo memorizzati sul tuo dispositivo usati per riconoscerti, ricordare preferenze e migliorare la tua esperienza di navigazione. Utilizziamo anche tecnologie simili come web beacon o fingerprinting.</p>
+                {{ __('ui.whatarecookiesdesc') }}
+            </p>
             </div>
         </div>
         </div>
@@ -20,9 +21,10 @@
         <div class="col">
         <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
-            <h5 class="card-title text-orange">🕒 Durata dei cookie</h5>
+            <h5 class="card-title text-orange">🕒 {{ __('ui.cookieduration') }}</h5>
             <p class="card-text">
-                Alcuni cookie restano attivi solo per la sessione di navigazione, altri persistono più a lungo sul tuo dispositivo.</p>
+                {{ __('ui.cookiedurationdesc') }}
+            </p>
             </div>
         </div>
         </div>
@@ -30,9 +32,10 @@
         <div class="col">
         <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
-            <h5 class="card-title text-orange">⚙️ Tipologie di cookie</h5>
+            <h5 class="card-title text-orange">⚙️ {{ __('ui.cookietypes') }}</h5>
             <p class="card-text">
-                Usiamo cookie funzionali per la navigazione, cookie analytics per comprendere l’uso del sito, e cookie di marketing per proporre contenuti rilevanti. Alcuni cookie di queste categorie sono gestiti da terze parti.</p>
+                {{ __('ui.cookietypesdesc') }}
+            </p>
             </div>
         </div>
         </div>
@@ -40,9 +43,10 @@
         <div class="col">
         <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
-            <h5 class="card-title text-orange">✅ Cookie funzionali (necessari)</h5>
+            <h5 class="card-title text-orange">✅ {{ __('ui.necessarycookies') }}</h5>
             <p class="card-text">
-                Questi cookie garantiscono funzioni essenziali del sito – come mantenere il login o preferenze utente – e non possono essere disattivati.</p>
+                {{ __('ui.necessarycookiesdesc') }}
+            </p>
             </div>
         </div>
         </div>
@@ -50,9 +54,10 @@
         <div class="col">
         <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
-            <h5 class="card-title text-orange">📈 Cookie di analisi</h5>
+            <h5 class="card-title text-orange">📈 {{ __('ui.analyticscookies') }}</h5>
             <p class="card-text">
-                Raccogliamo dati aggregati sulle visite al sito per capire come migliorare i contenuti e l’esperienza utente.</p>
+                {{ __('ui.analyticscookiesdesc') }}
+            </p>
             </div>
         </div>
         </div>
@@ -60,9 +65,10 @@
         <div class="col">
         <div class="card shadow-sm h-100 bg-light text-center">
             <div class="card-body">
-            <h5 class="card-title text-orange">📣 Cookie di marketing</h5>
+            <h5 class="card-title text-orange">📣 {{ __('ui.marketingcookies') }}</h5>
             <p class="card-text">
-                Utilizziamo cookie per mostrare annunci pertinenti basati sui tuoi interessi. Questi possono essere impostati anche da servizi di terze parti.</p>
+                {{ __('ui.marketingcookiesdesc') }}
+            </p>
             </div>
         </div>
         </div>
@@ -71,7 +77,7 @@
 
     <div class="text-center mt-5">
         <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-        ⬅ Torna alla Home
+        {{__('ui.backhome')}}
         </a>
     </div>
     </div>

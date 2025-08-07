@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h1 class="display-5 fw-bold" style="color:#ff6600;">Note Legali</h1>
-            <p class="lead">Trasparenza, responsabilità e tutela degli utenti su ANTIQUA.</p>
+            <h1 class="display-5 fw-bold" style="color:#ff6600;">{{ __('ui.legalnotices') }}</h1>
+            <p class="lead">{{__('ui.legalnotesdesc')}}</p>
         </div>
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -10,10 +10,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body bg-light text-center">
-                        <h5 class="card-title text-orange">⚖️ Identità del Titolare</h5>
+                        <h5 class="card-title text-orange">⚖️ {{__('ui.owneridentity')}}</h5>
                         <p class="card-text">
-                            Il sito ANTIQUA è gestito da Antiqua S.r.l., con sede legale in Via delle Arti 15, 00100 Roma, Italia.
-                            P.IVA: 01234567890 – REA: RM-123456.
+                            {{__('ui.owneridentitydesc')}}
                         </p>
                     </div>
                 </div>
@@ -22,10 +21,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange">📜 Proprietà Intellettuale</h5>
+                        <h5 class="card-title text-orange">📜 {{__('ui.intellectualproperty')}}</h5>
                         <p class="card-text">
-                            Tutti i contenuti pubblicati su ANTIQUA – testi, immagini, loghi, marchi e layout – sono protetti da copyright
-                            e non possono essere copiati o riprodotti senza autorizzazione scritta.
+                            {{__('ui.intellectualpropertydesc')}}
                         </p>
                     </div>
                 </div>
@@ -34,10 +32,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange">📦 Responsabilità</h5>
+                        <h5 class="card-title text-orange">📦 {{__('ui.responsibility')}}</h5>
                         <p class="card-text">
-                            Pur garantendo la massima accuratezza dei contenuti, ANTIQUA non è responsabile di eventuali errori o
-                            inesattezze. I contenuti informativi non costituiscono impegno contrattuale.
+                            {{__('ui.responsibilitydesc')}}
                         </p>
                     </div>
                 </div>
@@ -46,10 +43,9 @@
             <div class="col">
                 <div class="card h-100 shadow-sm bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange">🔗 Link Esterni</h5>
+                        <h5 class="card-title text-orange">🔗 {{__('ui.externallinks')}}</h5>
                         <p class="card-text">
-                            Il sito può contenere link a siti esterni non controllati da ANTIQUA. Non siamo responsabili per i contenuti
-                            di tali siti o per eventuali danni derivanti dalla loro consultazione.
+                            {{__('ui.externallinksdesc')}}
                         </p>
                     </div>
                 </div>
@@ -58,10 +54,10 @@
             <div class="col">
                 <div class="card h-100 shadow-sm bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange">🔒 Privacy e Cookie</h5>
+                        <h5 class="card-title text-orange">🔒 {{__('ui.privacyandcookies')}}</h5>
                         <p class="card-text">
-                            Per maggiori informazioni sul trattamento dei dati personali e sull’uso dei cookie, visita le nostre pagine:
-                            <a href="{{ route('informativa-privacy') }}">Privacy</a> e <a href="{{ route('politica-cookie') }}">Cookie Policy</a>.
+                            {{__('ui.privacyandcookiesdesc')}}
+                            <a href="{{ route('informativa-privacy') }}">{{__('ui.privacy')}}</a> e <a href="{{ route('politica-cookie') }}">{{__('ui.cookie')}}</a>.
                         </p>
                     </div>
                 </div>
@@ -70,10 +66,10 @@
             <div class="col">
                 <div class="card h-100 shadow-sm bg-light text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-orange">📧 Contatti legali</h5>
+                        <h5 class="card-title text-orange">📧 {{__('ui.legalcontact')}}</h5>
                         <p class="card-text">
-                            Per comunicazioni ufficiali, puoi scriverci a <a href="mailto:legal@antiqua.com">legal@antiqua.com</a>.
-                            Ti risponderemo il prima possibile.
+                            {{__('ui.legalcontactdesc')}} <a href="mailto:legal@antiqua.com">legal@antiqua.com</a>.
+                            {{__('ui.legalcontactdesc1')}}
                         </p>
                     </div>
                 </div>
@@ -83,7 +79,7 @@
 
         <div class="text-center mt-5">
             <a href="{{ route('homepage') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-                ⬅ Torna alla Home
+                {{ __('ui.backhome') }}
             </a>
         </div>
     </div>
